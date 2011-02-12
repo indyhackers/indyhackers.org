@@ -1,0 +1,123 @@
+body {
+  color: #666666;
+  background: url("../images/striped_bg.png") white;
+  font-size: 100%; }
+
+a, a:visited {
+  color: #ab8b00;
+  text-decoration: none; }
+  a:hover, a:visited:hover {
+    color: #7799bb; }
+
+.clear {
+  clear: both; }
+
+hr {
+  color: #e5ecf9;
+  background-color: #e5ecf9;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  clear: both;
+  height: 5px;
+  width: 85%;
+  border: none; }
+
+#header {
+  background-color: rgba(229, 236, 249, 0.8);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  height: 50px;
+  margin: 0 auto; }
+  #header #menu-container h1 {
+    font-family: Philosopher, Helvetica Nueue, Helvetica, Verdana, Arial, sans-serif;
+    float: left;
+    color: #666666;
+    margin: 10px 0;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); }
+    #header #menu-container h1 a, #header #menu-container h1 a:visited, #header #menu-container h1 a:hover, #header #menu-container h1 a:visited:hover {
+      color: #666666; }
+  #header #menu-container ul#menu {
+    margin: 15px 0 0 0;
+    padding: 0;
+    display: inline;
+    list-style-type: none;
+    float: right; }
+    #header #menu-container ul#menu li {
+      margin: 0;
+      padding: 0;
+      display: inline; }
+      #header #menu-container ul#menu li a, #header #menu-container ul#menu li a:visited {
+        color: #666666;
+        padding: 20px 20px 14px 20px; }
+      #header #menu-container ul#menu li a:hover, #header #menu-container ul#menu li a:visited:hover {
+        color: #e5ecf9;
+        background-color: rgba(171, 139, 0, 0.4); }
+
+indy_hackers_calendar {
+  margin: 0 auto; }
+
+#body {
+  margin-top: 20px; }
+  #body .readable, #body ol.tumblr_posts > li {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-top: 2px solid white;
+    background: url("../images/white-grad-trans.png") repeat-x;
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.4); }
+    #body .readable h2, #body .readable .tumblr_title, #body ol.tumblr_posts > li h2, #body ol.tumblr_posts > li .tumblr_title {
+      display: block;
+      background: #cccccc;
+      padding: 25px 5px 0 5px;
+      font-family: Consolas, Inconsolata, Terminus, DejaVu Sans Mono, mono;
+      text-align: right;
+      width: 600px;
+      z-index: 5; }
+    #body .readable p, #body ol.tumblr_posts > li p {
+      padding: 0 10px; }
+  #body ol.tumblr_posts {
+    list-style-type: none;
+    margin-left: -30px; }
+  #body .tumblr_title {
+    color: #666666;
+    font-weight: bold;
+    font-size: 23px; }
+  #body #beer-clause {
+    font-size: 80%;
+    font-style: italic; }
+
+h3#get-a-job-posted {
+  margin-top: 20px;
+  display: block;
+  text-align: center; }
+
+.job h3 {
+  margin-top: 15px; }
+.job .job-description {
+  background-color: #e5ecf9;
+  padding: 2em;
+  margin-bottom: 2em; }
+
+.toggle-all {
+  float: right;
+  padding: 2px;
+  margin-top: -15px;
+  border: 1px solid #e5ecf9;
+  font-size: 70%; }
+
+#footer {
+  text-align: center; }
+  #footer p {
+    background-color: rgba(171, 139, 0, 0.4);
+    color: #e5ecf9;
+    padding: 5px 0;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.4); }
+    #footer p a, #footer p a:visited {
+      color: #c3d9ff; }
+      #footer p a:hover, #footer p a:visited:hover {
+        color: #7799bb; }

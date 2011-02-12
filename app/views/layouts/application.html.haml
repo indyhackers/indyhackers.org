@@ -8,14 +8,7 @@
     %link{:href => "/jobs.xml", :rel => "alternate", :title => "Job Board Feed", :type => "application/atom+xml"}/
     %link{:href => "http://fonts.googleapis.com/css?family=Philosopher&subset=latin", :rel => "stylesheet", :type => "text/css"}/
     / 960 Grid System
-    = stylesheet_link_tag '960/reset', '960/text', '960/960', 'application'
-    %link{:href => "stylesheets/960/reset.css", :rel => "stylesheet", :type => "text/css"}/
-    %link{:href => "/css/960/text.css", :rel => "stylesheet", :type => "text/css"}/
-    %link{:href => "/css/960/960.css", :rel => "stylesheet", :type => "text/css"}/
-    / CodeRay syntax highlighting CSS
-    %link{:href => "/css/coderay.css", :rel => "stylesheet", :type => "text/css"}/
-    / Homepage CSS
-    %link{:href => "/css/screen.css", :media => "screen, projection", :rel => "stylesheet", :type => "text/css"}/
+    = stylesheet_link_tag '960/reset', '960/text', '960/960', 'screen'
   %body
     #header
       #menu-container.container_12
@@ -31,7 +24,7 @@
     .container_12
       #body
         .grid_8.prefix_2
-          = @content
+          = yield
         .clear &nbsp;
       #footer
         %hr/
@@ -52,5 +45,5 @@
         pageTracker._trackPageview();
       } catch(err) {}
     / END Google Analytics
-    %script{:src => "/js/jquery-1.4.2.min.js"}
-    %script{:src => "/js/app.js"}
+    -# %script{:src => "/js/jquery-1.4.2.min.js"}
+    -# %script{:src => "/js/app.js"}
