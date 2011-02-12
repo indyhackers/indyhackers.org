@@ -1,0 +1,6 @@
+.DS_Store
+.bundle
+mkmf.log
+log/*
+coverage/*
+tmp/**/*
