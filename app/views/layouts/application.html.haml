@@ -1,0 +1,56 @@
+!!! 5
+%html
+  %head
+    %meta{:charset => "utf-8"}/
+    %title IndyHackers
+    %meta{:content => 'Miles Z. Sterrett', :name => "author"}/
+    %meta{:content => "Bringing together hackers in the Indianapolis area.", :name => "Description"}/
+    %link{:href => "/jobs.xml", :rel => "alternate", :title => "Job Board Feed", :type => "application/atom+xml"}/
+    %link{:href => "http://fonts.googleapis.com/css?family=Philosopher&subset=latin", :rel => "stylesheet", :type => "text/css"}/
+    / 960 Grid System
+    = stylesheet_link_tag '960/reset', '960/text', '960/960', 'application'
+    %link{:href => "stylesheets/960/reset.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "/css/960/text.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "/css/960/960.css", :rel => "stylesheet", :type => "text/css"}/
+    / CodeRay syntax highlighting CSS
+    %link{:href => "/css/coderay.css", :rel => "stylesheet", :type => "text/css"}/
+    / Homepage CSS
+    %link{:href => "/css/screen.css", :media => "screen, projection", :rel => "stylesheet", :type => "text/css"}/
+  %body
+    #header
+      #menu-container.container_12
+        %h1
+          %a{:href => "http://indyhackers.org/"} IndyHackers
+        %ul#menu
+          %li
+            %a{:href => "/"} home
+          %li
+            %a{:href => "/blog"} blog
+          %li.last
+            %a{:href => "/jobs"} jobs
+    .container_12
+      #body
+        .grid_8.prefix_2
+          = @content
+        .clear &nbsp;
+      #footer
+        %hr/
+        .grid_6.prefix_3.suffix_3
+          %p
+            Built with
+            %a{:href => "http://webby.rubyforge.org/", :title => "The ASCII Alchemist, written in Ruby"} Webby
+            \:: Source available
+            %a{:href => "http://github.com/mileszs/indyhackers.org", :title => "indyhackers.org source"} at GitHub
+        .clear &nbsp;
+    / Google Analytics
+    :javascript
+      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          :javascript
+      try {
+        var pageTracker = _gat._getTracker("UA-3615572-3");
+        pageTracker._trackPageview();
+      } catch(err) {}
+    / END Google Analytics
+    %script{:src => "/js/jquery-1.4.2.min.js"}
+    %script{:src => "/js/app.js"}
