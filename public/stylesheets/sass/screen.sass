@@ -1,0 +1,143 @@
+// color constants
+$white:             #ffffff
+$blue:              #7799bb
+$light_blue:        #c3d9ff
+$really_light_blue: #e5ecf9
+$lt_bl_trans:       rgba(229, 236, 249, 0.8)  
+$dark_grey:         #333333
+$medium_grey:       #666666
+$light_grey:        #999999
+$gold:              #ab8b00
+$gold_trans:        rgba(171, 139, 0, 0.4)
+
+@mixin drop-shadow($x_offset: 0, $y_offset: 0, $blur_radius: 10px, $color: rgba(0,0,0,0.4))
+  box-shadow: $x_offset $y_offset $blur_radius $color
+  -moz-box-shadow: $x_offset $y_offset $blur_radius $color
+  -webkit-box-shadow: $x_offset $y_offset $blur_radius $color
+
+body
+  color: $medium_grey
+  background: url('../images/striped_bg.png') $white
+  font-size: 100%
+
+a, a:visited
+  color: $gold
+  text-decoration: none
+  &:hover
+    color: $blue
+
+// Displays the grid in the background
+// .container_12
+//   :background #fff url(../images/12_col.gif) repeat-y
+
+.clear
+  clear: both
+
+hr
+  color: $really_light_blue
+  background-color: $really_light_blue
+  margin-top: 20px
+  margin-bottom: 20px
+  clear: both
+  height: 5px
+  width: 85%
+  border: none
+
+#header
+  background-color: $lt_bl_trans
+  @include drop-shadow(0, 0, 10px, rgba(0,0,0,0.4))
+  height: 50px
+  margin: 0 auto
+  #menu-container
+    h1
+      font-family: Philosopher, Helvetica Nueue, Helvetica, Verdana, Arial, sans-serif
+      float: left
+      color: $medium_grey
+      margin: 10px 0
+      text-shadow: 1px 1px 1px rgba(0,0,0,0.2)
+      a, a:visited, a:hover, a:visited:hover
+        color: $medium_grey
+    ul#menu
+      margin: 15px 0 0 0
+      padding: 0
+      display: inline
+      list-style-type: none
+      float: right
+      li
+        margin: 0
+        padding: 0
+        display: inline
+        a, a:visited
+          color: $medium_grey
+          padding: 20px 20px 14px 20px
+        a:hover, a:visited:hover
+          color: $really_light_blue
+          background-color: $gold_trans
+
+indy_hackers_calendar
+  margin: 0 auto
+
+#body
+  margin-top: 20px
+
+  .readable, ol.tumblr_posts > li
+    margin-bottom: 10px
+    padding: 10px
+    border-top: 2px solid $white
+    background: url('../images/white-grad-trans.png') repeat-x
+    background-color: rgba(255,255,255,0.7)
+    @include drop-shadow(0, 0, 4px, rgba(0,0,0,0.4))
+    h2, .tumblr_title
+      display: block
+      background: #ccc
+      padding: 25px 5px 0 5px
+      font-family: Consolas, Inconsolata, Terminus, DejaVu Sans Mono, mono
+      text-align: right
+      width: 600px
+      z-index: 5
+    p
+      padding: 0 10px
+
+  ol.tumblr_posts
+    list-style-type: none
+    margin-left: -30px
+
+  .tumblr_title
+    color: #666
+    font-weight: bold
+    font-size: 23px
+
+  #beer-clause
+    font-size: 80%
+    font-style: italic
+
+h3#get-a-job-posted
+  margin-top: 20px
+  display: block
+  text-align: center
+.job
+  h3
+    margin-top: 15px
+  .job-description
+    background-color: $really_light_blue
+    padding: 2em
+    margin-bottom: 2em
+
+.toggle-all
+  float: right
+  padding: 2px
+  margin-top: -15px
+  border: 1px solid $really_light_blue
+  font-size: 70%
+
+#footer
+  text-align: center
+  p
+    background-color: $gold_trans
+    color: $really_light_blue
+    padding: 5px 0
+    @include drop-shadow(0,0,4px,rgba(0,0,0,0.4))
+    a, a:visited
+      color: $light_blue
+      &:hover
+        color: $blue
