@@ -1,0 +1,23 @@
+.readable
+  %h3#get-a-job-posted
+    %a{:href => "/jobs/getting-a-job-posted"} How to Get a Job Posted
+
+.readable
+  %h2 Jobs
+
+  - if collection.empty?
+    %p
+      There are no job postings at this time. Check back later, or
+      %a{:href =>'http://indyhackers.org/jobs.xml'}subsribe to the feed.
+  - else
+    %span{:class => 'toggle-all'}
+      %a{:href => '#'} + expand all
+
+%div{:class => 'clear'}
+
+- collection.each do |job|
+  .job.readable
+    %h3
+      =link_to job.title, job
+    .job-description{:style => "display:none;"}
+      = Maruku.new(job.description).to_html.html_safe

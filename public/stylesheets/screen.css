@@ -1,3 +1,123 @@
+.button, .button:visited {
+  background: #222222 url("/images/button.png") repeat-x;
+  border: none;
+  display: inline-block;
+  padding: 5px 10px 6px;
+  color: white;
+  text-decoration: none;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  position: relative;
+  cursor: pointer; }
+  .button:hover, .button:visited:hover {
+    background-color: #111111;
+    color: white; }
+  .button:active, .button:visited:active {
+    top: 1px; }
+
+.small.button, .small.button:visited {
+  font-size: 11px; }
+
+.button, .button:visited, .medium.button, .medium.button:visited {
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25); }
+
+.large.button, .large.button:visited {
+  font-size: 14px;
+  padding: 8px 14px 9px; }
+
+.green.button, .green.button:visited {
+  background-color: #91bd09; }
+
+.green.button:hover {
+  background-color: #749a02; }
+
+.blue.button, .blue.button:visited {
+  background-color: #7799bb; }
+
+.blue.button:hover {
+  background-color: #133156; }
+
+.red.button, .red.button:visited {
+  background-color: #e33100; }
+
+.red.button:hover {
+  background-color: #872300; }
+
+.magenta.button, .magenta.button:visited {
+  background-color: #a9014b; }
+
+.magenta.button:hover {
+  background-color: #630030; }
+
+.orange.button, .orange.button:visited {
+  background-color: #da4d00; }
+
+.orange.button:hover {
+  background-color: #d45500; }
+
+.yellow.button, .yellow.button:visited {
+  background-color: #ffb515; }
+
+.yellow.button:hover {
+  background-color: #fc9200; }
+
+input[type=text], textarea {
+  width: 400px;
+  margin-bottom: 5px;
+  font-size: 16px;
+  padding: 9px;
+  border: solid 1px #e5e5e5;
+  outline: 0;
+  background: white; }
+
+textarea {
+  height: 500px;
+  line-height: 150%; }
+
+input[type=text]:hover, textarea:hover,
+input[type=text]:focus, textarea:focus {
+  border-color: #c9c9c9; }
+
+input[type=text]:focus, textarea:focus {
+  border-color: #999999; }
+
+form.simple_form fieldset div label {
+  display: block;
+  float: left;
+  width: 100px;
+  text-align: right;
+  padding-right: 10px; }
+
+form.simple_form fieldset {
+  border-top: 1px solid #999999;
+  padding-bottom: 10px;
+  padding-top: 10px; }
+
+form.simple_form legend {
+  color: #7799bb;
+  font-size: 100%;
+  font-weight: bold;
+  margin-left: 20px; }
+
+form.simple_form .hint {
+  font-size: 11px;
+  color: #666666;
+  display: block; }
+
+form.simple_form span.error {
+  display: block;
+  text-align: center; }
+
+form.simple_form label abbr {
+  color: red; }
+
 body {
   color: #666666;
   background: url("../images/striped_bg.png") white;

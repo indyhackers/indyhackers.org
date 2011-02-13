@@ -1,0 +1,4 @@
+.job.readable
+  %h2= resource.title
+  .job-description
+    = Maruku.new(resource.description).to_html.html_safe

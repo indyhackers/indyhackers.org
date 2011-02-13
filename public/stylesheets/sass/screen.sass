@@ -10,10 +10,9 @@ $light_grey:        #999999
 $gold:              #ab8b00
 $gold_trans:        rgba(171, 139, 0, 0.4)
 
-@mixin drop-shadow($x_offset: 0, $y_offset: 0, $blur_radius: 10px, $color: rgba(0,0,0,0.4))
-  box-shadow: $x_offset $y_offset $blur_radius $color
-  -moz-box-shadow: $x_offset $y_offset $blur_radius $color
-  -webkit-box-shadow: $x_offset $y_offset $blur_radius $color
+@import "partials/_box_shadow"
+@import "partials/_buttons"
+@import "partials/_forms"
 
 body
   color: $medium_grey
