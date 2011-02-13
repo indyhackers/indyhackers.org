@@ -10,7 +10,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110212232434) do
+ActiveRecord::Schema.define(:version => 20110213163408) do
+
+  create_table "admins", :force => true do |t|
+    t.string   "email",                             :default => "", :null => false
+    t.string   "encrypted_password", :limit => 128, :default => "", :null => false
+    t.string   "password_salt",                     :default => "", :null => false
+    t.integer  "failed_attempts",                   :default => 0
+    t.string   "unlock_token"
+    t.datetime "locked_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "admins", ["email"], :name => "index_admins_on_email", :unique => true
 
   create_table "jobs", :force => true do |t|
     t.string   "title"

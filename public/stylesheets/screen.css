@@ -68,7 +68,7 @@
 .yellow.button:hover {
   background-color: #fc9200; }
 
-input[type=text], textarea {
+input[type=text], input[type=password], input[type=email], textarea {
   width: 400px;
   margin-bottom: 5px;
   font-size: 16px;
@@ -81,11 +81,11 @@ textarea {
   height: 500px;
   line-height: 150%; }
 
-input[type=text]:hover, textarea:hover,
-input[type=text]:focus, textarea:focus {
+input[type=text]:hover, input[type=password]:hover, input[type=email]:hover, textarea:hover,
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, textarea:focus {
   border-color: #c9c9c9; }
 
-input[type=text]:focus, textarea:focus {
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, textarea:focus {
   border-color: #999999; }
 
 form.simple_form fieldset div label {
@@ -117,6 +117,89 @@ form.simple_form span.error {
 
 form.simple_form label abbr {
   color: red; }
+
+/* Success, error & notice boxes for messages and errors. */
+div.error, div.notice, div.success, div.failure, div.alert {
+  padding: 0.8em;
+  margin-bottom: 1em;
+  border: 1px solid #dddddd;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px; }
+
+#errorExplanation, #error_explanation {
+  padding: 0.8em;
+  margin-bottom: 1em;
+  border: 1px solid #dddddd;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px; }
+
+div.error, div.failure, div.alert {
+  background: #fbe3e4;
+  color: #d12f19;
+  border-color: #fbc2c4; }
+
+.error, .failure, .alert, #errorExplanation, #error_explanation {
+  background: #fbe3e4;
+  color: #d12f19;
+  border-color: #fbc2c4; }
+
+div.error a, div.failure a, div.alert a {
+  color: #d12f19; }
+div.notice {
+  background: #fff6bf;
+  color: #817134;
+  border-color: #ffd324; }
+
+.notice {
+  background: #fff6bf;
+  color: #817134;
+  border-color: #ffd324; }
+
+div.notice a {
+  color: #817134; }
+div.success {
+  background: #e6efc2;
+  color: #529214;
+  border-color: #c6d880; }
+
+.success {
+  background: #e6efc2;
+  color: #529214;
+  border-color: #c6d880; }
+
+div.success a {
+  color: #529214; }
+
+.fieldWithErrors {
+  color: #d12f19; }
+  .fieldWithErrors input, .fieldWithErrors select, .fieldWithErrors textarea {
+    background: #fbe3e4;
+    border: 1px solid #d12f19; }
+
+#errorExplanation, #error_explanation h2 {
+  font-size: 12px;
+  color: #d12f19; }
+
+#errorExplanation, #error_explanation p {
+  color: #333333;
+  margin: 12px 0 5px 0; }
+
+#errorExplanation, #error_explanation ul {
+  margin: 0 0 0 20px; }
+
+#errorExplanation, #error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+  margin: 0; }
+
+/* FLASH */
+.errorExplanation {
+  border: 1px solid #ffbbbb;
+  background-color: #ffdddd;
+  padding: 20px 30px;
+  margin: 20px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px; }
 
 body {
   color: #666666;

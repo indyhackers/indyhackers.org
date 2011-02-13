@@ -24,6 +24,10 @@
     .container_12
       #body
         .grid_8.prefix_2
+          - if notice
+            %div.notice= notice
+          - if alert
+            %div.alert= alert
           = yield
         .clear &nbsp;
       #footer
