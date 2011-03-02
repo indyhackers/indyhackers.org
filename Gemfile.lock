@@ -99,6 +99,10 @@ GEM
       haml (~> 3.0)
       railties (~> 3.0)
     has_scope (0.5.0)
+    heroku (1.17.17)
+      json (~> 1.4.6)
+      launchy (~> 0.3.2)
+      rest-client (>= 1.4.0, < 1.7.0)
     hpricot (0.8.3)
     i18n (0.5.0)
     inherited_resources (1.1.2)
@@ -142,6 +146,8 @@ GEM
     rake (0.8.7)
     rcov (0.9.9)
     responders (0.6.2)
+    rest-client (1.6.1)
+      mime-types (>= 1.16)
     rspec (2.0.1)
       rspec-core (~> 2.0.1)
       rspec-expectations (~> 2.0.1)
@@ -207,8 +213,10 @@ DEPENDENCIES
   gherkin
   haml (~> 3.0)
   haml-rails
+  heroku
   hpricot
   inherited_resources (= 1.1.2)
+  json_pure
   launchy
   maruku
   pg

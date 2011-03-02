@@ -40,6 +40,8 @@ gem 'will_paginate', '~> 3.0.pre3'
 # DelayedJob for delayed jobs
 gem 'delayed_job', '2.1.0.pre'
 
+gem 'json_pure'
+
 group :development, :test do
   gem 'thin'
   gem "rspec-rails", "~> 2.0.1"
@@ -54,10 +56,12 @@ group :development, :test do
   gem 'fakeweb'
   gem 'gherkin'
   gem 'deadweight'
-  
+
   gem 'rails3-generators', '0.11.0'
   gem 'hpricot'
   gem 'ruby_parser', '2.0.4'
   gem 'evergreen', :require => 'evergreen/rails'
   gem 'rcov'
+
+  gem 'heroku'
 end
