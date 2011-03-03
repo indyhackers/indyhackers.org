@@ -18,6 +18,6 @@
 - collection.each do |job|
   .job.readable
     %h3
-      =link_to job.title, job
+      %a{:name => "#{job.title.downcase.gsub(/[^a-zA-Z0-9]/, '-')}"}= job.title
     .job-description{:style => "display:none;"}
       = Maruku.new(job.description).to_html.html_safe

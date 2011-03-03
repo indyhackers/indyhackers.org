@@ -1,8 +1,20 @@
 $(document).ready(function() {
+  console.log(location.hash);
+  console.log(location.hash.replace(/#/,''));
+  console.log($('a[name=' + location.hash.replace(/#/,'') + ']'));
+  if (location.hash != '' && $('a[name=' + location.hash.replace(/#/, '') + ']').length) {
+    console.log('here');
+    $('a[name=' + location.hash.replace(/#/, '') + ']').parent().next().slideDown('slow');
+  }
   $('.job h3 a').click(function(event) {
+    var anchorName = $(this).attr('name');
     event.stopImmediatePropagation();
     event.preventDefault();
     $(this).parent().next().slideToggle('slow');
+    // Remove the name so that setting the hash doesn't jump the page
+    $(this).attr('name', '');
+    location.hash = anchorName;
+    $(this).attr('name', anchorName);
     return false;
   });
 
