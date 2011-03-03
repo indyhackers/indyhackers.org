@@ -1,0 +1,9 @@
+.readable
+  = simple_form_for resource, :url => admin_jobs_path do |f|
+    %fieldset
+      %legend New Job
+      = f.input :title
+      = f.input :description
+      .input
+        %label &nbsp;
+        = f.button :submit, 'Save'

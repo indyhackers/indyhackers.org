@@ -1,0 +1,9 @@
+.readable
+  = simple_form_for resource, :url => admin_job_path(resource), :html => {:multipart => true} do |f|
+    %fieldset
+      %legend Edit Job
+      = f.input :title
+      = f.input :description
+      .input
+        %label &nbsp;
+        = f.button :submit, 'Save'

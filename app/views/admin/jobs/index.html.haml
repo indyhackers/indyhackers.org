@@ -1,0 +1,9 @@
+.readable
+  %h2 Jobs
+
+  %p= link_to 'Create a New Job', new_admin_job_path
+  %table
+    - collection.each do |job|
+      %tr
+        %td= job.title
+        %td= link_to 'edit', edit_admin_job_path(job)
