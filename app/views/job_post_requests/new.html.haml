@@ -5,11 +5,13 @@
   %p= @job_post_request.errors
   = simple_form_for @job_post_request, :html => {:multipart => true} do |f|
     %fieldset
-      %legend Your job post request
+      %legend Your contact info
       = f.input :name
       = f.input :email
+    %fieldset
+      %legend The job's info
       = f.input :title
-      = f.input :attachment, :as => 'file'
+      = f.input :attachment, :as => 'file', :label => 'File', :hint => 'Attach a file rather than typing the full description below.'
       = f.input :description, :as => :text
       .input
         %label &nbsp;

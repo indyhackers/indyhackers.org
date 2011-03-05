@@ -107,7 +107,8 @@ form.simple_form legend {
   margin-left: 20px; }
 
 form.simple_form .hint {
-  font-size: 11px;
+  margin-left: 110px;
+  font-size: 13px;
   color: #666666;
   display: block; }
 
