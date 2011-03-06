@@ -1,9 +1,5 @@
 $(document).ready(function() {
-  console.log(location.hash);
-  console.log(location.hash.replace(/#/,''));
-  console.log($('a[name=' + location.hash.replace(/#/,'') + ']'));
   if (location.hash != '' && $('a[name=' + location.hash.replace(/#/, '') + ']').length) {
-    console.log('here');
     $('a[name=' + location.hash.replace(/#/, '') + ']').parent().next().slideDown('slow');
   }
   $('.job h3 a').click(function(event) {
