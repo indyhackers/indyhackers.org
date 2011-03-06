@@ -1,6 +1,7 @@
 $(document).ready(function() {
   if (location.hash != '' && $('a[name=' + location.hash.replace(/#/, '') + ']').length) {
     $('a[name=' + location.hash.replace(/#/, '') + ']').parent().next().slideDown('slow');
+    scrollTo($('a[name=' + location.hash.replace(/#/, '') + ']'));
   }
   $('.job h3 a').click(function(event) {
     var el = $(this);
@@ -9,8 +10,7 @@ $(document).ready(function() {
     event.preventDefault();
     el.parent().next().slideToggle('slow', function() {
       if ($(this).is(':visible')) {
-        // Animating the move or scroll to the element is better, I think.
-        $('html,body').animate({scrollTop: el.offset().top},'slow');
+        scrollTo(el);
       }
     });
     // Remove the name so that setting the hash doesn't jump the page
@@ -34,3 +34,7 @@ $(document).ready(function() {
     return false;
   });
 });
+
+function scrollTo(element) {
+  $('html,body').animate({scrollTop: element.offset().top},'slow');
+}
