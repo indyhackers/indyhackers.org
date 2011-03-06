@@ -11,6 +11,8 @@ $(document).ready(function() {
     $(this).attr('name', '');
     location.hash = anchorName;
     $(this).attr('name', anchorName);
+    // Animating the move or scroll to the element is better, I think.
+    $('html,body').animate({scrollTop: $(this).offset().top},'slow');
     return false;
   });
 
