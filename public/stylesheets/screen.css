@@ -289,14 +289,6 @@ indy_hackers_calendar {
     color: #666666;
     font-weight: bold;
     font-size: 23px; }
-  #body #beer-clause {
-    font-size: 80%;
-    font-style: italic; }
-
-h3#get-a-job-posted {
-  margin-top: 20px;
-  display: block;
-  text-align: center; }
 
 .job h3 {
   margin-top: 15px; }
@@ -311,6 +303,19 @@ h3#get-a-job-posted {
   margin-top: -15px;
   border: 1px solid #e5ecf9;
   font-size: 70%; }
+
+table#jobs {
+  margin: 0 auto;
+  width: 400px; }
+  table#jobs tr td {
+    padding: 5px;
+    border-bottom: 1px solid #999999; }
+  table#jobs tr td.actions {
+    padding: 5px 0px;
+    border-bottom: 1px solid #999999; }
+    table#jobs tr td.actions img {
+      width: 24px;
+      height: 24px; }
 
 #footer {
   text-align: center; }
