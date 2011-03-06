@@ -2,4 +2,11 @@
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  time:
+    formats:
+      default: "%Y-%m-%d"
+      mdy: "%m/%d/%Y"
+      diary: "%A, %B %e, %Y"
+      db_meridian: "%Y-%m%d %I:%M%p"
+      mtime: "%H:%M"
+      ustime: "%l:%M%p"
