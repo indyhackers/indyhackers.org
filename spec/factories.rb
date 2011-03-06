@@ -1,3 +1,7 @@
+Factory.sequence :email do |n|
+  "person#{n}@example.com"
+end
+
 Factory.define :job do |j|
   j.title 'Awesome Job'
   j.description <<-MARKDOWN
@@ -8,4 +12,8 @@ Factory.define :job do |j|
     + Has awesome workplace (psst, it's your home)
     + Has awesome moneys (we pay in yen)
   MARKDOWN
+end
+
+Factory.define :admin do |a|
+  a.email { Factory.next :email }
 end
