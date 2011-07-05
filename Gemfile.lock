@@ -228,4 +228,4 @@ DEPENDENCIES
   simple_form
   spork
   thin
-  will_paginate (~> 3.0.pre3)
+  will_paginate (~> 3.0.pre2)
