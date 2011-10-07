@@ -20,11 +20,11 @@
             %li= link_to 'logout', destroy_admin_session_path
             %li ||
           %li
-            %a{:href => "/"} home
-          %li
-            %a{:href => "http://blog.indyhackers.org"} blog
-          %li.last
             %a{:href => "/jobs"} jobs
+          %li
+            %a{:href => "job_post_requests/new"} submit a job
+          %li.last
+            %a{:href => "http://blog.indyhackers.org"} blog
     .container_12
       #body
         .grid_8.prefix_2
