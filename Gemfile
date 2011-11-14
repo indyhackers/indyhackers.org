@@ -35,9 +35,9 @@ gem 'will_paginate', '~> 3.0'
 gem 'delayed_job'
 
 gem 'json_pure'
+gem 'thin'
 
 group :development, :test do
-  gem 'thin'
   gem "rspec-rails"
   gem 'capybara'
   gem 'database_cleaner'
