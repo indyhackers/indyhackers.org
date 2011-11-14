@@ -2,7 +2,6 @@
 #job_post_request.readable
   %h2 Job Post Request
 
-  %p= @job_post_request.errors
   = simple_form_for @job_post_request, :html => {:multipart => true} do |f|
     %fieldset
       %legend Your contact info
