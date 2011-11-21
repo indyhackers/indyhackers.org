@@ -1,7 +1,9 @@
 IndyhackersRails::Application.routes.draw do
   devise_for :admins
 
-  resources :jobs
+  resources :jobs do
+    post "viewed", :on => :member
+  end
 
   namespace "admin" do
     resources :jobs

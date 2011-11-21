@@ -17,3 +17,7 @@ end
 Factory.define :admin do |a|
   a.email { Factory.next :email }
 end
+
+Factory.define :viewer do |v|
+  v.client_hash "asdfqwrogrwhoashogasdfgioha455"
+end

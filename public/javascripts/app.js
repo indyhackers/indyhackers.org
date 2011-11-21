@@ -8,6 +8,10 @@ $(document).ready(function() {
     var anchorName = el.attr('name');
     event.stopImmediatePropagation();
     event.preventDefault();
+    if (el.parent().next().is(':hidden')) {
+      $.post(el.attr('href') + '/viewed');
+    }
+
     el.parent().next().slideToggle('slow', function() {
       if ($(this).is(':visible')) {
         scrollTo(el);
