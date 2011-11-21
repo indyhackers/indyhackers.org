@@ -11,6 +11,10 @@
       %legend The job's info
       = f.input :title
       = f.input :attachment, :as => 'file', :label => 'File', :hint => 'Attach a file rather than typing the full description below.'
+      %p{:style => 'font-size: 90%; margin: 10px 0 0 105px;'}
+        Job posts use Markdown syntax. See&nbsp; 
+        %a{:href => 'http://daringfireball.net/projects/markdown/syntax'}>  this Markdown reference
+        \.
       = f.input :description, :as => :text
       .input
         %label &nbsp;
