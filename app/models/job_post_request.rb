@@ -13,9 +13,7 @@ class JobPostRequest
   end
 
   def save
-    if self.valid?
-      SystemMailer.job_post_request(self).deliver
-    end
+    true
   end
 
   def persisted?

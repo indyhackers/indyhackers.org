@@ -5,7 +5,7 @@ class JobsController < InheritedResources::Base
   actions :index, :show
 
   def collection
-    @jobs = Job.order("created_at DESC").all
+    @jobs = Job.published.order("created_at DESC").all
   end
 
   def viewed

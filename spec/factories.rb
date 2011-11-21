@@ -21,3 +21,8 @@ end
 Factory.define :viewer do |v|
   v.client_hash "asdfqwrogrwhoashogasdfgioha455"
 end
+
+Factory.define :user do |u|
+  u.email { Factory.next :email }
+  u.name 'Joe Camel'
+end

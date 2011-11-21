@@ -4,6 +4,7 @@
       %legend Edit Job
       = f.input :title
       = f.input :description
+      = f.input :published_at, :as => :date
       .input
         %label &nbsp;
         = f.button :submit, 'Save'
