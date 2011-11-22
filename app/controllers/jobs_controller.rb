@@ -2,7 +2,8 @@ require "digest/md5"
 class JobsController < InheritedResources::Base
   respond_to :atom, :only => :index
   respond_to :xml, :only => :index
-  actions :index, :show
+  actions :index, :show, :destroy
+  before_filter :authenticate_by_token, :only => [:show, :destroy]
 
   def collection
     @jobs = Job.published.order("created_at DESC").all
@@ -17,5 +18,15 @@ class JobsController < InheritedResources::Base
       @job.save
     end
     render :text => "Success!"
+  end
+
+  private
+
+  def authenticate_by_token
+    @job = resource
+    @user = User.find_by_token(params[:token]) unless params[:token].nil?
+    unless @user.present? && @job.user == @user
+      redirect_to jobs_url, :notice => "*gasp* You shouldn't be snooping around there! FOR SHAME!"
+    end
   end
 end
