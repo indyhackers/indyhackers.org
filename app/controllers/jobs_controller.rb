@@ -4,6 +4,7 @@ class JobsController < InheritedResources::Base
   respond_to :xml, :only => :index
   actions :index, :show, :destroy
   before_filter :authenticate_by_token, :only => [:show, :destroy]
+  skip_before_filter :verify_authenticity_token, :only => :viewed
 
   def collection
     @jobs = Job.published.order("created_at DESC").all
@@ -11,7 +12,10 @@ class JobsController < InheritedResources::Base
 
   def viewed
     @job = Job.find(params[:id])
-    @viewer = Viewer.find_or_create_by_client_hash(Digest::MD5.hexdigest(request.remote_ip + request.user_agent))
+    if cookies['_ih_uid'].nil?
+      cookies['_ih_uid'] = Digest::MD5.hexdigest(Time.now.to_s + rand(13000).to_s)
+    end
+    @viewer = Viewer.find_or_create_by_client_hash(cookies['_ih_uid'])
     unless @viewer.viewed?(@job)
       @job.viewers << @viewer
       @job.views = @job.views.nil? ? 1 : @job.views + 1
