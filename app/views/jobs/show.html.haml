@@ -3,4 +3,4 @@
     = @job.title
   %p= link_to 'Delete Job Post', job_path(@job, :token => @user.token), :method => :delete, :title => 'delete', :confirm => 'Are you sure you wanna destroy this job?'
   .job-description
-    = Maruku.new(@job.description).to_html.html_safe
+    = MARKDOWN.render(@job.description).html_safe

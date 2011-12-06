@@ -78,7 +78,7 @@ input[type=text], input[type=password], input[type=email], textarea {
   background: white; }
 
 textarea {
-  height: 500px;
+  height: 250px;
   line-height: 150%; }
 
 input[type=text]:hover, input[type=password]:hover, input[type=email]:hover, textarea:hover,

@@ -1,3 +1,6 @@
+- content_for :footer do
+  = javascript_include_tag 'showdown'
+
 - title 'Job Post Request'
 #job_post_request.readable
   %h2 Job Post Request
@@ -19,3 +22,10 @@
       .input
         %label &nbsp;
         = f.button :submit, 'Send'
+
+.job.readable
+  %h2 Preview
+  %h3
+    &nbsp;
+  .job-description#markdown-target
+    &nbsp;

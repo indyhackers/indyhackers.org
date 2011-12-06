@@ -149,6 +149,7 @@ GEM
     rcov (0.9.11)
     rdoc (3.11)
       json (~> 1.4)
+    redcarpet (2.0.0)
     responders (0.6.4)
     rest-client (1.6.7)
       mime-types (>= 1.16)
@@ -244,6 +245,7 @@ DEPENDENCIES
   rails (= 3.1.0)
   rails3-generators
   rcov
+  redcarpet
   rspec-rails
   ruby_parser (= 2.0.4)
   simple_form

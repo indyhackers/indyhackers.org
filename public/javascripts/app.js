@@ -37,6 +37,17 @@ $(document).ready(function() {
     }
     return false;
   });
+
+  $('textarea#job_description, textarea#job_post_request_description').keyup(function(event) {
+    var text = $(this).attr('value');
+    var converter = new Showdown.converter();
+    var html = converter.makeHtml(text);
+    $('#markdown-target').html(html);
+  });
+
+  $('input#job_title, input#job_post_request_title').keyup(function(event) {
+    $('.job.readable h3').text($(this).attr('value'));
+  });
 });
 
 function scrollTo(element) {

@@ -2,4 +2,4 @@
   %h3
     = resource.title
   .job-description
-    = Maruku.new(resource.description).to_html.html_safe
+    = MARKDOWN.render(resource.description).html_safe

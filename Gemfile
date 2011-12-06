@@ -27,6 +27,7 @@ gem 'devise', '~> 1.1'
 
 # Markdown
 gem 'maruku'
+gem 'redcarpet'
 
 # Pagination of long lists
 gem 'will_paginate', '~> 3.0'
