@@ -12,7 +12,7 @@
       %tr
         %td= job.title
         %td= l(job.created_at, :format => :murican)
-        %td= l(job.published_at, :format => :murican)
+        %td= l(job.published_at, :format => :murican) unless job.published_at.nil?
         %td.actions
           = link_to 'edit', edit_admin_job_path(job), :title => 'edit'
           |
