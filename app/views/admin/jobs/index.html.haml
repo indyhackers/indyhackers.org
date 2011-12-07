@@ -1,11 +1,19 @@
-.readable
+.readable.admin
   %h2 Jobs
 
   %p= link_to 'Create a New Job', new_admin_job_path
   %table#jobs
+    %tr
+      %th Title
+      %th Requested
+      %th Published
+      %th Actions
     - collection.each do |job|
       %tr
         %td= job.title
-        %td= l(job.created_at, :format => :short)
-        %td.actions= link_to image_tag('pencil.png'), edit_admin_job_path(job), :title => 'edit'
-        %td.actions= link_to image_tag('skull-n-bones.png'), admin_job_path(job), :method => :delete, :title => 'delete', :confirm => 'Are you sure you wanna destroy this job?'
+        %td= l(job.created_at, :format => :murican)
+        %td= l(job.published_at, :format => :murican)
+        %td.actions
+          = link_to 'edit', edit_admin_job_path(job), :title => 'edit'
+          |
+          = link_to 'delete', admin_job_path(job), :method => :delete, :title => 'delete', :confirm => 'Are you sure you wanna destroy this job?'

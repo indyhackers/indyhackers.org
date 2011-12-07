@@ -3,7 +3,7 @@ $white:             #ffffff
 $blue:              #7799bb
 $light_blue:        #c3d9ff
 $really_light_blue: #e5ecf9
-$lt_bl_trans:       rgba(229, 236, 249, 0.8)  
+$lt_bl_trans:       rgba(229, 236, 249, 0.8)
 $dark_grey:         #333333
 $medium_grey:       #666666
 $light_grey:        #999999
@@ -107,9 +107,10 @@ indy_hackers_calendar
     font-weight: bold
     font-size: 23px
 
-.job
+.job.readable
+  height: 40px
   h3
-    margin-top: 15px
+    margin-top: 6px
   .job-description
     background-color: $really_light_blue
     padding: 2em
@@ -125,9 +126,15 @@ indy_hackers_calendar
   border: 1px solid $really_light_blue
   font-size: 70%
 
-table#jobs 
+#body .admin h2
+  width: 100%
+
+table#jobs
   margin: 0 auto
-  width: 500px
+  width: 100%
+  tr th
+    text-align: left
+    border-bottom: 3px solid $light_grey
   tr td
     padding: 5px
     border-bottom: 1px solid $light_grey
