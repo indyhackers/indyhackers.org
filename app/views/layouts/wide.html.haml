@@ -27,12 +27,12 @@
             %a{:href => "http://blog.indyhackers.org"} blog
     .container_12
       #body
-        .grid_10.prefix_1
+        .grid_12
           - if notice
             %div.notice= notice
           - if alert
             %div.alert= alert
-        = yield
+          = yield
         .clear &nbsp;
       #footer
         %hr/

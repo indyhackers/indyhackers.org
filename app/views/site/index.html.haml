@@ -1,28 +1,33 @@
-#whatup.readable
+.grid_10.prefix_1
+  #whatup.readable
 
-  %h2 what's happenin'?
+    %h2 what's happenin'?
 
-  %p
-    :markdown
-      [The Indy Hackers Holiday Social](http://indyhackersholidaysocial.eventbrite.com/) s coming up quick! It will be held on December 16th, at Developer Town in Broad Ripple. There will be food, beer, music, and a programming contest! To get your ticket, and check out details, [visit the EventBrite listing now](http://indyhackersholidaysocial.eventbrite.com/)!
+    %p
+      :markdown
+        [The Indy Hackers Holiday Social](http://indyhackersholidaysocial.eventbrite.com/) s coming up quick! It will be held on December 16th, at Developer Town in Broad Ripple. There will be food, beer, music, and a programming contest! To get your ticket, and check out details, [visit the EventBrite listing now](http://indyhackersholidaysocial.eventbrite.com/)!
 
-      We have several sponsors already lined up for the event, and we will be announcing more. You can keep up with those here, or [on the Twitter feed](http://indyhackers.org).
+        We have several sponsors already lined up for the event, and we will be announcing more. You can keep up with those here, or [on the Twitter feed](http://indyhackers.org).
 
-  %table{:style => 'text-align: center; margin: 0 auto; width: 600px;'}
-    %tr
-      %td= link_to image_tag('devtown_logo.png'), 'http://developertown.com'
-      %td= link_to image_tag('exacttarget.jpg'), 'http://exacttarget.com'
-    %tr
-      %td= link_to image_tag('telerik-logo.jpg'), 'http://telerik.com'
-      %td= link_to image_tag('oreilly_logo.gif'), 'http://oreilly.com'
+    %table{:style => 'text-align: center; margin: 0 auto; width: 600px;'}
+      %tr
+        %td= link_to image_tag('devtown_logo.png'), 'http://developertown.com'
+        %td= link_to image_tag('exacttarget.jpg'), 'http://exacttarget.com'
+      %tr
+        %td= link_to image_tag('telerik-logo.jpg'), 'http://telerik.com'
+        %td= link_to image_tag('oreilly_logo.gif'), 'http://oreilly.com'
 
-#indy_hackers_calendar.readable
-  %h2 indy hackers' calendar
-  <iframe src="http://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=400&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=ig7e0j6v8ub9q6kga256n77048%40group.calendar.google.com&amp;color=%23AB8B00&amp;ctz=America%2FNew_York" style=" border-width:0 " width="600" height="400" frameborder="0" scrolling="no"></iframe>
+  #indy_hackers_calendar.readable
+    %h2 indy hackers' calendar
+    %p
+      = link_to 'Month View', '/calendar'
+      |
+      = link_to 'Subscribe to the Events Feed', 'https://www.google.com/calendar/feeds/ig7e0j6v8ub9q6kga256n77048%40group.calendar.google.com/public/basic'
+    <iframe src="http://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=400&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=ig7e0j6v8ub9q6kga256n77048%40group.calendar.google.com&amp;color=%23AB8B00&amp;ctz=America%2FNew_York" style=" border-width:0 " width="600" height="400" frameborder="0" scrolling="no"></iframe>
 
-#contact.readable
-  %h2 missin' somethin'?
-  %p
-    :markdown
-      If there's an event that you think is missing from our calendar, or if you want to recommend an event that you think is extra-special in the next month or so, email [miles@indyhackers.org](mailto:miles@indyhackers.org).
+  #contact.readable
+    %h2 missin' somethin'?
+    %p
+      :markdown
+        If there's an event that you think is missing from our calendar, or if you want to recommend an event that you think is extra-special in the next month or so, email [miles@indyhackers.org](mailto:miles@indyhackers.org).
 

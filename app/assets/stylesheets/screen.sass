@@ -19,6 +19,7 @@ body
   color: $medium_grey
   background: url('../images/striped_bg.png') $white
   font-size: 100%
+  font-family: Helvetica, Arial, Verdana, sans-serif
 
 a, a:visited
   color: $gold
@@ -80,6 +81,11 @@ hr
 #indy_hackers_calendar
   margin: 0 auto
   text-align: center
+  p
+    width: 600px
+    margin: 0 auto
+    text-align: right
+
 
 #body
   margin-top: 20px
@@ -95,7 +101,7 @@ hr
       display: block
       background: #ccc
       padding: 25px 5px 0 5px
-      font-family: Consolas, Inconsolata, Terminus, DejaVu Sans Mono, mono
+      font-family: "Consolas", "Inconsolata", "Terminus", "DejaVu Sans Mono", monospace
       text-align: right
       width: 100%
       z-index: 5
@@ -113,6 +119,11 @@ hr
 
 #body .job.readable
   padding: 0 6px 3px 6px
+  h2
+    padding: 0
+    background: transparent
+    font-family: Helvetica, Arial, Verdana, sans-serif
+    text-align: left
   h3
     margin: 6px 0
   .job-description
@@ -127,6 +138,9 @@ hr
   margin-top: -15px
   border: 1px solid $really_light_blue
   font-size: 70%
+
+#job_post_request form textarea
+  width: 628px
 
 #body .admin h2
   width: 100%

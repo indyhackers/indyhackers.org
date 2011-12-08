@@ -1,24 +1,25 @@
-.readable
-  %h2 Jobs
+.grid_10.prefix_1
+  .readable
+    %h2 Jobs
 
-  - if collection.empty?
-    %p
-      There are no job postings at this time. Check back later, or
-      %a{:href =>'http://indyhackers.org/jobs.xml'}subsribe to the feed.
-  - else
-    -# %span{:class => 'toggle-all'}
-      -# %a{:href => '#'} + expand all
+    - if collection.empty?
+      %p
+        There are no job postings at this time. Check back later, or
+        %a{:href =>'http://indyhackers.org/jobs.xml'}subsribe to the feed.
+    - else
+      -# %span{:class => 'toggle-all'}
+        -# %a{:href => '#'} + expand all
 
-%div{:class => 'clear'}
+  %div{:class => 'clear'}
 
-- collection.each do |job|
-  .job.readable
-    %h3
-      = link_to job.title, job, :name => "#{job.title.downcase.gsub(/[^a-zA-Z0-9]/, '-')}"
-    .job-description{:style => "display:none;"}
-      = MARKDOWN.render(job.description).html_safe
+  - collection.each do |job|
+    .job.readable
+      %h3
+        = link_to job.title, job, :name => "#{job.title.downcase.gsub(/[^a-zA-Z0-9]/, '-')}"
+      .job-description{:style => "display:none;"}
+        = MARKDOWN.render(job.description).html_safe
 
-.readable
-  :markdown
-    Do you want to post a job? Well, have I got a form for **you**! Please [proceed to the 'request a job posting' form](/job_post_requests/new). Fill it out, send it along, and your job will get posted as soon as it can be approved. Go. [Post a job](/job_post_requests/new).
+  .readable
+    :markdown
+      Do you want to post a job? Well, have I got a form for **you**! Please [proceed to the 'request a job posting' form](/job_post_requests/new). Fill it out, send it along, and your job will get posted as soon as it can be approved. Go. [Post a job](/job_post_requests/new).
 

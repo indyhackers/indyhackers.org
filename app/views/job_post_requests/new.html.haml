@@ -2,30 +2,35 @@
   = javascript_include_tag 'showdown'
 
 - title 'Job Post Request'
-#job_post_request.readable
-  %h2 Job Post Request
+.grid_10.prefix_1
+  #job_post_request.readable
+    %h2 Job Post Request
 
-  = simple_form_for @job_post_request, :html => {:multipart => true} do |f|
-    %fieldset
-      %legend Your contact info
-      = f.input :name
-      = f.input :email
-    %fieldset
-      %legend The job's info
-      = f.input :title
-      = f.input :attachment, :as => 'file', :label => 'File', :hint => 'Attach a file rather than typing the full description below.'
-      %p{:style => 'font-size: 90%; margin: 10px 0 0 105px;'}
-        Job posts use Markdown syntax. See&nbsp; 
-        %a{:href => 'http://daringfireball.net/projects/markdown/syntax'}>  this Markdown reference
-        \.
-      = f.input :description, :as => :text
-      .input
-        %label &nbsp;
-        = f.button :submit, 'Send'
+    = simple_form_for @job_post_request, :html => {:multipart => true} do |f|
+      %fieldset
+        %legend Your contact info
+        = f.input :name
+        = f.input :email
+      %fieldset
+        %legend The job's info
+        = f.input :title
+        = f.input :attachment, :as => 'file', :label => 'File', :hint => 'Attach a file rather than typing the full description below.'
+        %p{:style => 'font-size: 90%; margin: 10px 0 0 105px;'}
+          Job posts use Markdown syntax. See&nbsp; 
+          %a{:href => 'http://daringfireball.net/projects/markdown/syntax'}>  this Markdown reference
+          \.
+        = f.input :description, :as => :text
+        .input
+          %label &nbsp;
+          = f.button :submit, 'Send'
 
-.job.readable
-  %h2 Preview
-  %h3
-    &nbsp;
-  .job-description#markdown-target
-    &nbsp;
+    .clear &nbsp;
+
+  .readable
+    %h2 Live Preview
+  .job.readable
+    %h3
+      %a{:href => '#'} &nbsp;
+    .job-description#markdown-target
+      &nbsp;
+    .clear &nbsp;

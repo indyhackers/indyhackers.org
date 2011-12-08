@@ -46,7 +46,7 @@ $(document).ready(function() {
   });
 
   $('input#job_title, input#job_post_request_title').keyup(function(event) {
-    $('.job.readable h3').text($(this).attr('value'));
+    $('.job.readable h3 > a').text($(this).attr('value'));
   });
 });
 
