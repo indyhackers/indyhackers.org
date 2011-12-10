@@ -3,11 +3,23 @@ class JobsController < InheritedResources::Base
   respond_to :atom, :only => :index
   respond_to :xml, :only => :index
   actions :index, :show, :destroy
-  before_filter :authenticate_by_token, :only => [:show, :destroy]
+  before_filter :authenticate_by_token, :only => [:manage, :destroy]
   skip_before_filter :verify_authenticity_token, :only => :viewed
 
   def collection
     @jobs = Job.published.order("created_at DESC").all
+  end
+
+  def resource
+    if params[:id].to_i == 0
+      @job = Job.find_by_slug(params[:id])
+    else
+      @job = Job.find(params[:id])
+    end
+  end
+
+  def manage
+    @job = resource
   end
 
   def viewed

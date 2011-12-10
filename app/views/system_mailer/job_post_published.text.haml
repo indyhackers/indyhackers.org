@@ -1,4 +1,4 @@
 :plain
   Your job has been published! Check it out here: http://indyhackers.org/jobs##{@job.slug}
 
-  If you wish to remove the job post, press the delete link and confirm your decision here: http://indyhackers.org/jobs/#{@job.id}?token=#{@user.try(:token)}
+  If you wish to remove the job post, press the delete link and confirm your decision here: http://indyhackers.org/jobs/#{@job.slug}/manage?token=#{@user.try(:token)}

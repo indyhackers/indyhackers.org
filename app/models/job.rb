@@ -3,14 +3,15 @@ class Job < ActiveRecord::Base
   has_many :viewers, :through => :job_views
   belongs_to :user
 
+  before_create :create_slug
   after_update :notify_if_published
 
   scope :published, lambda {
     where("jobs.published_at IS NOT NULL AND jobs.published_at <= ?", Time.zone.now)
   }
 
-  def slug
-    self.title.downcase.gsub(/[^a-zA-Z0-9]/, '-')
+  def create_slug
+    self.slug = title.downcase.gsub(/[^a-zA-Z0-9]/, '-').gsub('-{2,}', '-')
   end
 
   def notify_if_published

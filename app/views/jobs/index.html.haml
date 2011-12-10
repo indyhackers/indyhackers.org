@@ -17,7 +17,7 @@
   - collection.each do |job|
     .job.readable
       %h3
-        = link_to job.title, job, :name => "#{job.title.downcase.gsub(/[^a-zA-Z0-9]/, '-')}"
+        = link_to job.title, job_path(:id => job.slug), :name => "#{job.title.downcase.gsub(/[^a-zA-Z0-9]/, '-')}"
       .job-description{:style => "display:none;"}
         = MARKDOWN.render(job.description).html_safe
 

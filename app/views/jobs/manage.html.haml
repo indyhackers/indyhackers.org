@@ -1,0 +1,7 @@
+.grid_10.prefix_1
+  .job.readable
+    %h3
+      = @job.title
+    %p= link_to 'Delete Job Post', job_path(@job, :token => @user.token), :method => :delete, :title => 'delete', :confirm => 'Are you sure you wanna destroy this job?'
+    .job-description
+      = MARKDOWN.render(@job.description).html_safe

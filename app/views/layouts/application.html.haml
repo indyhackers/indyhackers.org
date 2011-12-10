@@ -2,7 +2,7 @@
 %html
   %head
     %meta{:charset => "utf-8"}/
-    %title IndyHackers
+    %title= "#{yield(:title)} - IndyHackers"
     %meta{:content => 'Miles Z. Sterrett', :name => "author"}/
     %meta{:content => "Bringing together hackers in the Indianapolis area.", :name => "Description"}/
     %link{:href => "/jobs.xml", :rel => "alternate", :title => "Job Board Feed", :type => "application/atom+xml"}/

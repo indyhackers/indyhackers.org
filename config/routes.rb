@@ -3,6 +3,7 @@ IndyhackersRails::Application.routes.draw do
 
   resources :jobs do
     post "viewed", :on => :member
+    get "manage", :on => :member
   end
 
   namespace "admin" do
