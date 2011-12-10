@@ -4,7 +4,7 @@ class SitemapsController < ApplicationController
 
   def show
     @jobs = Job.published
-    @other_routes = ["/","/jobs","/job_post_request","calendar"]
+    @other_routes = ["/","/jobs","/job_post_request","/calendar"]
     respond_to do |format|
       format.xml
     end
