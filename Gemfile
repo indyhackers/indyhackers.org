@@ -38,6 +38,8 @@ gem 'delayed_job'
 gem 'json_pure'
 gem 'thin'
 
+gem 'rack-reverse-proxy', :require => "rack/reverse_proxy"
+
 group :development, :test do
   gem "rspec-rails"
   gem 'capybara'
