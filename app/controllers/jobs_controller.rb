@@ -14,7 +14,13 @@ class JobsController < InheritedResources::Base
     if params[:id].to_i == 0
       @job = Job.find_by_slug(params[:id])
     else
-      @job = Job.find(params[:id])
+      @job = Job.find_by_id(params[:id])
+    end
+  end
+
+  def show
+    if resource.blank?
+      redirect_to(jobs_path, :notice => "Couldn't find that job. It may have been filled. Sorry!") and return
     end
   end
 
