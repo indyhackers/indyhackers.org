@@ -3,7 +3,7 @@ $(document).ready(function() {
     $('a[name=' + location.hash.replace(/#/, '') + ']').parent().next().slideDown('slow');
     scrollTo($('a[name=' + location.hash.replace(/#/, '') + ']'));
   }
-  $('.job h3 a').click(function(event) {
+  $('article.job h1 a').click(function(event) {
     var el = $(this);
     var anchorName = el.attr('name');
     event.stopImmediatePropagation();

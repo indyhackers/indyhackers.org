@@ -29,7 +29,7 @@ class JobsController < InheritedResources::Base
   end
 
   def viewed
-    @job = Job.find(params[:id])
+    @job = resource
     if cookies['_ih_uid'].nil?
       cookies['_ih_uid'] = Digest::MD5.hexdigest(Time.now.to_s + rand(13000).to_s)
     end

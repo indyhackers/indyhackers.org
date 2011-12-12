@@ -15,6 +15,10 @@ $gold_trans:        rgba(171, 139, 0, 0.4)
 @import "partials/_forms"
 @import "partials/_notices"
 
+article
+  margin: 0
+  padding: 0
+
 body
   color: $medium_grey
   background: url('../images/striped_bg.png') $white
@@ -108,20 +112,59 @@ hr
     p
       padding: 0 10px
 
-#body .job.readable
-  padding: 0 6px 3px 6px
-  h2
-    padding: 0
-    background: transparent
-    font-family: Helvetica, Arial, Verdana, sans-serif
-    text-align: left
-  h3
-    margin: 6px 0
-  .job-description
-    padding: 6px
-    ul li p
+  // This should probably replace the .readable tree above, eventually
+  section.readable
+    margin: 0
+    margin-bottom: 10px
+    padding: 10px
+    border-top: 2px solid $white
+    background: url('../images/white-grad-trans.png') repeat-x
+    background-color: rgba(255,255,255,0.7)
+    @include drop-shadow(0, 0, 4px, rgba(0,0,0,0.4))
+
+    article.job#single-job
       padding: 0
       margin: 0
+      h1
+        display: block
+        background: #ccc
+        padding: 25px 5px 0 5px
+        font-family: "Consolas", "Inconsolata", "Terminus", "DejaVu Sans Mono", monospace
+        text-align: right
+        width: 100%
+        z-index: 5
+      h2
+        padding: 0
+        background: transparent
+        font-family: Helvetica, Arial, Verdana, sans-serif
+        text-align: left
+
+  section.jobs
+    h1
+      display: block
+      background: #ccc
+      padding: 25px 5px 0 5px
+      font-family: "Consolas", "Inconsolata", "Terminus", "DejaVu Sans Mono", monospace
+      text-align: right
+      width: 100%
+      z-index: 5
+
+    article.job.readable
+      padding: 0 6px 3px 6px
+      h1
+        padding: 0
+        background: transparent
+        font-family: Helvetica, Arial, Verdana, sans-serif
+        text-align: left
+        margin: 6px 0
+      h3
+        margin: 6px 0
+      .job-description
+        padding: 6px
+        ul li p
+          padding: 0
+          margin: 0
+
 
 .toggle-all
   float: right
