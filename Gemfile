@@ -38,7 +38,7 @@ gem 'delayed_job'
 gem 'json_pure'
 gem 'thin'
 
-gem 'rack-reverse-proxy', :require => "rack/reverse_proxy"
+gem 'newrelic_rpm'
 
 group :development, :test do
   gem "rspec-rails"
