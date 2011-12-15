@@ -5,14 +5,14 @@
     .readable
       %h1 Indianapolis Programming Jobs
 
-      - if collection.empty?
+      - if @jobs.empty?
         %p
           There are no job postings at this time. Check back later, or
           %a{:href =>'http://indyhackers.org/jobs.xml'}subsribe to the feed.
 
     -# %div{:class => 'clear'}
 
-    - collection.each do |job|
+    - @jobs.each do |job|
       %article.job.readable
         %h1
           = link_to job.title, job_path(:id => job.slug), :name => "#{job.title.downcase.gsub(/[^a-zA-Z0-9]/, '-')}"

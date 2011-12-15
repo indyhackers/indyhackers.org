@@ -1,20 +1,14 @@
 require "digest/md5"
-class JobsController < InheritedResources::Base
-  respond_to :atom, :only => :index
-  respond_to :xml, :only => :index
-  actions :index, :show, :destroy
+class JobsController < ApplicationController
   before_filter :authenticate_by_token, :only => [:manage, :destroy]
   skip_before_filter :verify_authenticity_token, :only => :viewed
 
-  def collection
+  def index
     @jobs = Job.published.order("created_at DESC").all
-  end
-
-  def resource
-    if params[:id].to_i == 0
-      @job = Job.find_by_slug(params[:id])
-    else
-      @job = Job.find_by_id(params[:id])
+    respond_to do |format|
+      format.html
+      format.atom { render :layout => false }
+      format.rss { redirect_to jobs_path(:format => :atom), :status => :moved_permanently }
     end
   end
 
@@ -42,6 +36,12 @@ class JobsController < InheritedResources::Base
     render :text => "Success!"
   end
 
+  def destroy
+    @job = resource
+    @job.destroy
+    redirect_to jobs_path
+  end
+
   private
 
   def authenticate_by_token
@@ -49,6 +49,14 @@ class JobsController < InheritedResources::Base
     @user = User.find_by_token(params[:token]) unless params[:token].nil?
     unless @user.present? && @job.user == @user
       redirect_to jobs_url, :notice => "*gasp* You shouldn't be snooping around there! FOR SHAME!"
+    end
+  end
+
+  def resource
+    if params[:id].to_i == 0
+      @job = Job.find_by_slug(params[:id])
+    else
+      @job = Job.find_by_id(params[:id])
     end
   end
 end

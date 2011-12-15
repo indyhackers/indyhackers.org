@@ -7,6 +7,10 @@
     %meta{:content => "Bringing together hackers in the Indianapolis area.", :name => "Description"}/
     %link{:href => "/jobs.xml", :rel => "alternate", :title => "Job Board Feed", :type => "application/atom+xml"}/
     %link{:href => "http://fonts.googleapis.com/css?family=Philosopher&subset=latin", :rel => "stylesheet", :type => "text/css"}/
+
+    = auto_discovery_link_tag :atom, '/jobs.atom'
+    = auto_discovery_link_tag :rss, '/jobs.rss'
+
     / 960 Grid System
     = stylesheet_link_tag '960/reset', '960/text', '960/960', 'screen'
   %body
