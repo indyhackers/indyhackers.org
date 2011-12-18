@@ -6,10 +6,10 @@
     %title= yield(:title).blank? ? "IndyHackers - Events and Jobs for Programmers in Indianapolis" : "#{yield(:title)} - IndyHackers"
 
     %meta{:content => 'Miles Z. Sterrett', :name => "author"}/
-    - if yield(:meta_description).blank?
+    - if yield(:description).blank?
       %meta{:content => "Bringing together hackers in the Indianapolis area.", :name => "Description"}/
     - else
-      = yield(:meta_description)
+      = yield(:description)
 
     %link{:href => "/jobs.xml", :rel => "alternate", :title => "Job Board Feed", :type => "application/atom+xml"}/
     %link{:href => "http://fonts.googleapis.com/css?family=Philosopher&subset=latin", :rel => "stylesheet", :type => "text/css"}/

@@ -1,4 +1,6 @@
 - title @job.title + " - Indianapolis Programming Jobs"
+- description(truncate(@job.description, :length => 140))
+
 .grid_10.prefix_1
   %section.readable
     %article.job#single-job

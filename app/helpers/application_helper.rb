@@ -7,7 +7,7 @@ module ApplicationHelper
 
   # Help individual pages to set their HTML meta descriptions
   def description(text)
-    content_for(:description) { text }
+    content_for(:description) { "<meta content=\"#{text}\" name=\"Description\" />".html_safe }
   end
 
 end
