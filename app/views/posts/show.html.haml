@@ -1,0 +1,8 @@
+- title resource.title
+- description(truncate(resource.body, :length => 140))
+.grid_10.prefix_1
+  %section
+    %article.readable
+      %h1= resource.title
+      %p.date-published= l(resource.published_at, :format => :long)
+      = resource.body_html.try(:html_safe)
