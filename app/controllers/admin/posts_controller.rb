@@ -3,7 +3,6 @@ class Admin::PostsController < InheritedResources::Base
 
   before_filter :authenticate_admin!
   skip_before_filter :verify_authenticity_token, :only => :destroy
-  layout "admin"
 
   def create
     create!(:notice => "Dude! Nice job creating that post.") { posts_url }

@@ -16,15 +16,12 @@
     / 960 Grid System
     = stylesheet_link_tag '960/reset', '960/text', '960/960', 'screen'
   %body
+    = admin_header
     #header
       #menu-container.container_12
         %h1
           %a{:href => "/"} IndyHackers
         %ul#menu
-          - if admin_signed_in?
-            %li= link_to 'jobs admin', admin_jobs_path
-            %li= link_to 'logout', destroy_admin_session_path
-            %li ||
           %li
             %a{:href => "/jobs"} jobs
           %li

@@ -10,4 +10,10 @@ module ApplicationHelper
     content_for(:description) { "<meta content=\"#{text}\" name=\"Description\" />".html_safe }
   end
 
+  def admin_header
+    if admin_signed_in?
+      render :partial => 'shared/admin_header'
+    end
+  end
+
 end

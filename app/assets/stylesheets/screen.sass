@@ -223,3 +223,28 @@ table#jobs
       color: $light_blue
       &:hover
         color: $blue
+
+#admin-header
+  &.development
+    border-top: 4px solid green
+  &.production
+    border-top: 4px solid red
+  background-color: $light_blue
+  margin: 0 auto
+  width: 100%
+  padding: 8px
+  .left
+    float: left
+    width: 200px
+    padding: 0
+    margin: 0
+  .right
+    float: right
+    width: 300px
+    p
+      text-align: right
+  p
+    margin: 0
+    padding: 4px 1em
+    a
+      margin-left: 12px
