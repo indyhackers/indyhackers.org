@@ -101,16 +101,6 @@ hr
     background: url('../images/white-grad-trans.png') repeat-x
     background-color: rgba(255,255,255,0.7)
     @include drop-shadow(0, 0, 4px, rgba(0,0,0,0.4))
-    h2
-      display: block
-      background: #ccc
-      padding: 25px 5px 0 5px
-      font-family: "Consolas", "Inconsolata", "Terminus", "DejaVu Sans Mono", monospace
-      text-align: right
-      width: 100%
-      z-index: 5
-    p
-      padding: 0 10px
 
   // This should probably replace the .readable tree above, eventually
   section.readable
@@ -121,23 +111,19 @@ hr
     background: url('../images/white-grad-trans.png') repeat-x
     background-color: rgba(255,255,255,0.7)
     @include drop-shadow(0, 0, 4px, rgba(0,0,0,0.4))
-
+    h1
+      display: block
+      background: #ccc
+      padding: 25px 5px 0 5px
+      font-family: "Consolas", "Inconsolata", "Terminus", "DejaVu Sans Mono", monospace
+      text-align: right
+      width: 100%
+      z-index: 5
+    p
+      padding: 0 10px
     article.job#single-job
       padding: 0
       margin: 0
-      h1
-        display: block
-        background: #ccc
-        padding: 25px 5px 0 5px
-        font-family: "Consolas", "Inconsolata", "Terminus", "DejaVu Sans Mono", monospace
-        text-align: right
-        width: 100%
-        z-index: 5
-      h2
-        padding: 0
-        background: transparent
-        font-family: Helvetica, Arial, Verdana, sans-serif
-        text-align: left
 
   section.jobs
     h1
@@ -165,6 +151,30 @@ hr
           padding: 0
           margin: 0
 
+  section article.readable
+    p
+      padding: 0 1em
+      font-size: 100%
+    ul
+      margin: 0
+      padding: 0
+    blockquote
+      width: 80%
+      margin: 1em 0 1em 20px
+      padding: 0.5em 1em
+      border-left: 5px solid $gold
+      font-style: italic
+    p.date-published
+      font-size: 80%
+      font-style: italic
+      margin-top: -20px
+      padding: 0
+
+section.admin-posts .actions
+  float: right
+  white-space: nowrap
+  a
+    margin-left: 10px
 
 .toggle-all
   float: right

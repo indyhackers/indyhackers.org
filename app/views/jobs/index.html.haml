@@ -1,5 +1,8 @@
 - title 'Indianapolis Programming Jobs'
 - description("Find companies seeking passionate programmers in the Indianapolis area.")
+- content_for :head do
+  = auto_discovery_link_tag :atom, '/jobs.atom'
+  = auto_discovery_link_tag :rss, '/jobs.rss'
 
 .grid_10.prefix_1
   %section.jobs

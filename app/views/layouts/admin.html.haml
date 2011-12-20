@@ -2,13 +2,11 @@
 %html
   %head
     %meta{:charset => "utf-8"}/
-    %title IndyHackers
-    %meta{:content => 'Miles Z. Sterrett', :name => "author"}/
-    %meta{:content => "Bringing together hackers in the Indianapolis area.", :name => "Description"}/
-    %link{:href => "/jobs.xml", :rel => "alternate", :title => "Job Board Feed", :type => "application/atom+xml"}/
+    %title Admin Panel - IndyHackers
     %link{:href => "http://fonts.googleapis.com/css?family=Philosopher&subset=latin", :rel => "stylesheet", :type => "text/css"}/
     / 960 Grid System
     = stylesheet_link_tag '960/reset', '960/text', '960/960', 'screen'
+    = yield(:head)
   %body
     #header
       #menu-container.container_12
@@ -35,5 +33,5 @@
           = yield
         .clear &nbsp;
 
-    = yield(:footer)
     = javascript_include_tag 'jquery-1.5.min', 'rails', 'app'
+    = yield(:footer)

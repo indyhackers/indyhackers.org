@@ -3,6 +3,7 @@ IndyhackersRails::Application.routes.draw do
 
   namespace "admin" do
     resources :jobs
+    resources :posts
   end
 
 
@@ -10,10 +11,13 @@ IndyhackersRails::Application.routes.draw do
     post "viewed", :on => :member
     get "manage", :on => :member
   end
+
   resources :job_post_requests, :only => [:new, :create]
+  resources :posts, :only => [:index, :show]
   resource :sitemap, :only => :show
   match 'job_post_request' => 'job_post_requests#new'
   match "calendar", :to => "site#calendar"
+  match "blog", :to => "posts#index"
 
   match "why_indy", :to => "site#why_indy"
 

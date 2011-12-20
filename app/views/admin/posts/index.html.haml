@@ -1,0 +1,17 @@
+- title 'The IndyHackeres Blog'
+- description('The Indy Hackers Blog: Interviews and other information for Indianapolis programmers')
+- content_for :head do
+  = auto_discovery_link_tag :atom, '/blog.atom'
+  = auto_discovery_link_tag :rss, '/blog.rss'
+
+.grid_10.prefix_1
+  %section.admin-posts
+    - collection.each do |post|
+      %article.readable
+        .actions
+          = link_to 'edit', edit_admin_post_path(post)
+          = link_to 'delete', admin_post_path(post), :method => :delete, :confirm => 'Are you sure you want to delete this post?'
+        %h1
+          = link_to post.title, post_path(:id => post.slug)
+        %p.date-published= "&ndash; #{l(post.published_at, :format => :long)}".html_safe
+        = post.body_html.try(:html_safe)

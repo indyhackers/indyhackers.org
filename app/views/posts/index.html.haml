@@ -1,0 +1,11 @@
+- title 'The IndyHackeres Blog'
+- description('The Indy Hackers Blog: Interviews and other information for Indianapolis programmers')
+
+.grid_10.prefix_1
+  %section
+    - collection.each do |post|
+      %article.readable
+        %h1
+          = link_to post.title, post_path(:id => post.slug)
+        %p.date-published= l(post.published_at, :format => :long)
+        = post.body_html.try(:html_safe)

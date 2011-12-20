@@ -1,7 +1,7 @@
 .grid_10.prefix_1
-  #whatup.readable
+  %section#whatup.readable
 
-    %h2 what's happenin'?
+    %h1 what's happenin'?
 
     %p
       :markdown
@@ -21,16 +21,16 @@
         %td= link_to image_tag('proposaljet-logo.png'), 'http://proposaljet.com'
         %td= link_to image_tag('upland-logo.png', :width => 250, :height => 200), 'http://uplandbeer.com'
 
-  #indy_hackers_calendar.readable
-    %h2 indy hackers' calendar
+  %section#indy_hackers_calendar.readable
+    %h1 indy hackers' calendar
     %p
       = link_to 'Month View', '/calendar'
       |
       = link_to 'Subscribe to the Events Feed', 'https://www.google.com/calendar/feeds/ig7e0j6v8ub9q6kga256n77048%40group.calendar.google.com/public/basic'
     <iframe src="http://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=400&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=ig7e0j6v8ub9q6kga256n77048%40group.calendar.google.com&amp;color=%23AB8B00&amp;ctz=America%2FNew_York" style=" border-width:0 " width="600" height="400" frameborder="0" scrolling="no"></iframe>
 
-  #contact.readable
-    %h2 missin' somethin'?
+  %section#contact.readable
+    %h1 missin' somethin'?
     %p
       :markdown
         If there's an event that you think is missing from our calendar, or if you want to recommend an event that you think is extra-special in the next month or so, email [miles@indyhackers.org](mailto:miles@indyhackers.org).
