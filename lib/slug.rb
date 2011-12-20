@@ -5,7 +5,7 @@ module IndyHackers
     end
 
     def create_slug
-      self.slug = title.downcase.gsub(/[^a-zA-Z0-9]/, '-').gsub('-{2,}', '-')
+      self.slug = title.downcase.gsub(/[^a-zA-Z0-9]/, '-').gsub(/-{2,}/, '-').gsub(/-$/, '')
     end
   end
 end
