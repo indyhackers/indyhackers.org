@@ -5,6 +5,10 @@ class Post < ActiveRecord::Base
 
   before_save :generate_html
 
+  scope :published, lambda {
+    where("posts.published_at IS NOT NULL AND posts.published_at <= ?", Time.zone.now)
+  }
+
   def generate_html
     self.body_html = MARKDOWN.render(body)
   end
