@@ -1,0 +1,25 @@
+#
+# Format:
+# 
+# <heroku_san shorthand name>:
+#   app: <Heroku app name>
+#   stack: <Heroku stack, optional>
+#   config:
+#     - <Heroku config:var name>: <Heroku config:var value>
+#
+production: 
+  app: indyhackers31
+  stack: cedar
+#   config:
+#     BUNDLE_WITHOUT: "development:test"
+#     GOOGLE_ANALYTICS: "UA-12345678-1"
+# 
+# staging:
+#   stack: cedar
+#   app: awesomeapp-staging
+#   config: &default
+#     BUNDLE_WITHOUT: "development:test"
+# 
+# demo: 
+#   app: awesomeapp-demo
+#   config: *default
