@@ -1,4 +1,3 @@
-
 # Gems host
 source 'http://rubygems.org'
 
@@ -39,6 +38,8 @@ gem 'json_pure'
 gem 'thin'
 
 gem 'newrelic_rpm'
+
+gem 'instrumental_agent'
 
 group :development, :test do
   gem "rspec-rails"
