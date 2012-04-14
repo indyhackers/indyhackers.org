@@ -11,8 +11,12 @@
 
 # Job Board
 - Get rid of the animation thing; just load stuff, like in olden times.
+- Allow hackers to apply on the site, rather than finding info in the post
+  - GitHub link
+  - LinkedIn link
+  - Upload resume
 - Make it work well on mobile devices; integrate Skeleton 
     - http://jamus.co.uk/demos/rwd-demonstrations/
-        - http://getskeleton.com/
+    - http://getskeleton.com/
 
 
