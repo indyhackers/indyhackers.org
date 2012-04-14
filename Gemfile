@@ -2,7 +2,7 @@
 source 'http://rubygems.org'
 
 # Rails (version >= 3.0.4 and < 3.1)
-gem 'rails', '3.1.0'
+gem 'rails', '3.2.3'
 
 # Database
 gem 'pg'
@@ -16,7 +16,7 @@ gem 'jquery-rails'
 gem 'simple_form'
 
 # DRY those controllers
-gem 'inherited_resources', "1.1.2"
+gem 'inherited_resources'
 
 # Human readable URLs
 gem 'friendly_id', '~> 3.2'
