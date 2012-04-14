@@ -3,7 +3,7 @@
 ## To Do
 
 # General
-- Upgrade to the latest Rails (from 3.1 -> 3.2.x)
+- ~~Upgrade to the latest Rails (from 3.1 -> 3.2.x)~~
 - Improve tests, and their coverage (_mileszs started here_)
 - In-place edit the "what's happening" blurb
 - `attr_accessible` ... Whoops.
