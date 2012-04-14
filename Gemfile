@@ -58,7 +58,6 @@ group :development, :test do
   gem 'rails3-generators'
   gem 'hpricot'
   gem 'ruby_parser', '2.0.4'
-  gem 'rcov'
 
   gem 'heroku'
   gem 'taps'
