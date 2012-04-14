@@ -10,6 +10,7 @@ gem 'pg'
 gem 'coffee-script'
 gem 'uglifier'
 gem 'haml'
+gem 'sass'
 gem 'jquery-rails'
 
 # Form Builder
