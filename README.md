@@ -8,6 +8,7 @@
 - In-place edit the "what's happening" blurb
 - `attr_accessible` ... Whoops.
 - Use indyhackersapi.herokuapp.com for calendar on the front page.
+- Caching. CACHING.
 
 # Job Board
 - Get rid of the animation thing; just load stuff, like in olden times.
