@@ -6,7 +6,7 @@ Given /^I am signed up as "([^\"]*)" with password "([^\"]*)"$/ do |email, passw
   Factory(:admin, :email => email, :password => password)
 end
 Given /^I am logged in as "(.*)"$/ do |email|
-  Given %Q{I login as "#{email}" with password "rockstar"}
+  step %Q{I login as "#{email}" with password "rockstar"}
   page.should have_content('Signed in')
 end
 
