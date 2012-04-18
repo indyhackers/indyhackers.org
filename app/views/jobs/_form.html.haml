@@ -1,17 +1,12 @@
-= simple_form_for resource do |f|
-  - if resource.errors.any?
-    #error_explanation
-      %h2
-        = pluralize(resource.errors.count, "error")
-        prohibited this job from being saved:
+- if @job.errors.any?
+  #error_explanation
+    %h2
+      = pluralize(@job.errors.count, "error")
+      prohibited this job from being saved:
 
-      %ul
-        - resource.errors.full_messages.each do |msg|
-          %li= msg
-  %fieldset
-    %legend New Job
-    = f.input :title
-    = f.input :description
-    .input
-      %label &nbsp;
-      = f.button :submit, 'Save'
+    %ul
+      - @job.errors.full_messages.each do |msg|
+        %li= msg
+%fieldset
+  = f.input :title
+  = f.input :description

@@ -16,3 +16,13 @@ Feature: Jobs
     And I fill in "Description" with "An NBA coach who actually cares."
     And I press "Send"
     Then I should see "sent successfully"
+
+  Scenario: A user can edit job they've posted and had published
+    Given I have had a job post published
+    When I visit the job's edit page with my token
+    Then I should be able to edit the post
+
+  Scenario: A user can delete job they've posted and had published
+    Given I have had a job post published
+    When I visit the job's edit page with my token
+    Then I should be able to delete the post

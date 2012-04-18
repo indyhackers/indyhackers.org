@@ -1,6 +1,6 @@
 require "digest/md5"
 class JobsController < ApplicationController
-  before_filter :authenticate_by_token, :only => [:manage, :destroy]
+  before_filter :authenticate_by_token, :only => [:edit, :destroy]
   skip_before_filter :verify_authenticity_token, :only => :viewed
 
   def index
@@ -18,8 +18,17 @@ class JobsController < ApplicationController
     end
   end
 
-  def manage
+  def edit
     @job = resource
+  end
+
+  def update
+    @job = resource
+    if @job.update_attributes(params[:job])
+      redirect_to edit_job_path(@job, :token => params[:token]), :notice => 'Your job post was updated'
+     else
+      render :edit
+    end
   end
 
   def viewed
@@ -40,7 +49,7 @@ class JobsController < ApplicationController
   def destroy
     @job = resource
     @job.destroy
-    redirect_to jobs_path
+    redirect_to jobs_path, :notice => "Job post deleted. Thanks!"
   end
 
   private

@@ -15,6 +15,14 @@ $gold_trans:        rgba(171, 139, 0, 0.4)
 @import "partials/_forms"
 @import "partials/_notices"
 
+form.simple_form .input input.button
+  float: left
+
+input#delete-button
+  position: absolute
+  top: 10px
+  right: 10px
+
 article
   margin: 0
   padding: 0
@@ -95,6 +103,7 @@ hr
   margin-top: 20px
 
   .readable
+    position: relative
     margin-bottom: 10px
     padding: 10px
     border-top: 2px solid $white

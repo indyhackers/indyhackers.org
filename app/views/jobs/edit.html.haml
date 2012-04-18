@@ -1,5 +1,16 @@
 .grid_10.prefix_1
   .readable
-    %h2 Edit a Job
-    = render :partial => 'form'
+    %h2 Edit Your Job
+    = button_to 'Delete', job_path(@job, :token => params[:token]), :method => :delete, :class => 'button', :id => "delete-button", :confirm => "Are you sure you want to delete your job post?"
+    = simple_form_for @job do |f|
+      = render :partial => 'form', :locals => {:f => f}
+      .input
+        = hidden_field_tag :token, params[:token]
+        = f.button :submit, 'Update'
     %br.clear
+  .job.readable
+    %h2 Preview
+    %h3
+      = @job.title
+    .job-description#markdown-target
+      = MARKDOWN.render(@job.description).html_safe

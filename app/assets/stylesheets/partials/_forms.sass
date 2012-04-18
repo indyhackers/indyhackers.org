@@ -1,3 +1,7 @@
+form.simple_form
+  width: 760px
+  margin: 0 auto
+
 input[type=text], input[type=password], input[type=email], textarea
   margin-bottom: 5px
   font-size: 16px
@@ -7,7 +11,8 @@ input[type=text], input[type=password], input[type=email], textarea
   background: #FFFFFF
 
 textarea
-  height: 250px
+  width: 740px
+  height: 400px
   line-height: 150%
 
 input[type=text]:hover, input[type=password]:hover, input[type=email]:hover, textarea:hover,
@@ -19,13 +24,10 @@ input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, tex
 
 form.simple_form fieldset div label
   display: block
-  float: left
   width: 100px
-  text-align: right
   padding-right: 10px
 
 form.simple_form fieldset
-  border-top: 1px solid $light_grey
   padding-bottom: 10px
   padding-top: 10px
 
@@ -49,5 +51,5 @@ form.simple_form span.error
 form.simple_form label abbr
   color: #ff0000
 
-form.simple_form div.text
-  margin-left: 110px
+form.simple_form .input input.button
+  float: left
