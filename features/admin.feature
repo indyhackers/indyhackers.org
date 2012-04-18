@@ -34,6 +34,6 @@ Feature: Admin
     And I should see "Description"
     And I fill in "Description" with "Title says it all. Amirite!?"
     And I press "Save"
-    Then I should see "Job was successfully updated"
+    Then I should see "Job was updated successfully"
     And I should see "Ninjitsu-practicing, Guitar-playing Hacker at Trying Too Hard Co"
     And I should see "Title says it all. Amirite!?"

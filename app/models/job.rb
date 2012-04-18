@@ -6,6 +6,8 @@ class Job < ActiveRecord::Base
   has_many :viewers, :through => :job_views
   belongs_to :user
 
+  attr_accessible :title, :description
+
   after_update :notify_if_published
 
   scope :published, lambda {

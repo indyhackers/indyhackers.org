@@ -20,6 +20,7 @@ Then /^I should be able to edit the post$/ do
   fill_in "Title", :with => "New Awesome Title"
   click_button "Update"
   page.should have_content "Your job post was updated"
+  @job.reload
   current_path.should == edit_job_path(@job)
 end
 
