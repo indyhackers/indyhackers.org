@@ -12,7 +12,7 @@
 - ~~Caching. CACHING.~~
 
 ### Job Board
-- Get rid of the animation thing; just load stuff, like in olden times.
+- ~~Get rid of the animation thing; just load stuff, like in olden times.~~
 - ~~Quit trying to reinvent generating a slug~~
 - ~~Allow posters to edit their post~~
 - Allow hackers to apply on the site, rather than finding info in the post
