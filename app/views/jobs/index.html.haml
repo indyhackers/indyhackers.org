@@ -19,6 +19,6 @@
     - @jobs.each do |job|
       %article.job.readable
         %h1
-          = link_to job.title, job_path(:id => job.slug), :name => "#{job.title.downcase.gsub(/[^a-zA-Z0-9]/, '-')}"
+          = link_to job.title, job_path(job), :name => "#{job.title.downcase.gsub(/[^a-zA-Z0-9]/, '-')}"
         .job-description{:style => "display:none;"}
           = MARKDOWN.render(job.description).html_safe
