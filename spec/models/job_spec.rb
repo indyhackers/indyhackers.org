@@ -15,7 +15,13 @@ describe Job do
   end
 
   it "should escape a title for the slug" do
-    @job = FactoryGirl.create(:job, :title => 'Javascript Developer (with a touch of backend)')
+    @user = FactoryGirl.create(:user)
+    @job = Job.create(
+        :title => 'Javascript Developer (with a touch of backend)',
+        :description => "Awesome thing",
+        :user => @user
+      )
+
     @job.slug.should == 'javascript-developer-with-a-touch-of-backend'
   end
 end
