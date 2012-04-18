@@ -18,6 +18,9 @@ gem 'maruku'
 gem 'redcarpet'
 gem 'will_paginate', '~> 3.0'
 
+gem 'stringex'
+gem 'slugged'
+
 gem 'delayed_job'
 
 gem 'json_pure'

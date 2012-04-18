@@ -13,17 +13,17 @@ class JobsController < ApplicationController
   end
 
   def show
-    if resource.blank?
+    if find_job.blank?
       redirect_to(jobs_path, :notice => "Couldn't find that job. It may have been filled. Sorry!") and return
     end
   end
 
   def edit
-    @job = resource
+    find_job
   end
 
   def update
-    @job = resource
+    find_job
     if @job.update_attributes(params[:job])
       redirect_to edit_job_path(@job, :token => params[:token]), :notice => 'Your job post was updated'
      else
@@ -32,7 +32,7 @@ class JobsController < ApplicationController
   end
 
   def viewed
-    @job = resource
+    find_job
     if cookies['_ih_uid'].nil?
       cookies['_ih_uid'] = Digest::MD5.hexdigest(Time.now.to_s + rand(13000).to_s)
     end
@@ -47,7 +47,7 @@ class JobsController < ApplicationController
   end
 
   def destroy
-    @job = resource
+    find_job
     @job.destroy
     redirect_to jobs_path, :notice => "Job post deleted. Thanks!"
   end
@@ -55,18 +55,14 @@ class JobsController < ApplicationController
   private
 
   def authenticate_by_token
-    @job = resource
+    find_job
     @user = User.find_by_token(params[:token]) unless params[:token].nil?
     unless @user.present? && @job.user == @user
       redirect_to jobs_url, :notice => "*gasp* You shouldn't be snooping around there! FOR SHAME!"
     end
   end
 
-  def resource
-    if params[:id].to_i == 0
-      @job = Job.find_by_slug(params[:id])
-    else
-      @job = Job.find_by_id(params[:id])
-    end
+  def find_job
+    @job = Job.find_using_slug(params[:id])
   end
 end

@@ -113,6 +113,8 @@ GEM
       addressable (~> 2.2.6)
     libwebsocket (0.1.3)
       addressable
+    macaddr (1.5.0)
+      systemu (>= 2.4.0)
     mail (2.4.4)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
@@ -189,6 +191,10 @@ GEM
       activemodel (~> 3.0)
     sinatra (1.0)
       rack (>= 1.0)
+    slugged (1.1.0)
+      activerecord (~> 3.0)
+      activesupport (~> 3.0)
+      uuid
     spork (0.9.0)
     sprockets (2.1.2)
       hike (~> 1.2)
@@ -197,7 +203,9 @@ GEM
     sqlite3 (1.3.5)
     sqlite3-ruby (1.3.3)
       sqlite3 (>= 1.3.3)
+    stringex (1.3.2)
     syntax (1.0.0)
+    systemu (2.5.0)
     taps (0.3.23)
       rack (>= 1.0.1)
       rest-client (< 1.7.0, >= 1.4.0)
@@ -218,6 +226,8 @@ GEM
     uglifier (1.2.4)
       execjs (>= 0.3.0)
       multi_json (>= 1.0.2)
+    uuid (2.3.5)
+      macaddr (~> 1.0)
     warden (1.1.1)
       rack (>= 1.0)
     will_paginate (3.0.3)
@@ -260,7 +270,9 @@ DEPENDENCIES
   ruby_parser (= 2.0.4)
   sass
   simple_form
+  slugged
   spork
+  stringex
   taps
   thin
   uglifier

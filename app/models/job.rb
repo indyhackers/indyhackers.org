@@ -1,6 +1,6 @@
 require File.join(Rails.root, 'lib', 'slug')
 class Job < ActiveRecord::Base
-  include IndyHackers::Slug
+  is_sluggable :title
 
   has_many :job_views
   has_many :viewers, :through => :job_views
