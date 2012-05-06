@@ -2,3 +2,5 @@ postgres:
   adapter: postgresql
   database: indyhackers_test
   username: postgres
+  password:
+  host: localhost
