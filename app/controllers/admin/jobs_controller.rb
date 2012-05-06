@@ -10,7 +10,7 @@ class Admin::JobsController < InheritedResources::Base
 
   def update
     @job = resource
-    @job.published_at = Time.now if params[:job][:published_at].present?
+    @job.published_at = Time.now if params[:job].slice(:published_at).present?
     if @job.update_attributes(params[:job])
       redirect_to @job, :notice => 'Job was updated successfully'
     else
