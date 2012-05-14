@@ -15,6 +15,7 @@
 - ~~Get rid of the animation thing; just load stuff, like in olden times.~~
 - ~~Quit trying to reinvent generating a slug~~
 - ~~Allow posters to edit their post~~
+- Expire job posts after 60 days
 - Allow hackers to apply on the site, rather than finding info in the post
   - GitHub link
   - LinkedIn link
