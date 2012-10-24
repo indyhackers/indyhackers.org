@@ -21,6 +21,7 @@ IndyhackersRails::Application.routes.draw do
   match "blog/:id", :to => "posts#show"
 
   match "why_indy", :to => "site#why_indy"
+  match "holiday-social" => redirect('/holiday-social-2012/')
 
   root :to => "site#index"
 end
