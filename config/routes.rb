@@ -6,7 +6,6 @@ IndyhackersRails::Application.routes.draw do
     resources :posts
   end
 
-
   resources :jobs do
     post "viewed", :on => :member
     get "manage", :on => :member
@@ -22,6 +21,8 @@ IndyhackersRails::Application.routes.draw do
 
   match "why_indy", :to => "site#why_indy"
   match "holiday-social" => redirect('/holiday-social-2012/')
+
+  match '/newsletter/subscribe' => redirect('http://eepurl.com/sMpJj')
 
   root :to => "site#index"
 end
