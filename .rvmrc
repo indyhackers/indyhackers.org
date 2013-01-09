@@ -1,1 +1,1 @@
-rvm ruby-1.9.2-p180@indyhackers --create
+rvm ruby-1.9.3-p327@indyhackers --create
