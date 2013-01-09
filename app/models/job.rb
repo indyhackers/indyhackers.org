@@ -2,7 +2,7 @@ require File.join(Rails.root, 'lib', 'slug')
 class Job < ActiveRecord::Base
   is_sluggable :title
 
-  has_many :job_views
+  has_many :job_views, :dependent => :destroy
   has_many :viewers, :through => :job_views
   belongs_to :user
 
@@ -13,6 +13,10 @@ class Job < ActiveRecord::Base
 
   scope :published, lambda {
     where("jobs.published_at IS NOT NULL AND jobs.published_at <= ?", Time.zone.now)
+  }
+
+  scope :stale, lambda {
+    where("created_at < ?", 60.days.ago)
   }
 
   def notify_if_published
