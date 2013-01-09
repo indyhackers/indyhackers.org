@@ -97,6 +97,11 @@ When /^(?:|I )attach the file "([^"]*)" to "([^"]*)"(?: within "([^"]*)")?$/ do 
   end
 end
 
+Then /^I should see (?:the|an|a) "([^"]*)" section$/ do |section|
+  section_selector = "*[data-section='#{section}']"
+  page.should have_css(section_selector)
+end
+
 Then /^(?:|I )should see JSON:$/ do |expected_json|
   require 'json'
   expected = JSON.pretty_generate(JSON.parse(expected_json))
