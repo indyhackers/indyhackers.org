@@ -8,7 +8,6 @@
   - Show "This Week" and "Last Week" sections
 
 ### Job Board
-- Expire job posts after 60 days
 - Read-only API
 - Allow hackers to apply on the site, rather than finding info in the post
   - GitHub link
