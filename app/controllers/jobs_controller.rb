@@ -41,7 +41,6 @@ class JobsController < ApplicationController
       @job.viewers << @viewer
       @job.views = @job.views.nil? ? 1 : @job.views + 1
       @job.save
-      INSTRUMENTAL.increment(@job.slug + "_viewed")
     end
     render :text => "Success!"
   end
