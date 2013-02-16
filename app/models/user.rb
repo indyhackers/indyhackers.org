@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  attr_accessible :email, :name, :token
   has_many :jobs
 
   before_create :create_token
