@@ -23,6 +23,7 @@ IndyhackersRails::Application.routes.draw do
   match "holiday-social" => redirect('/holiday-social-2012/')
 
   match '/newsletter/subscribe' => redirect('http://eepurl.com/sMpJj')
+  match '/newsletter/archive' => 'newsletters#index'
 
   root :to => "site#index"
 end
