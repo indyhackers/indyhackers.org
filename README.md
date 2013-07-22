@@ -3,7 +3,6 @@
 ## To Do
 
 ### General
-- `attr_accessible` ... Whoops.
 - Use indyhackersapi.herokuapp.com for calendar on the front page.
   - Show "This Week" and "Last Week" sections
 
