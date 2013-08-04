@@ -3,13 +3,8 @@
 //= require linkify
 //= require jquery.easing
 //= require jquery.blockUI
-//= require jquery.qtip.min
-//= require jquery.fancybox
-//= require jquery.supersized.min
 //= require jquery.elastic.source
 //= require jquery.infieldlabel.min
-//= require jquery.carouFredSel.packed
-//= require jquery.supersized.shutter.min
 //= require showdown
 //= require script
 //= require main

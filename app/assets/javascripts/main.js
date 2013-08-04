@@ -1,30 +1,4 @@
 $(document).ready(function() {
-  /**************************************************************************/
-  /*	Template options													  */
-  /**************************************************************************/
-
-  var options = {
-    supersized		:
-      {
-      slide		:
-        [
-          {image	: '/holiday-social-2012/image/background/01.jpg'},
-      ]
-    },
-  }
-
-  /**************************************************************************/
-  /*	Supersized															  */
-  /**************************************************************************/
-
-  $.supersized(
-    {
-    slides					: options.supersized.slide,
-    autoplay				: true,
-    thumb_links				: false,
-    start_slide				: 1,
-    thumbnail_navigation	: false
-  });
 
   /**************************************************************************/
   /*	Forms																  */

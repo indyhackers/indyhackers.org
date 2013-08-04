@@ -2,8 +2,5 @@
  *= require_self
  *= require jquery.qtip
  *= require jquery-ui/jquery-ui
- *= require supersized/supersized
- *= require supersized/supersized.shutter
- *= require fancybox/jquery.fancybox
  *= require base
  */
