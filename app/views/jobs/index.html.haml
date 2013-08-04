@@ -4,21 +4,18 @@
   = auto_discovery_link_tag :atom, '/jobs.atom'
   = auto_discovery_link_tag :rss, '/jobs.rss'
 
-.grid_10.prefix_1
-  %section.jobs
-    .readable
-      %h1 Indianapolis Programming Jobs
+%li#jobs-header.text-center
+  %h1 Indianapolis Programming Jobs
 
-      - if @jobs.empty?
-        %p
-          There are no job postings at this time. Check back later, or
-          %a{:href =>'http://indyhackers.org/jobs.xml'}subsribe to the feed.
+- if @jobs.empty?
+  %li#no-jobs
+    %p
+      There are no job postings at this time. Check back later, or
+      %a{:href =>'http://indyhackers.org/jobs.xml'}subsribe to the feed.
 
-    -# %div{:class => 'clear'}
-
-    - @jobs.each do |job|
-      %article.job.readable
-        %h1
-          = link_to job.title, job_path(job), :name => "#{job.title.downcase.gsub(/[^a-zA-Z0-9]/, '-')}"
-        .job-description{:style => "display:none;"}
-          = MARKDOWN.render(job.description).html_safe
+- @jobs.each do |job|
+  %li.job
+    %h1
+      = link_to job.title, job_path(job), :name => "#{job.title.downcase.gsub(/[^a-zA-Z0-9]/, '-')}"
+    .job-description{:style => "display:none;"}
+      = MARKDOWN.render(job.description).html_safe

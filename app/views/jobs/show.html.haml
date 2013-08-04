@@ -1,9 +1,7 @@
 - title @job.title + " - Indianapolis Programming Jobs"
 - description(truncate(@job.description, :length => 140))
 
-.grid_10.prefix_1
-  %section.readable
-    %article.job#single-job
-      %h1= @job.title
-      .job-description
-        = MARKDOWN.render(@job.description).html_safe
+%li.job#single-job
+  %h1= @job.title
+  %article.job-description
+    = MARKDOWN.render(@job.description).html_safe

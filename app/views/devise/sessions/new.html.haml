@@ -1,8 +1,8 @@
-.readable
+%li#sign_in
   %h2 Sign in
   = simple_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
     %fieldset
-      = f.input :email
+      = f.input :email, :as => :string
       = f.input :password
       - if devise_mapping.rememberable?
         = f.check_box :remember_me

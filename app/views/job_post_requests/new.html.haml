@@ -2,36 +2,41 @@
   = javascript_include_tag 'showdown'
 
 - title 'Job Post Request'
-.grid_10.prefix_1
-  %section#job_post_request.readable
-    %h1 Find Indianapolis' Most Passionate Programmers
 
-    %p You want to get your open position in front of quality, local programmers. Lucky for you, this site's demographic consists primarily of high quality programmers that live in the Indianapolis metropolitan area. If you need a nerd, you need to post here.
+%li#job_post_request
+  %h1 Find Indianapolis' Most Passionate Programmers
 
-    %p Simply fill in the few fields below, and we will quickly review your job and put it in front of the best and brightest in Indy.
+  %p You want to get your open position in front of quality, local programmers. Lucky for you, this site's demographic consists primarily of high quality programmers that live in the Indianapolis metropolitan area. If you need a nerd, you need to post here.
 
-    = simple_form_for @job_post_request, :html => {:multipart => true} do |f|
-      %fieldset
-        %legend Your contact info
-        = f.input :name
-        = f.input :email, :hint => "Address to receive info about your post's status from IndyHackers"
-      %fieldset
-        %legend The job's info
-        = f.input :title
-        = f.input :attachment, :as => 'file', :label => 'File', :hint => 'Attach a file rather than typing the full description below.'
-        %p{:style => 'font-size: 90%; margin: 10px 0 0 105px;'}
-          Job posts use Markdown syntax. See&nbsp; 
-          %a{:href => 'http://daringfireball.net/projects/markdown/syntax'}>  this Markdown reference
-          \.
-        = f.input :description, :as => :text
-        .input
-          %label &nbsp;
-          = f.button :submit, 'Send'
+  %p Simply fill in the few fields below, and we will quickly review your job and put it in front of the best and brightest in Indy.
+
+  = simple_form_for @job_post_request, :html => {:multipart => true} do |f|
+    %fieldset
+      %legend Your contact info
+      = f.input :name
+      = f.input :email, as: :string, :hint => "Address to receive info about your post's status from IndyHackers"
+    %fieldset
+      %legend The job's info
+      = f.input :title
+      -# = f.input :attachment, :as => 'file', :label => 'File', :hint => 'Attach a file rather than typing the full description below.'
+      %p
+        %strong Note:
+        Job posts use Markdown syntax. Watch the&nbsp;
+        %a{:href => '#live-preview'}> Live Preview below
+        \.
+        See&nbsp;
+        %a{:href => 'http://daringfireball.net/projects/markdown/syntax'}>  this Markdown reference
+        \.
+      = f.input :description, :as => :text
+      .input
+        %label &nbsp;
+        = f.button :submit, 'Send'
 
     .clear &nbsp;
 
-  .readable
-    %h2 Live Preview
+%li#live-preview
+  %a{:name => '#live-preview'}
+  %h2 Live Preview
   .job.readable
     %h3
       %a{:href => '#'} &nbsp;

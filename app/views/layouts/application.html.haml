@@ -10,42 +10,67 @@
       %meta{:content => "Bringing together hackers in the Indianapolis area.", :name => "Description"}/
     - else
       = yield(:description)
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Voces"/>
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Dosis:400,300,200,500,600,700,800" />
 
-    %link{:href => "http://fonts.googleapis.com/css?family=Philosopher&subset=latin", :rel => "stylesheet", :type => "text/css"}/
+    = stylesheet_link_tag 'application'
+    <link rel="stylesheet" type="text/css" media="screen and (max-width:969px)" href="assets/responsive/width-0-969.css"/>
+    <link rel="stylesheet" type="text/css" media="screen and (max-width:767px)" href="assets/responsive/width-0-767.css"/>
+    <link rel="stylesheet" type="text/css" media="screen and (min-width:480px) and (max-width:969px)" href="assets/responsive/width-480-969.css"/>
+    <link rel="stylesheet" type="text/css" media="screen and (min-width:768px) and (max-width:969px)" href="assets/responsive/width-768-969.css"/>
+    <link rel="stylesheet" type="text/css" media="screen and (min-width:480px) and (max-width:767px)" href="assets/responsive/width-480-767.css"/>
+    <link rel="stylesheet" type="text/css" media="screen and (max-width:479px)" href="assets/responsive/width-0-479.css"/>
 
-    / 960 Grid System
-    = stylesheet_link_tag '960/reset', '960/text', '960/960', 'screen'
   %body
     = admin_header
-    #header
-      #menu-container.container_12
-        %h1
-          %a{:href => "/"} IndyHackers
-        %ul#menu
-          %li
-            %a{:href => "/jobs"} jobs
-          %li
-            %a{:href => "/job_post_requests/new"} submit a job
-          %li
-            %a{:href => "/calendar"} calendar
-          %li.last
-            %a{:href => "/blog"} blog
-    .container_12
-      #body
-        .grid_10.prefix_1
-          - if notice
-            %div.notice= notice
-          - if alert
-            %div.alert= alert
-        = yield
-        .clear &nbsp;
-      #footer
-        %hr/
-        .grid_8.prefix_2.suffix_2
-          :markdown
-            Follow us [on Twitter](http://twitter.com/indyhackersorg) :: Subscribe to [the Jobs feed](http://indyhackers.org/jobs.atom) :: Made with love by [mileszs](http://mileszs.com) && [_swanson](http://mdswanson.com/)
+    .main.main-body
+      .header.clear-fix
+        .layout-50p-left.clear-fix
+          = link_to 'Indy Hackers', '/', :class => 'header-logo'
 
-        .clear &nbsp;
+        .layout-50p-right
+          .header-phone
+            %ul.no-list.menu
+              %li= link_to 'Jobs', '/jobs'
+              %li= link_to 'Submit a Job', '/job_post_requests/new'
+              %li= link_to 'Calendar', '/calendar'
+
+      .content.clear-fix
+        %ul.no-list.clear-fix.section-list
+
+          - if notice
+            %li.text-center.clear-fix
+              .notice= notice
+          - if alert
+            %li.text-center.clear-fix
+              .alert= alert
+          = yield
+
+      .footer.layout-50.clear-fix
+        .layout-50-left
+          %h2 missin' somethin'?
+          %p
+            Want to recommend an event for the calendar? Email&nbsp;
+            %a{ :href => 'mailto:miles@indyhackers.org' }> miles@indyhackers.org
+            \.
+        #made-by.layout-50-right
+          %h3 Crafted Lovingly but with Wild Abandon By
+          %ul
+            %li
+              %p
+                = link_to 'http://mdswanson.com' do
+                  = image_tag 'matt-swansons-face.jpeg'
+              %p= link_to 'Matt Swanson', 'http://mdswanson.com'
+              %p= link_to '@_swanson', 'http://twitter.com/_swanson'
+            %li
+              %p
+                = link_to 'http://mileszs.com' do
+                  = image_tag 'my-face.jpeg'
+              %p= link_to 'Miles Z. Sterrett', 'http://mileszs.com'
+              %p= link_to '@mileszs', 'http://twitter.com/mileszs'
+
+
+    = javascript_include_tag 'application'
     <!-- Google Analytics -->
     :javascript
       var _gaq = _gaq || [];
@@ -59,4 +84,3 @@
       })();
     <!-- END Google Analytics -->
     = yield(:footer)
-    = javascript_include_tag 'jquery-1.5.min', 'rails', 'app'
