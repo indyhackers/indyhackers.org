@@ -28,6 +28,7 @@ gem 'thin'
 gem 'newrelic_rpm'
 gem 'instrumental_agent'
 
+gem 'memcachier'
 gem 'dalli'
 
 group :development, :test do

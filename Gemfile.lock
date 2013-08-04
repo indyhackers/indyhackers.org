@@ -124,6 +124,7 @@ GEM
       treetop (~> 1.4.8)
     maruku (0.6.1)
       syntax (>= 1.0.0)
+    memcachier (0.0.2)
     mime-types (1.23)
     multi_json (1.7.7)
     netrc (0.7.7)
@@ -258,6 +259,7 @@ DEPENDENCIES
   json_pure
   launchy
   maruku
+  memcachier
   newrelic_rpm
   pg
   rails (= 3.2.13)

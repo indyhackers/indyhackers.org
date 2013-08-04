@@ -12,6 +12,7 @@ IndyhackersRails::Application.configure do
   config.serve_static_assets = true
   config.static_cache_control = "public, max-age=2592000"
   config.assets.digest = true
+  config.assets.cache_store = :dalli_store
 
   # Compress JavaScripts and CSS
   # config.assets.compress = true
