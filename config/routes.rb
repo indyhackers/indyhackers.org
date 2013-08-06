@@ -3,7 +3,6 @@ IndyhackersRails::Application.routes.draw do
 
   namespace "admin" do
     resources :jobs
-    resources :posts
   end
 
   resources :jobs do
@@ -12,12 +11,9 @@ IndyhackersRails::Application.routes.draw do
   end
 
   resources :job_post_requests, :only => [:new, :create]
-  resources :posts, :only => [:index, :show]
   resource :sitemap, :only => :show
   match 'job_post_request' => 'job_post_requests#new'
   match "calendar", :to => "site#calendar"
-  match "blog", :to => "posts#index"
-  match "blog/:id", :to => "posts#show"
 
   match "why_indy", :to => "site#why_indy"
   match "holiday-social" => redirect('/holiday-social-2012/')
