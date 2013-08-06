@@ -1,28 +1,28 @@
 Feature: Jobs
 
   Scenario: A user can view job listings
-    Given I go to the home page
-    And there is a job with title "Ninjitsu-practicing, Guitar-playing Hacker at Trying Too Hard Co"
-    Then I should see "jobs"
-    When I follow "jobs"
-    Then I should see "Ninjitsu-practicing, Guitar-playing Hacker at Trying Too Hard Co"
+    Given I am a guest
+    And there is an existing job
+    When I go to the jobs list
+    Then I should see the title for that job
+    When I click that job's title
+    Then I should see the description for that job
 
   Scenario: A user can request a job post
-    Given I go to the home page
-    When I follow "submit a job"
-    And I fill in "Name" with "Frank Vogel"
-    And I fill in "Email" with "frank.vogel@pacers.com"
-    And I fill in "Title" with "Star NBA Coach"
-    And I fill in "Description" with "An NBA coach who actually cares."
-    And I press "Send"
-    Then I should see "sent successfully"
+    Given I am a guest
+    When I fill out a job request form
+    And I send the form
+    Then I should see that the job request was sent successfully
+    # ... And I should receive an email?
 
   Scenario: A user can edit job they've posted and had published
-    Given I have had a job post published
-    When I visit the job's edit page with my token
-    Then I should be able to edit the post
+    Given I am a guest
+    And I have a job published
+    When I visit the job's edit page from the link in the email
+    Then I can edit the job
 
   Scenario: A user can delete job they've posted and had published
-    Given I have had a job post published
-    When I visit the job's edit page with my token
-    Then I should be able to delete the post
+    Given I am a guest
+    And I have a job published
+    When I visit the job's edit page from the link in the email
+    Then I can delete the job

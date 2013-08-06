@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :job do
     title Faker::Lorem.words.join(' ')
-    description Faker::Lorem.paragraphs
+    description Faker::Lorem.paragraphs.join
   end
 
   factory :admin do

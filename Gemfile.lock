@@ -41,6 +41,7 @@ GEM
       xpath (~> 1.0.0)
     childprocess (0.3.6)
       ffi (~> 1.0, >= 1.0.6)
+    coderay (1.0.9)
     coffee-script (2.2.0)
       coffee-script-source
       execjs
@@ -125,6 +126,7 @@ GEM
     maruku (0.6.1)
       syntax (>= 1.0.0)
     memcachier (0.0.2)
+    method_source (0.8.2)
     mime-types (1.23)
     multi_json (1.7.7)
     netrc (0.7.7)
@@ -133,6 +135,12 @@ GEM
     orm_adapter (0.0.7)
     pg (0.14.1)
     polyglot (0.3.3)
+    pry (0.9.12.2)
+      coderay (~> 1.0.5)
+      method_source (~> 0.8)
+      slop (~> 3.4)
+    pry-rails (0.3.2)
+      pry (>= 0.9.10)
     rack (1.4.5)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -192,6 +200,7 @@ GEM
       activemodel (~> 3.0)
     sinatra (1.0)
       rack (>= 1.0)
+    slop (3.4.6)
     slugged (1.1.0)
       activerecord (~> 3.0)
       activesupport (~> 3.0)
@@ -262,6 +271,7 @@ DEPENDENCIES
   memcachier
   newrelic_rpm
   pg
+  pry-rails
   rails (= 3.2.13)
   rails3-generators
   redcarpet

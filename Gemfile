@@ -52,4 +52,6 @@ group :development, :test do
   gem 'heroku'
   gem 'taps'
   gem 'heroku_san'
+
+  gem 'pry-rails'
 end
