@@ -28,7 +28,7 @@ time,mark,audio,video
 /*  Base styles																  */
 /******************************************************************************/
 html { 
-  background: url('/assets/speakeasy-bg.jpg') no-repeat center center fixed; 
+  background: url('/assets/holiday-social-from-loft.jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -1371,3 +1371,6 @@ form.simple_form .input input.button {
   height: 72px;
 }
 
+.footer.layout-50 .layout-50-left, .footer.layout-50 .layout-50-right {
+  height: 160px;
+}
