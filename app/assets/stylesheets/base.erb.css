@@ -29,6 +29,7 @@ time,mark,audio,video
 /******************************************************************************/
 html { 
   background: url('/assets/holiday-social-from-loft.jpg') no-repeat center center fixed; 
+  background-color: #000;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
