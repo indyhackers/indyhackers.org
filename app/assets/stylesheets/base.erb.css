@@ -1354,6 +1354,11 @@ form.simple_form .input input.button {
   font-size: 24px;
 }
 
+#single-job article.job-description ul {
+  padding-bottom: 15px;
+  line-height: 150%;
+}
+
 .footer #made-by ul {
   margin-left: 60px;
 }
