@@ -3,6 +3,6 @@
     %p= Rails.env
   .right
     %p
-      = link_to 'jobs', admin_jobs_path
-      = link_to 'logout', destroy_admin_session_path
+      = link_to 'jobs', admin_jobs_path, :class => 'button-yellow'
+      = link_to 'logout', destroy_admin_session_path, :class => 'button-yellow'
   .clear &nbsp;

@@ -1273,6 +1273,25 @@ ul.menu li a:hover {
   color: #FFC000;
 }
 
+#admin-header {
+  margin: 0;
+  padding: 5px;
+  color: #efefef;
+  background-color: #000;
+}
+
+#admin-header .left {
+  float: left;
+}
+
+#admin-header .right {
+  float: right;
+}
+
+#admin-header .clear {
+  clear: both;
+}
+
 // form
 form.simple_form {
   width: 760px;
@@ -1379,4 +1398,11 @@ form.simple_form .input input.button {
 
 .footer.layout-50 .layout-50-left, .footer.layout-50 .layout-50-right {
   height: 160px;
+}
+
+table#jobs tr td {
+  margin: 0;
+  padding: 6px 16px 6px 0;
+  border-top: 1px solid #000;
+  border-collapse: collapse;
 }
