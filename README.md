@@ -19,4 +19,5 @@
     - http://jamus.co.uk/demos/rwd-demonstrations/
     - http://getskeleton.com/
 - Consider using a completely different design from the main site for the job board
+- Make preview a tab of editing a job post, like on GitHub, instead of below the post. 
 
