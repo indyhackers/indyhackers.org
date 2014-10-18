@@ -28,8 +28,8 @@ time,mark,audio,video
 /*  Base styles																  */
 /******************************************************************************/
 
-html { 
-  background: url(/assets/speakeasy-bg.jpg) no-repeat center center fixed; 
+html {
+  background: url(/assets/speakeasy-bg.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -749,6 +749,13 @@ p.subtitle-paragraph span.bold
 		font-weight:700;
 	}
 
+p.subtitle-paragraph a {
+	font-family:'Dosis';
+	padding:0px;
+	font-size:24px;
+	font-weight:400;
+	line-height:120%;
+}
 p#where-subtitle a, p#where-subtitle a:hover {
 	font-family:'Dosis';
 	padding:0px;
@@ -1371,4 +1378,3 @@ form.simple_form .input input.button {
   width: 72px;
   height: 72px;
 }
-
