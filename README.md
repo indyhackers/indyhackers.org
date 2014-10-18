@@ -1,5 +1,8 @@
 # IndyHackers.org
 
+![TravisCI](https://travis-ci.org/mileszs/indyhackers.org.svg?branch=master)
+[![Code Climate](https://codeclimate.com/github/mileszs/indyhackers.org/badges/gpa.svg)](https://codeclimate.com/github/mileszs/indyhackers.org)
+
 ## To Do
 
 ### General
