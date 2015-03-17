@@ -11,6 +11,7 @@
 - Update to Rails 4
 - Is it time for a new design?
 - Should the main, content-y stuff be static, on PaperPlane, leaving the job board as the only thing requiring "a backend" (which we could locate at jobs.indyhackers.org)?
+- Offer meeting organizers a list of open weekday evenings, pulled dynamically from current calendar data.
 
 ### Job Board
 - Read-only API
