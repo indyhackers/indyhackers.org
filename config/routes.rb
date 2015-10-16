@@ -16,7 +16,7 @@ IndyhackersRails::Application.routes.draw do
   match "calendar", :to => "site#calendar"
 
   match "why_indy", :to => "site#why_indy"
-  match "holiday-social" => redirect('/holiday-social-2012/')
+  match "holiday-social" => redirect('/holiday-social-2015/')
 
   match '/newsletter/subscribe' => redirect('http://eepurl.com/sMpJj')
   match '/newsletter/archive' => 'newsletters#index'
