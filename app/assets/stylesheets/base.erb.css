@@ -1411,14 +1411,14 @@ table#jobs tr td {
 ul.volunteer-organizers {
   display: block;
   overflow: hidden;
-  width: 500px;
+  width: 560px;
 }
 
 ul.volunteer-organizers li {
   display: block;
   float: left;
   margin: 5px;
-  width: 100px;
+  width: 130px;
 }
 
 ul.volunteer-organizers li img {
