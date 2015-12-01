@@ -18,6 +18,8 @@ IndyhackersRails::Application.routes.draw do
   match "why_indy", :to => "site#why_indy"
   match "holiday-social" => redirect('/holiday-social-2015/')
 
+  match 'code-of-conduct' => 'site#code_of_conduct'
+
   match '/newsletter/subscribe' => redirect('http://eepurl.com/sMpJj')
   match '/newsletter/archive' => 'newsletters#index'
 
