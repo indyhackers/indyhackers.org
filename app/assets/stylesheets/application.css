@@ -4,3 +4,39 @@
  *= require jquery-ui/jquery-ui
  *= require base
  */
+
+li#jobs-header {
+  padding: 10px;
+}
+
+li#jobs-header h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.jobs {
+  margin-top: 40px;
+  background-color: #FFC000;
+}
+
+.jobs li {
+  border-bottom: 1px solid black;
+}
+
+.jobs li:last-child {
+  border-bottom: none;
+}
+
+.jobs li a {
+  font-size: 20px;
+  font-weight: 400;
+  font-family: 'Dosis';
+  text-transform: uppercase;
+  display: block;
+  padding: 15px;
+}
+
+.jobs li a:hover {
+  color: white;
+  background-color: black;
+}

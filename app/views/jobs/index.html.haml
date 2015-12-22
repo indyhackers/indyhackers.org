@@ -7,15 +7,11 @@
 %li#jobs-header.text-center
   %h1 Indianapolis Programming Jobs
 
-- if @jobs.empty?
-  %li#no-jobs
+.jobs
+  - if @jobs.empty?
     %p
       There are no job postings at this time. Check back later, or
       %a{:href =>'http://indyhackers.org/jobs.xml'}subsribe to the feed.
 
-- @jobs.each do |job|
-  %li.job
-    %h1
-      = link_to job.title, job_path(job), :name => "#{job.title.downcase.gsub(/[^a-zA-Z0-9]/, '-')}"
-    .job-description{:style => "display:none;"}
-      = MARKDOWN.render(job.description).html_safe
+  - @jobs.each do |job|
+    %li= link_to job.title, job_path(job), :name => "#{job.title.downcase.gsub(/[^a-zA-Z0-9]/, '-')}"
