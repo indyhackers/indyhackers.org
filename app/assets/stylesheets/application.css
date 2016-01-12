@@ -40,3 +40,7 @@ li#jobs-header h1 {
   color: white;
   background-color: black;
 }
+
+article ul li ul {
+  margin-left: 20px;
+}
