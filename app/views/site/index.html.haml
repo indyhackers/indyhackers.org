@@ -19,11 +19,14 @@
 
         You can [subscribe](http://indyhackers.us6.list-manage.com/subscribe?u=244b5370d41b5cf4146ec517c&id=b51f983563) now or [view the past issues](/newsletter/archive).
 
-  .layout-50-right
-    %h2 You, here, and in or newsletter?
-    %p
-      :markdown
-        Want to get your name in front of developers and other technologists in Indy? Want to help support our efforts in bringing together and helping to grow this community? [Ask us about sponsoring](mailto:sponsors@indyhackers.org), today!
+  .layout-50-right.text-center
+    -# Scale Assembly should be the sponsor through August 17th, 2017!
+    = link_to "http://scaleassembly.com/" do
+      %h2 Scale Assembly
+    = link_to "http://scaleassembly.com/" do
+      = image_tag "scale_assembly_logo_on_transparent_background_no_text.png", height: "250", width: "250"
+    %p= link_to "Helping software businesses scale", "http://scaleassembly.com/", class: "sponsor-blurb"
+    %p.sponsor-indicator [Our Wonderful Sponsor!]
 
 %li#indy_hackers_calendar
   %h2 indy hackers' calendar

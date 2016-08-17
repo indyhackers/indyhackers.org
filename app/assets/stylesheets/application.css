@@ -44,3 +44,11 @@ li#jobs-header h1 {
 article ul li ul {
   margin-left: 20px;
 }
+
+a.sponsor-blurb {
+  font-size: 18px;
+}
+
+p.sponsor-indicator {
+  font-size: 12px;
+}
