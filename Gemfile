@@ -1,5 +1,5 @@
 # Gems host
-source 'http://rubygems.org'
+source 'https://rubygems.org'
 ruby '1.9.3'
 
 gem 'rails', '3.2.19'
@@ -25,7 +25,7 @@ gem 'slugged'
 gem 'delayed_job'
 
 gem 'json_pure'
-gem 'thin'
+gem 'unicorn'
 gem 'newrelic_rpm'
 gem 'instrumental_agent'
 
