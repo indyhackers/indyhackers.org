@@ -17,8 +17,8 @@ $(document).ready(function()
       {
       slide		:
         [
-          {image	: 'image/background/01.jpg'},
-      {image	: 'image/background/05.jpg'}
+          {image	: '/holiday-social-2014/image/background/01.jpg'},
+      {image	: '/holiday-social-2014/image/background/05.jpg'}
       ]
     },
     googleMap		:
@@ -84,7 +84,7 @@ $(document).ready(function()
       {
       map:googleMap,
       position:coordinate,
-      icon:'image/map_pointer.png'
+      icon:'/holiday-social-2014/image/map_pointer.png'
     }
 
     var googleMarker=new google.maps.Marker(markerOptions);
