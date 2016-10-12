@@ -7,8 +7,8 @@ describe Job do
       @fresh_job = FactoryGirl.create(:job, :created_at => 59.day.ago)
       
       results = Job.stale
-      results.should include(@stale_job)
-      results.should_not include(@fresh_job)
+      expect(results).to include(@stale_job)
+      expect(results).not_to include(@fresh_job)
     end
   end
 end
