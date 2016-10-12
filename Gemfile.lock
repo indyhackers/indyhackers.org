@@ -131,7 +131,7 @@ GEM
     multi_json (1.12.1)
     multi_test (0.1.2)
     netrc (0.7.7)
-    newrelic_rpm (3.5.5.38)
+    newrelic_rpm (3.16.3.323)
     nokogiri (1.6.8.1)
       mini_portile2 (~> 2.1.0)
     orm_adapter (0.0.7)
