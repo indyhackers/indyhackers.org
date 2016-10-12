@@ -45,16 +45,16 @@ When 'I edit an existing job' do
 end
 
 Then 'I should be signed in successfully' do
-  page.should have_content 'Signed in successfully'
+  expect(page).to have_content 'Signed in successfully'
 end
 
 Then 'I see the saved job' do
-  page.should have_content /success/
-  page.should have_content 'Pacers Assistant Coach'
-  page.should have_content "Someone who sits at the end of the bench and keeps Roy Hibbert's confidence level high"
+  expect(page).to have_content /success/
+  expect(page).to have_content 'Pacers Assistant Coach'
+  expect(page).to have_content "Someone who sits at the end of the bench and keeps Roy Hibbert's confidence level high"
 end
 
 Then 'I see the updated job' do
-  page.should have_content /success/
-  page.should have_content @job.title + ' FAST'
+  expect(page).to have_content /success/
+  expect(page).to have_content @job.title + ' FAST'
 end

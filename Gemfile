@@ -1,8 +1,6 @@
-# Gems host
 source 'https://rubygems.org'
-ruby '1.9.3'
 
-gem 'rails', '3.2.19'
+gem 'rails', '3.2.22.5'
 
 gem 'pg'
 
@@ -33,26 +31,29 @@ gem 'memcachier'
 gem 'dalli'
 
 group :development, :test do
-  gem "rspec-rails"
-  gem 'capybara'
-  gem 'database_cleaner'
-  gem 'cucumber-rails'
-  gem 'cucumber'
   gem 'spork'
   gem 'launchy'
-  gem 'factory_girl_rails'
-  gem 'faker'
-  gem 'fakeweb'
-  gem 'gherkin'
   gem 'deadweight'
+  gem 'test-unit'
 
   gem 'rails3-generators'
   gem 'hpricot'
-  gem 'ruby_parser', '2.0.4'
 
   gem 'heroku'
   gem 'taps'
   gem 'heroku_san'
 
   gem 'pry-rails'
+end
+
+group :test do
+  gem 'database_cleaner'
+  gem 'rspec-rails', '~> 3.5'
+  gem 'gherkin'
+  gem 'factory_girl_rails'
+  gem 'faker'
+  gem 'fakeweb'
+  gem 'capybara'
+  gem 'cucumber-rails'
+  gem 'cucumber'
 end

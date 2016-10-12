@@ -43,25 +43,25 @@ end
 Then 'I can edit the job' do
   fill_in "Title", :with => "New Awesome Title"
   click_button "Update"
-  page.should have_content "Your job post was updated"
+  expect(page).to have_content "Your job post was updated"
   @job.reload
-  current_path.should == edit_job_path(@job)
+  expect(current_path).to eq edit_job_path(@job)
 end
 
 Then /^I can delete the job/ do
   click_button "Delete"
-  current_path.should == jobs_path
-  page.should_not have_content @job.title
+  expect(current_path).to eq jobs_path
+  expect(page).not_to have_content @job.title
 end
 
 Then 'I should see the title for that job' do
-  page.should have_content @job.title
+  expect(page).to have_content @job.title
 end
 
 Then 'I should see the description for that job' do
-  page.should have_content @job.description
+  expect(page).to have_content @job.description
 end
 
 Then 'I should see that the job request was sent successfully' do
-  page.should have_content 'sent successfully'
+  expect(page).to have_content 'sent successfully'
 end
