@@ -33,6 +33,7 @@ gem 'memcachier'
 gem 'dalli'
 
 group :development, :test do
+  gem 'foreman'
   gem 'spork'
   gem 'launchy'
   gem 'deadweight'
