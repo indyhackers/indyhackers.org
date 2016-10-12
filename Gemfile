@@ -25,7 +25,7 @@ gem 'slugged'
 gem 'delayed_job'
 
 gem 'json_pure'
-gem 'thin'
+gem 'unicorn'
 gem 'newrelic_rpm'
 gem 'instrumental_agent'
 
