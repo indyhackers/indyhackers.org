@@ -257,6 +257,13 @@ input,textarea,label
 	color:#000000;
 }
 
+.subtitle-paragraph a, .subtitle-paragraph a:hover {
+	color: black;
+	font-size: inherit;
+	font-family: inherit;
+	text-decoration: underline;
+}
+
 /******************************************************************************/
 /*  Background colors														  */
 /******************************************************************************/
