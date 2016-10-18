@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby "2.3.1"
+ruby '2.3.1'
 
 gem 'rails', '3.2.22.5'
 
@@ -32,6 +32,7 @@ gem 'memcachier'
 gem 'dalli'
 
 group :development, :test do
+  gem 'foreman'
   gem 'spork'
   gem 'launchy'
   gem 'deadweight'
