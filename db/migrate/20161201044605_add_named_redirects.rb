@@ -2,7 +2,7 @@ class AddNamedRedirects < ActiveRecord::Migration
   def up
     create_table(:redirects, :id => false) do |t|
       t.column :id,  :string, limit: 255, null: false
-      t.column :url, :string, limit: 255
+      t.column :url, :string, limit: 2083
       t.column :last_visited_at, :datetime
       t.column :visits, :integer, null: false, default: 0
       t.timestamps
