@@ -57,10 +57,12 @@ ActiveRecord::Schema.define(:version => 20161201044605) do
   end
 
   create_table "redirects", :id => false, :force => true do |t|
-    t.string   "id",         :null => false
+    t.string   "id",                             :null => false
     t.string   "url"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "last_visited_at"
+    t.integer  "visits",          :default => 0, :null => false
+    t.datetime "created_at",                     :null => false
+    t.datetime "updated_at",                     :null => false
   end
 
   create_table "slugs", :force => true do |t|

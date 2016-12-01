@@ -10,4 +10,8 @@ class Redirect < ActiveRecord::Base
       errors.add(:url, "not a valid url")
     end
   end
+
+  def visit!
+    update_attributes!(last_visited_at: Time.now, :visits => visits + 1)
+  end
 end
