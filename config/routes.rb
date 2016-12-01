@@ -23,7 +23,7 @@ IndyhackersRails::Application.routes.draw do
   match '/newsletter/subscribe' => redirect('http://eepurl.com/sMpJj')
   match '/newsletter/archive' => 'newsletters#index'
 
-  resources :redirects, :only => [:show], :constraints => { :id => /[a-z0-9_]+/i }
+  resources :redirects, :only => [:show], :constraints => { :id => /[a-z0-9_]+/i }, :path => "r"
 
   root :to => "site#index"
 end
