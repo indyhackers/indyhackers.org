@@ -1,6 +1,6 @@
-class RedirectController < ApplicationController
+class RedirectsController < ApplicationController
   def show
     redirect = Redirect.find(params[:id])
-    redirect_to redirect
+    redirect_to redirect.url, status: 307
   end
 end
