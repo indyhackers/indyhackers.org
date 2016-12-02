@@ -1,7 +1,7 @@
 require 'uri'
 
 class Redirect < ActiveRecord::Base
-  validates :id,  format: /[a-z0-9_]+/i, presence: true
+  validates :id,  format: /[a-z0-9_]+/i, presence: true, length: { maximum: 32 }
   validates :url, presence: true, length: { maximum: 2083 }
   validate :url_is_valid
 

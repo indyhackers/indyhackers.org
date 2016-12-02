@@ -57,7 +57,7 @@ ActiveRecord::Schema.define(:version => 20161201044605) do
   end
 
   create_table "redirects", :id => false, :force => true do |t|
-    t.string   "id",                                             :null => false
+    t.string   "id",              :limit => 32,                  :null => false
     t.string   "url",             :limit => 2083
     t.datetime "last_visited_at"
     t.integer  "visits",                          :default => 0, :null => false
