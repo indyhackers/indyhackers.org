@@ -31,12 +31,13 @@ gem 'instrumental_agent'
 gem 'memcachier'
 gem 'dalli'
 
+gem 'test-unit'
+
 group :development, :test do
   gem 'foreman'
   gem 'spork'
   gem 'launchy'
   gem 'deadweight'
-  gem 'test-unit'
 
   gem 'rails3-generators'
   gem 'hpricot'
