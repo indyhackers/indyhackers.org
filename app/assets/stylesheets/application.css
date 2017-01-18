@@ -52,3 +52,7 @@ a.sponsor-blurb {
 p.sponsor-indicator {
   font-size: 12px;
 }
+
+ul ul {
+  margin-left: 20px;
+}
