@@ -14,6 +14,7 @@ IndyhackersRails::Application.routes.draw do
   resource :sitemap, :only => :show
   match 'job_post_request' => 'job_post_requests#new'
   match "calendar", :to => "site#calendar"
+  match "submit_event", to: "site#event"
 
   match "why_indy", :to => "site#why_indy"
   match "holiday-social" => redirect('/holiday-social-2016/')
