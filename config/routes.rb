@@ -26,5 +26,7 @@ IndyhackersRails::Application.routes.draw do
 
   resources :redirects, :only => [:show], :constraints => { :id => /[a-z0-9_]+/i }, :path => "r"
 
+  get 'coc' => 'site#coc'
+
   root :to => "site#index"
 end
