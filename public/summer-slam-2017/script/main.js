@@ -17,8 +17,8 @@ $(document).ready(function()
       {
       slide		:
         [
-          {image	: '/holiday-social-2016/image/background/01.jpg'},
-      {image	: '/holiday-social-2016/image/background/05.jpg'}
+          {image	: '/summer-slam-2017/image/background/01.jpg'},
+      {image	: '/summer-slam-2017/image/background/05.jpg'}
       ]
     },
     googleMap		:
@@ -84,7 +84,7 @@ $(document).ready(function()
       {
       map:googleMap,
       position:coordinate,
-      icon:'/holiday-social-2016/image/map_pointer.png'
+      icon:'/summer-slam-2017/image/map_pointer.png'
     }
 
     var googleMarker=new google.maps.Marker(markerOptions);
