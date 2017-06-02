@@ -16,7 +16,7 @@ gem 'inherited_resources'
 gem 'devise'
 gem 'maruku'
 gem 'redcarpet'
-gem 'will_paginate', '~> 3.0'
+gem 'will_paginate'
 
 gem 'stringex'
 gem 'slugged'
