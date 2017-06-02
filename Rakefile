@@ -6,4 +6,5 @@ require 'rake'
 
 IndyhackersRails::Application.load_tasks
 
-task :default => [:spec, :features]
+task :test    => [:spec, :features]
+task :default => :test
