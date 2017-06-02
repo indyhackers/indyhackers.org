@@ -1,7 +1,7 @@
 require "digest/md5"
 class JobsController < ApplicationController
-  before_filter :authenticate_by_token, :only => [:edit, :destroy]
-  skip_before_filter :verify_authenticity_token, :only => :viewed
+  before_action :authenticate_by_token, :only => [:edit, :destroy]
+  skip_before_action :verify_authenticity_token, :only => :viewed
 
   def index
     @jobs = Job.published.order("created_at DESC").all
@@ -24,7 +24,7 @@ class JobsController < ApplicationController
 
   def update
     find_job
-    if @job.update_attributes(params[:job])
+    if @job.update_attributes(job_params)
       redirect_to edit_job_path(@job, :token => params[:token]), :notice => 'Your job post was updated'
      else
       render :edit
@@ -36,7 +36,7 @@ class JobsController < ApplicationController
     if cookies['_ih_uid'].nil?
       cookies['_ih_uid'] = Digest::MD5.hexdigest(Time.now.to_s + rand(13000).to_s)
     end
-    @viewer = Viewer.find_or_create_by_client_hash(cookies['_ih_uid'])
+    @viewer = Viewer.find_or_create_by!(:client_hash => cookies['_ih_uid'])
     unless @viewer.viewed?(@job)
       @job.viewers << @viewer
       @job.views = @job.views.nil? ? 1 : @job.views + 1
@@ -52,6 +52,10 @@ class JobsController < ApplicationController
   end
 
   private
+
+  def job_params
+    params[:job].permit(:title, :description, :published_at)
+  end
 
   def authenticate_by_token
     find_job

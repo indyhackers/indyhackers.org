@@ -1,5 +1,5 @@
-class CreateSluggedSlugs < ActiveRecord::Migration
-  
+class CreateSluggedSlugs < ActiveRecord::Migration[5.1]
+
   def self.up
     create_table :slugs do |t|
       t.string   :scope
@@ -16,5 +16,5 @@ class CreateSluggedSlugs < ActiveRecord::Migration
   def self.down
     drop_table :slugs
   end
-  
+
 end

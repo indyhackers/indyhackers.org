@@ -1,4 +1,4 @@
-IndyhackersRails::Application.routes.draw do
+Rails.application.routes.draw do
   devise_for :admins
 
   namespace "admin" do
@@ -12,17 +12,17 @@ IndyhackersRails::Application.routes.draw do
 
   resources :job_post_requests, :only => [:new, :create]
   resource :sitemap, :only => :show
-  match 'job_post_request' => 'job_post_requests#new'
-  match "calendar", :to => "site#calendar"
-  match "submit_event", to: "site#event"
+  get 'job_post_request' => 'job_post_requests#new'
+  get "calendar", :to => "site#calendar"
+  get "submit_event", to: "site#event"
 
-  match "why_indy", :to => "site#why_indy"
-  match "holiday-social" => redirect('/holiday-social-2016/')
+  get "why_indy", :to => "site#why_indy"
+  get "holiday-social" => redirect('/holiday-social-2016/')
 
-  match 'code-of-conduct' => 'site#code_of_conduct'
+  get 'code-of-conduct' => 'site#code_of_conduct'
 
-  match '/newsletter/subscribe' => redirect('http://eepurl.com/sMpJj')
-  match '/newsletter/archive' => 'newsletters#index'
+  get '/newsletter/subscribe' => redirect('http://eepurl.com/sMpJj')
+  get '/newsletter/archive' => 'newsletters#index'
 
   resources :redirects, :only => [:show], :constraints => { :id => /[a-z0-9_]+/i }, :path => "r"
 
