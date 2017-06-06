@@ -172,6 +172,7 @@ GEM
       thor (>= 0.14.6, < 2.0)
     raindrops (0.17.0)
     rake (11.3.0)
+    rb-readline (0.5.4)
     rdoc (3.12.2)
       json (~> 1.4)
     redcarpet (2.2.2)
@@ -279,6 +280,7 @@ DEPENDENCIES
   pry-rails
   rails (= 3.2.22.5)
   rails3-generators
+  rb-readline
   redcarpet
   rspec-rails (~> 3.5)
   sass
@@ -296,4 +298,4 @@ RUBY VERSION
    ruby 2.3.1p112
 
 BUNDLED WITH
-   1.13.3
+   1.15.1
