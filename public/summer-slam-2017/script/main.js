@@ -23,7 +23,7 @@ $(document).ready(function()
     },
     googleMap		:
       {
-      coordinates	:	[39.966762,-86.0108277]
+      coordinates	:	[39.849268,-86.141426]]
     }
   }
 
