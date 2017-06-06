@@ -13,25 +13,25 @@ $(document).ready(function() {
   }
 
   $('textarea#job_description, textarea#job_post_request_description').keyup(function(event) {
-    var text = $(this).attr('value');
+    var text = $(this).val();
     var converter = new Showdown.converter();
     var html = converter.makeHtml(text);
     $('#markdown-target').html(html);
   });
 
   $('#new-blog-post textarea#post_body').keyup(function(event) {
-    var title = $('input#post_title').attr('value');
-    var text = $(this).attr('value');
+    var title = $('input#post_title').val();
+    var text = $(this).val();
     var converter = new Showdown.converter();
     var html = converter.makeHtml(text);
     $('#preview article').html("<h1>" + title + "</h1>" + html);
   });
 
   $('input#job_title, input#job_post_request_title').keyup(function(event) {
-    $('.job.readable h3 > a').text($(this).attr('value'));
+    $('.job.readable h3 > a').text($(this).val());
   });
 
   $('input#post_title').keyup(function(event) {
-    $('#preview article h1').text($(this).attr('value'));
+    $('#preview article h1').text($(this).val());
   });
 });
