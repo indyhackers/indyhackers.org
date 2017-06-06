@@ -15,6 +15,7 @@
 .job.readable
   %h2 Preview
   %h3
-    = @job.title
+    %a{:href => '#'}
+      = @job.title || "&nbsp;"
   .job-description#markdown-target
     = MARKDOWN.render(@job.description).html_safe
