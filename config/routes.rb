@@ -19,13 +19,12 @@ IndyhackersRails::Application.routes.draw do
   match "why_indy", :to => "site#why_indy"
   match "holiday-social" => redirect('/holiday-social-2016/')
 
-  match 'code-of-conduct' => 'site#code_of_conduct'
-
   match '/newsletter/subscribe' => redirect('http://eepurl.com/sMpJj')
   match '/newsletter/archive' => 'newsletters#index'
 
   resources :redirects, :only => [:show], :constraints => { :id => /[a-z0-9_]+/i }, :path => "r"
 
+  match 'code-of-conduct' => 'site#coc'
   get 'coc' => 'site#coc'
 
   root :to => "site#index"
