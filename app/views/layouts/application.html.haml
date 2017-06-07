@@ -14,6 +14,7 @@
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Dosis:400,300,200,500,600,700,800" />
 
     = stylesheet_link_tag 'application'
+
     <link rel="stylesheet" type="text/css" media="screen and (max-width:969px)" href="/assets/responsive/width-0-969.css"/>
     <link rel="stylesheet" type="text/css" media="screen and (max-width:767px)" href="/assets/responsive/width-0-767.css"/>
     <link rel="stylesheet" type="text/css" media="screen and (min-width:480px) and (max-width:969px)" href="/assets/responsive/width-480-969.css"/>
@@ -60,8 +61,14 @@
             %a{ :href => 'https://docs.google.com/forms/d/e/1FAIpQLSdlfIqF42uU8iyoYyqKDFPEYRsNCOCFYpFJwMTvdVOkK3otSg/viewform?usp=sf_link' }> this form
             \.
           %p
+            Coming to one of our events? Cool!
+            %br
+            Check out our
+            =link_to 'Code of Conduct', '/coc'
+          %p
             Just wanna chat? Hit us up at
             = link_to '@indyhackersorg', "https://twitter.com/indyhackersorg"
+
         #made-by.layout-50-right
           %h3 Crafted Lovingly but with Wild Abandon By
           %ul.clear-fix
