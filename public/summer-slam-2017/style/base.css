@@ -27,9 +27,9 @@ time,mark,audio,video
 /******************************************************************************/
 /*  Base styles																  */
 /******************************************************************************/
+
 html {
-  background: url('/assets/holiday-social-from-loft.jpg') no-repeat center center fixed;
-  background-color: #000;
+  background: url(/assets/speakeasy-bg.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -120,6 +120,10 @@ p
 p,div.contact-details
 {
 	line-height:150%;
+}
+
+#venue-logo {
+  height: 125px;
 }
 
 /******************************************************************************/
@@ -749,6 +753,13 @@ p.subtitle-paragraph span.bold
 		font-weight:700;
 	}
 
+p.subtitle-paragraph a {
+	font-family:'Dosis';
+	padding:0px;
+	font-size:24px;
+	font-weight:400;
+	line-height:120%;
+}
 p#where-subtitle a, p#where-subtitle a:hover {
 	font-family:'Dosis';
 	padding:0px;
@@ -1206,13 +1217,6 @@ div.main-body
 			text-decoration:none;
 		}
 
-		.logo {
-	    float: left;
-	    height: 82px;
-	    width: 82px;
-	    margin-right: -5px;
-	  }
-
 		div.header div.header-phone
 		{
 			float:right;
@@ -1259,7 +1263,7 @@ div.main-body
 		{
 			width:400px;
 			padding:40px;
-      height: 140px;
+      height: 240px;
 		}
 
 /***********************/
@@ -1278,25 +1282,6 @@ ul.menu li a {
 ul.menu li a:hover {
   background-color: #111;
   color: #FFC000;
-}
-
-#admin-header {
-  margin: 0;
-  padding: 5px;
-  color: #efefef;
-  background-color: #000;
-}
-
-#admin-header .left {
-  float: left;
-}
-
-#admin-header .right {
-  float: right;
-}
-
-#admin-header .clear {
-  clear: both;
 }
 
 // form
@@ -1380,11 +1365,6 @@ form.simple_form .input input.button {
   font-size: 24px;
 }
 
-#single-job article.job-description ul {
-  padding-bottom: 15px;
-  line-height: 150%;
-}
-
 .footer #made-by ul {
   margin-left: 60px;
 }
@@ -1401,39 +1381,4 @@ form.simple_form .input input.button {
 .footer #made-by ul li img {
   width: 72px;
   height: 72px;
-}
-
-.footer.layout-50 .layout-50-left, .footer.layout-50 .layout-50-right {
-  height: 160px;
-}
-
-table#jobs tr td {
-  margin: 0;
-  padding: 6px 16px 6px 0;
-  border-top: 1px solid #000;
-  border-collapse: collapse;
-  overflow: hidden;
-}
-
-ul.volunteer-organizers {
-  display: block;
-  overflow: hidden;
-  width: 560px;
-}
-
-ul.volunteer-organizers li {
-  display: block;
-  float: left;
-  margin: 5px;
-  width: 175px;
-  height: 175px;
-}
-
-ul.volunteer-organizers li img {
-  margin: 0 auto;
-  display: block;
-}
-
-ul.volunteer-organizers li .name {
-  text-align: center;
 }
