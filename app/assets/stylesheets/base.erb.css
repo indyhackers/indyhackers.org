@@ -1206,6 +1206,13 @@ div.main-body
 			text-decoration:none;
 		}
 
+		.logo {
+	    float: left;
+	    height: 82px;
+	    width: 82px;
+	    margin-right: -5px;
+	  }
+
 		div.header div.header-phone
 		{
 			float:right;
