@@ -1425,7 +1425,8 @@ ul.volunteer-organizers li {
   display: block;
   float: left;
   margin: 5px;
-  width: 130px;
+  width: 175px;
+  height: 175px;
 }
 
 ul.volunteer-organizers li img {
