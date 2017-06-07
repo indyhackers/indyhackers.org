@@ -47,6 +47,7 @@ group :development, :test do
   gem 'heroku_san'
 
   gem 'pry-rails'
+  gem 'rb-readline'
 end
 
 group :test do

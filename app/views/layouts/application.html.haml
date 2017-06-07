@@ -21,14 +21,18 @@
     <link rel="stylesheet" type="text/css" media="screen and (min-width:480px) and (max-width:767px)" href="/assets/responsive/width-480-767.css"/>
     <link rel="stylesheet" type="text/css" media="screen and (max-width:479px)" href="/assets/responsive/width-0-479.css"/>
 
+    = stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     = favicon_link_tag "/favicon.png"
+    = yield(:head)
 
-  %body
+  %body{class: "#{request[:controller].split('/').join(' ')} #{request[:action]}"}
     = admin_header
     .main.main-body
       .header.clear-fix
         .layout-50p-left.clear-fix
+          = link_to image_tag('indyhackers-logo.png', :class => 'logo'), '/'
           = link_to 'Indy Hackers', '/', :class => 'header-logo'
+
 
         .layout-50p-right
           .header-phone
