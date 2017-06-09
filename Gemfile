@@ -34,6 +34,7 @@ gem 'dalli'
 gem 'test-unit'
 
 gem 'rack-cache'
+gem 'actionpack-action_caching'
 
 group :development, :test do
   gem 'foreman'
