@@ -7,7 +7,6 @@ class Job < ActiveRecord::Base
   belongs_to :user
 
   attr_accessor :publish_now
-  attr_accessible :title, :description, :published_at
 
   after_update :notify_if_published
 
@@ -20,7 +19,7 @@ class Job < ActiveRecord::Base
   }
 
   def notify_if_published
-    if published_at_changed? && published_at.present? && published_at <= Time.now
+    if saved_change_to_published_at? && published_at.present? && published_at <= Time.now
       SystemMailer.job_post_published(self.user, self).deliver
     else
       Rails.logger.info "OMG WTF BBQ"

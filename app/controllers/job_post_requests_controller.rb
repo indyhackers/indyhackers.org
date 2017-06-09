@@ -4,9 +4,9 @@ class JobPostRequestsController < ApplicationController
   end
 
   def create
-    @job_post_request = JobPostRequest.new(params[:job_post_request].merge!({:id => 13}))
+    @job_post_request = JobPostRequest.new(job_post_request_params.merge!({:id => 13}))
     if @job_post_request.valid?
-      @user = User.find_or_create_by_email(:name => @job_post_request.name, :email => @job_post_request.email)
+      @user = User.find_or_create_by!(:name => @job_post_request.name, :email => @job_post_request.email)
       @job = Job.new(
         :title => @job_post_request.title,
         :description => @job_post_request.description,
@@ -19,5 +19,11 @@ class JobPostRequestsController < ApplicationController
       flash[:notice] = 'There was a problem with sending your job post request'
       render :new
     end
+  end
+
+  private
+
+  def job_post_request_params
+    params[:job_post_request].permit(:name, :email, :title, :description, :attachment)
   end
 end

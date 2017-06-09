@@ -1,4 +1,4 @@
-class AddNamedRedirects < ActiveRecord::Migration
+class AddNamedRedirects < ActiveRecord::Migration[5.1]
   def up
     create_table(:redirects, :id => false) do |t|
       t.column :id,  :string, limit: 32, null: false

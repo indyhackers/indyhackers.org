@@ -1,4 +1,4 @@
-class CreateJobViews < ActiveRecord::Migration
+class CreateJobViews < ActiveRecord::Migration[5.1]
   def change
     create_table :job_views do |t|
       t.integer :job_id

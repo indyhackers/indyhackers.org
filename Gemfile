@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
-ruby '2.3.1'
+ruby '2.4.1'
 
-gem 'rails', '3.2.22.5'
+gem 'rails', '5.1.1'
 
 gem 'pg'
 
@@ -13,10 +13,10 @@ gem 'jquery-rails'
 gem 'simple_form'
 gem 'inherited_resources'
 
-gem 'devise', '~> 1.1'
+gem 'devise'
 gem 'maruku'
 gem 'redcarpet'
-gem 'will_paginate', '~> 3.0'
+gem 'will_paginate'
 
 gem 'stringex'
 gem 'slugged'
@@ -32,6 +32,9 @@ gem 'memcachier'
 gem 'dalli'
 
 gem 'test-unit'
+
+gem 'rack-cache'
+gem 'actionpack-action_caching'
 
 group :development, :test do
   gem 'foreman'
@@ -52,12 +55,12 @@ end
 
 group :test do
   gem 'database_cleaner'
-  gem 'rspec-rails', '~> 3.5'
+  gem 'rspec-rails'
   gem 'gherkin'
   gem 'factory_girl_rails'
   gem 'faker'
   gem 'fakeweb'
   gem 'capybara'
-  gem 'cucumber-rails'
+  gem 'cucumber-rails', :require => false
   gem 'cucumber'
 end
