@@ -33,6 +33,8 @@ gem 'dalli'
 
 gem 'test-unit'
 
+gem 'rack-cache'
+
 group :development, :test do
   gem 'foreman'
   gem 'spork'
