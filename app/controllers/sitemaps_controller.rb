@@ -1,6 +1,6 @@
 class SitemapsController < ApplicationController
   respond_to :xml
-  caches_page :show
+  caches_action :show
 
   def show
     @jobs = Job.published
