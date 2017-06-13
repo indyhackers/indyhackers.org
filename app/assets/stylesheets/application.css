@@ -14,20 +14,20 @@ li#jobs-header h1 {
   padding: 0;
 }
 
-.jobs {
+.job-list {
   margin-top: 40px;
   background-color: #FFC000;
 }
 
-.jobs li {
+.job-list li {
   border-bottom: 1px solid black;
 }
 
-.jobs li:last-child {
+.job-list li:last-child {
   border-bottom: none;
 }
 
-.jobs li a {
+.job-list li a {
   font-size: 20px;
   font-weight: 400;
   font-family: 'Dosis';
@@ -36,7 +36,7 @@ li#jobs-header h1 {
   padding: 15px;
 }
 
-.jobs li a:hover {
+.job-list li a:hover {
   color: white;
   background-color: black;
 }
