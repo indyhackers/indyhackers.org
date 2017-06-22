@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   get "why_indy", :to => "site#why_indy"
   get "holiday-social" => redirect('/holiday-social-2016/')
 
-  get 'code-of-conduct' => 'site#code_of_conduct'
+  get 'code-of-conduct' => 'site#coc'
 
   get '/newsletter/subscribe' => redirect('http://eepurl.com/sMpJj')
   get '/newsletter/archive' => 'newsletters#index'
