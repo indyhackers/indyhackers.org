@@ -22,6 +22,7 @@ Rails.application.routes.draw do
   get 'code-of-conduct' => 'site#coc'
 
   get '/newsletter/subscribe' => redirect('http://eepurl.com/sMpJj')
+  get '/newsletter' => 'newsletters#index'
   get '/newsletter/archive' => 'newsletters#index'
 
   resources :redirects, :only => [:show], :constraints => { :id => /[a-z0-9_]+/i }, :path => "r"

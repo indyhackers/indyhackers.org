@@ -38,8 +38,8 @@
         .layout-50p-right
           .header-phone
             %ul.no-list.menu
+              %li= link_to 'Newsletter', '/newsletter'
               %li= link_to 'Jobs', '/jobs'
-              %li= link_to 'Submit a Job', '/job_post_requests/new'
               %li= link_to 'Calendar', '/calendar'
 
       .content.clear-fix
@@ -70,21 +70,12 @@
             = link_to '@indyhackersorg', "https://twitter.com/indyhackersorg"
 
         #made-by.layout-50-right
-          %h3 Crafted Lovingly but with Wild Abandon By
-          %ul.clear-fix
-            %li
-              %p
-                = link_to 'http://mdswanson.com' do
-                  = image_tag 'matt-swansons-face.jpeg'
-              %p= link_to 'Matt Swanson', 'http://mdswanson.com'
-              %p= link_to '@_swanson', 'http://twitter.com/_swanson'
-            %li
-              %p
-                = link_to 'http://mileszs.com' do
-                  = image_tag 'my-face.jpeg'
-              %p= link_to 'Miles Z. Sterrett', 'http://mileszs.com'
-              %p= link_to '@mileszs', 'http://twitter.com/mileszs'
-          %p Background photo by Garrett Hart
+          %h3 This thing you're looking at
+          %p
+            :markdown
+              This web app sorta thing has been crafted lovingly but with wild abandon by [The Indy Hackers Board]('/coc'). It's warty and it oozes unspeakably in some places. Find out [on GitHub](https://github.com/indyhackers/indyhackers.org).
+
+              Background photo by Garrett Hart.
 
 
     = javascript_include_tag 'application'
