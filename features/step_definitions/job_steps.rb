@@ -29,7 +29,7 @@ When "I click that job's title" do
 end
 
 When 'I fill out a job request form' do
-  click_link 'Submit a Job'
+  visit '/job_post_requests/new'
   fill_in 'Name', with: 'Frank Vogel'
   fill_in 'Email', with: 'frank.vogel@pacers.com'
   fill_in 'Title', with: 'Star NBA Coach'
