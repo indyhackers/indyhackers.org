@@ -10,31 +10,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161201044605) do
+ActiveRecord::Schema.define(version: 20171129213115) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "admins", force: :cascade do |t|
-    t.string "email", default: "", null: false
-    t.string "encrypted_password", default: "", null: false
-    t.integer "failed_attempts", default: 0, null: false
-    t.string "unlock_token"
+  create_table "admins", id: :serial, force: :cascade do |t|
+    t.string "email", limit: 255, default: "", null: false
+    t.string "encrypted_password", limit: 128, default: "", null: false
+    t.integer "failed_attempts", default: 0
+    t.string "unlock_token", limit: 255
     t.datetime "locked_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_admins_on_email", unique: true
   end
 
-  create_table "job_views", force: :cascade do |t|
+  create_table "job_views", id: :serial, force: :cascade do |t|
     t.integer "job_id"
     t.integer "viewer_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "jobs", force: :cascade do |t|
-    t.string "title"
+  create_table "jobs", id: :serial, force: :cascade do |t|
+    t.string "title", limit: 255
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -42,16 +42,17 @@ ActiveRecord::Schema.define(version: 20161201044605) do
     t.integer "user_id"
     t.datetime "published_at"
     t.datetime "published_notice_sent_at"
-    t.string "cached_slug"
+    t.string "cached_slug", limit: 255
+    t.string "company"
     t.index ["cached_slug"], name: "index_jobs_on_cached_slug"
   end
 
-  create_table "posts", force: :cascade do |t|
+  create_table "posts", id: :serial, force: :cascade do |t|
     t.text "body"
     t.text "body_html"
-    t.string "title"
+    t.string "title", limit: 255
     t.datetime "published_at"
-    t.string "slug"
+    t.string "slug", limit: 255
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -64,9 +65,9 @@ ActiveRecord::Schema.define(version: 20161201044605) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "slugs", force: :cascade do |t|
-    t.string "scope"
-    t.string "slug"
+  create_table "slugs", id: :serial, force: :cascade do |t|
+    t.string "scope", limit: 255
+    t.string "slug", limit: 255
     t.integer "record_id"
     t.datetime "created_at"
     t.index ["scope", "record_id", "created_at"], name: "index_slugs_on_scope_and_record_id_and_created_at"
@@ -75,16 +76,16 @@ ActiveRecord::Schema.define(version: 20161201044605) do
     t.index ["scope", "slug"], name: "index_slugs_on_scope_and_slug"
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string "email"
-    t.string "token"
-    t.string "name"
+  create_table "users", id: :serial, force: :cascade do |t|
+    t.string "email", limit: 255
+    t.string "token", limit: 255
+    t.string "name", limit: 255
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "viewers", force: :cascade do |t|
-    t.string "client_hash"
+  create_table "viewers", id: :serial, force: :cascade do |t|
+    t.string "client_hash", limit: 255
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
