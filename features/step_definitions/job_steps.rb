@@ -33,6 +33,7 @@ When 'I fill out a job request form' do
   fill_in 'Name', with: 'Frank Vogel'
   fill_in 'Email', with: 'frank.vogel@pacers.com'
   fill_in 'Title', with: 'Star NBA Coach'
+  fill_in 'Company', with: 'The Pacers'
   fill_in 'Description', with: 'An NBA coach who actually cares.'
 end
 

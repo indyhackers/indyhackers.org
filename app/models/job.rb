@@ -1,6 +1,6 @@
 require File.join(Rails.root, 'lib', 'slug')
 class Job < ActiveRecord::Base
-  is_sluggable :title
+  is_sluggable :name
 
   has_many :job_views, :dependent => :destroy
   has_many :viewers, :through => :job_views
@@ -17,6 +17,16 @@ class Job < ActiveRecord::Base
   scope :stale, lambda {
     where("created_at < ?", 60.days.ago)
   }
+
+  def name
+    "#{title} at #{company}"
+  end
+
+  # The 'slugged' gem expects this method to exist, as it's expecting the
+  # method to be an AR attribute.
+  def name_changed?
+    title_changed? || company_changed?
+  end
 
   def notify_if_published
     if saved_change_to_published_at? && published_at.present? && published_at <= Time.now

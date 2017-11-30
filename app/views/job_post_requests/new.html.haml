@@ -11,6 +11,8 @@
   :markdown
     Simply fill in the few fields below, and we will quickly review your job and put it in front of the best and brightest in Indy. Check out [our Job Board Policy](https://github.com/indyhackers/job_board_policy), as we do have a few things we ask of you.
 
+    Make sure you provide information as to how a candidate should get you their résumé.
+
   = simple_form_for @job_post_request, :html => {:multipart => true} do |f|
     %fieldset
       %legend Your contact info
@@ -20,6 +22,7 @@
       %legend The job's info
       = f.input :title
       -# = f.input :attachment, :as => 'file', :label => 'File', :hint => 'Attach a file rather than typing the full description below.'
+      = f.input :company
       %p
         %strong Note:
         Job posts use Markdown syntax. Watch the&nbsp;

@@ -8,8 +8,9 @@ class JobPostRequestsController < ApplicationController
     if @job_post_request.valid?
       @user = User.find_or_create_by!(:name => @job_post_request.name, :email => @job_post_request.email)
       @job = Job.new(
-        :title => @job_post_request.title,
-        :description => @job_post_request.description,
+        title: @job_post_request.title,
+        description: @job_post_request.description,
+        company: @job_post_request.company,
       )
       @job.user = @user
       @job.save
@@ -24,6 +25,6 @@ class JobPostRequestsController < ApplicationController
   private
 
   def job_post_request_params
-    params[:job_post_request].permit(:name, :email, :title, :description, :attachment)
+    params[:job_post_request].permit(:name, :email, :title, :company, :description)
   end
 end

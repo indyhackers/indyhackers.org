@@ -2,6 +2,6 @@
 - description(truncate(@job.description, :length => 140))
 
 %li.job#single-job
-  %h1= @job.title
+  %h1= @job.name
   %article.job-description
     = MARKDOWN.render(@job.description).html_safe

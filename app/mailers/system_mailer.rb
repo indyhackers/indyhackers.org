@@ -5,9 +5,6 @@ class SystemMailer < ActionMailer::Base
   def job_post_request(job_post_request, job)
     @job_post_request = job_post_request
     @job = job
-    if job_post_request.attachment.present?
-      attachments[job_post_request.attachment.original_filename] = File.read(job_post_request.attachment.tempfile.path)
-    end
     mail(
       :subject => "[IndyHackers Jobs] #{@job_post_request.title}", 
       :from => %{"#{@job_post_request.name}" <alfred@indyhackers.org>},
