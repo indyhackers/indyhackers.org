@@ -17,4 +17,4 @@
       %a{:href =>'http://indyhackers.org/jobs.xml'}subsribe to the feed.
 
   - @jobs.each do |job|
-    %li= link_to job.title, job_path(job), :name => "#{job.title.downcase.gsub(/[^a-zA-Z0-9]/, '-')}"
+    %li= link_to job.name, job_path(job), name: "#{job.name.downcase.gsub(/[^a-zA-Z0-9]/, '-')}"

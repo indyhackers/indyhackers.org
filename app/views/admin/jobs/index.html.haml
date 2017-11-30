@@ -4,13 +4,13 @@
   %p= link_to 'Create a New Job', new_admin_job_path, :class => 'button-black'
   %table#jobs
     %tr
-      %th Title
+      %th Name
       %th Requested
       %th Published
       %th Actions
     - collection.each do |job|
       %tr
-        %td= job.title
+        %td= job.name
         %td= l(job.created_at, :format => :murican)
         %td= l(job.published_at, :format => :murican) unless job.published_at.nil?
         %td.actions
