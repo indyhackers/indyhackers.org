@@ -1,0 +1,63 @@
+.job h1 a {
+  font-size: 36px;
+}
+
+#single-job h1 {
+  font-size: 36px;
+}
+#single-job article.job-description h1 {
+  font-size: 24px;
+}
+
+#single-job article.job-description ul {
+  padding-bottom: 15px;
+  line-height: 150%;
+}
+
+table#jobs {
+  width: 100%;
+}
+
+table#jobs tr td {
+  margin: 0;
+  padding: 6px 16px 6px 0;
+  border-top: 1px solid #000;
+  border-collapse: collapse;
+  overflow: hidden;
+}
+
+li#jobs-header {
+  padding: 10px;
+}
+
+li#jobs-header h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.job-list {
+  margin-top: 40px;
+  background-color: #FFC000;
+}
+
+.job-list li {
+  border-bottom: 1px solid black;
+}
+
+.job-list li:last-child {
+  border-bottom: none;
+}
+
+.job-list li a {
+  font-size: 20px;
+  font-weight: 400;
+  font-family: 'Dosis';
+  text-transform: uppercase;
+  display: block;
+  padding: 15px;
+}
+
+.job-list li a:hover {
+  color: white;
+  background-color: black;
+}
