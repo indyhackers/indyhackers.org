@@ -20,30 +20,29 @@
       = f.input :email, as: :string, :hint => "Address to receive info about your post's status from IndyHackers"
     %fieldset
       %legend The job's info
-      = f.input :title
-      -# = f.input :attachment, :as => 'file', :label => 'File', :hint => 'Attach a file rather than typing the full description below.'
-      = f.input :company
+      = f.input :title, :input_html => { :class => "job_title" }
+      = f.input :company, :input_html => { :class => "job_company" }
       %p
         %strong Note:
-        Job posts use Markdown syntax. Watch the&nbsp;
-        %a{:href => '#live-preview'}> Live Preview below
-        \.
-        See&nbsp;
+        Job posts use Markdown syntax. See&nbsp;
         %a{:href => 'http://daringfireball.net/projects/markdown/syntax'}>  this Markdown reference
-        \.
-      = f.input :description, :as => :text
-      .input
-        %label &nbsp;
-        = f.button :submit, 'Send'
+        \. For instance, a '+' before a line turns it into a list item!
 
-    .clear &nbsp;
+      %ul.tab-menu
+        %li.active
+          %a{ href: '#' } Edit
+        %li
+          %a{ href: '#' } Preview
+      .tab-container.active
+        = f.input :description, :as => :text
+        .input
+          %label &nbsp;
+          = f.button :submit, 'Send'
+      #live-preview.tab-container
+        #single-job.job.readable
+          %h1 &nbsp;
+          .job-description#markdown-target
+            &nbsp;
+          .clear &nbsp;
 
-%li#live-preview
-  %a{:name => '#live-preview'}
-  %h2 Live Preview
-  .job.readable
-    %h3
-      %a{:href => '#'} &nbsp;
-    .job-description#markdown-target
-      &nbsp;
     .clear &nbsp;

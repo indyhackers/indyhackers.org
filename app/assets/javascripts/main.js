@@ -1,16 +1,9 @@
 $(document).ready(function() {
-
-  /**************************************************************************/
-  /*	Forms																  */
-  /**************************************************************************/
-
   $('textarea').elastic();
-  $('#job_post_request form label').inFieldLabels();
-  $('#sign_in form label').inFieldLabels();
-
-  if (location.hash != '' && $('section.jobs').length) {
-    window.location.replace('/jobs/' + location.hash.replace(/#/, ''));
-  }
+  $('form.new_job_post_request, form.new_job, form.edit_job, #sign_in form').superLabels({
+    labelLeft: 10,
+    labelTop: 10
+  });
 
   $('textarea#job_description, textarea#job_post_request_description').keyup(function(event) {
     var text = $(this).val();
@@ -19,19 +12,16 @@ $(document).ready(function() {
     $('#markdown-target').html(html);
   });
 
-  $('#new-blog-post textarea#post_body').keyup(function(event) {
-    var title = $('input#post_title').val();
-    var text = $(this).val();
-    var converter = new Showdown.converter();
-    var html = converter.makeHtml(text);
-    $('#preview article').html("<h1>" + title + "</h1>" + html);
+  $('input.job_title, input.job_company').keyup(function(event) {
+    var name = $('input.job_title').val() + " at " + $('input.job_company').val();
+    $('#single-job.job.readable h1').text(name);
   });
 
-  $('input#job_title, input#job_post_request_title').keyup(function(event) {
-    $('.job.readable h3 > a').text($(this).val());
-  });
-
-  $('input#post_title').keyup(function(event) {
-    $('#preview article h1').text($(this).val());
+  $('.tab-container').not('.active').hide();
+  $("ul.tab-menu li").click(function (ev) {
+    ev.preventDefault();
+    $('ul.tab-menu li').removeClass('active');
+    $(this).addClass('active');
+    $('.tab-container').hide().eq($(this).index()).show();
   });
 });

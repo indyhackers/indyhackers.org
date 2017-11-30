@@ -1,7 +1,7 @@
 - content_for :footer do
   = javascript_include_tag 'showdown'
 
-.readable
+%li.readable
   = simple_form_for resource, :url => admin_job_path(resource), :html => {:multipart => true} do |f|
     %fieldset
       %legend Edit Job
@@ -13,10 +13,8 @@
         %label &nbsp;
         = f.button :submit, 'Save'
 
-.job.readable
+%li.job.readable
   %h2 Preview
-  %h3
-    %a{:href => '#'}
-      = @job.title || "&nbsp;"
+  %h1= @job.title || "&nbsp;"
   .job-description#markdown-target
     = MARKDOWN.render(@job.description).html_safe

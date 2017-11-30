@@ -4,7 +4,7 @@
 //= require jquery.easing
 //= require jquery.blockUI
 //= require jquery.elastic.source
-//= require jquery.infieldlabel.min
+//= require jquery.superlabels.min
 //= require showdown
 //= require script
 //= require main

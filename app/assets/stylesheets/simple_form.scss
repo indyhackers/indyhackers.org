@@ -48,20 +48,20 @@ form.simple_form span.error {
   text-align: center;
 }
 
-#job_post_request form.simple_form div.input { position: relative; }
+form.simple_form div.input { position: relative; }
 
-#job_post_request form.simple_form fieldset div.input.string label,
-#job_post_request form.simple_form fieldset div.input.text label,
-#job_post_request form.simple_form fieldset div.input.email label,
-#job_post_request form.simple_form fieldset div.input.password label {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  font-size: 18px;
-}
+// #job_post_request form.simple_form fieldset div.input.string label,
+// #job_post_request form.simple_form fieldset div.input.text label,
+// #job_post_request form.simple_form fieldset div.input.email label,
+// #job_post_request form.simple_form fieldset div.input.password label {
+//   position: absolute;
+//   top: 10px;
+//   left: 10px;
+//   font-size: 18px;
+// }
 
 form.simple_form label abbr {
-  color: red;
+  display: none;
 }
 
 form.simple_form .input input.button {
