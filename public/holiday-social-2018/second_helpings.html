@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="googlebot" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="http://jsfiddle.net/js/babel/babel.js"></script>
+    <script type="text/javascript" src="http://jsfiddle.net/js/lib/dummy.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://jsfiddle.net/css/result-light.css">
+    <script type="text/javascript" src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script type="text/javascript" src="https://rawgit.com/masayuki0812/c3/master/c3.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://rawgit.com/masayuki0812/c3/master/c3.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+
+    <title>Second Helpings Progress</title>
+    <script type="text/babel"
+            data-presets="es2017,react,stage-0"
+            data-plugins="transform-decorators-legacy">
+
+class Hello extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      goal: 9
+    }
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  componentWillMount() {
+    window.goalGraph;
+  }
+
+  componentDidMount() {
+   window.goalGraph = c3.generate({
+    data: {
+        columns: [
+            ['data', this.state.goal]
+        ],
+        type: 'gauge'
+    },
+    gauge: {
+      min: 0,
+      max: 3000
+    },
+    color: {
+        pattern: ['#FF0000', '#F97600', '#F6C600', '#60B044'], // the three color levels for the percentage values.
+        threshold: {
+          unit: 'value',
+          max: 3000,
+            values: [500, 1000, 2000, 2500]
+        }
+    }
+});
+  }
+
+  handleChange(event) {
+    let newCurrentValue = event.target.value;
+    this.setState({goal: newCurrentValue},
+      window.goalGraph.load({
+          columns: [['data', newCurrentValue]]
+      })
+    );
+  }
+
+  render() {
+    return (
+    <div>
+      <div style={{width: '400px', margin: 'auto', textAlign: 'center'}}>
+        <h1 style={{color: '#666', fontFamily: 'Helvetica, Arial, sans-serif'}}>Helping <span style={{color: 'orange'}}>Second Helpings</span></h1>
+        <div id="chart">
+
+        </div>
+        <p><a href="http://indyhackers.org/r/secondhelpings" style={{color: '#78a22f', textDecoration: 'none'}}>http://indyhackers.org/r/secondhelpings
+        <p style={{color: '#999', fontSize: '18px'}}>Thank you, Brandon Knight and Joel Meador</p>
+        <input id="input" type="number" step="1" value={this.state.goal} onChange={this.handleChange} />
+      </div>
+    </div>
+    );
+  }
+}
+
+ReactDOM.render(
+  <Hello />,
+  document.getElementById('container')
+);
+
+    </script>
+  </head>
+
+  <body>
+    <div id="container">
+      <!-- This element's contents will be replaced with your component. -->
+    </div>
+  </body>
+</html>
