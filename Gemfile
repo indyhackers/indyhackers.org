@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.4.1'
+ruby "2.5.3"
 
 gem 'rails', '5.1.1'
 
@@ -42,12 +42,9 @@ group :development, :test do
   gem 'launchy'
   gem 'deadweight'
 
-  gem 'rails3-generators'
   gem 'hpricot'
 
-  gem 'heroku'
   gem 'taps'
-  gem 'heroku_san'
 
   gem 'pry-rails'
   gem 'rb-readline'
