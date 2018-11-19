@@ -3,7 +3,21 @@
 ![TravisCI](https://travis-ci.org/mileszs/indyhackers.org.svg?branch=master)
 [![Code Climate](https://codeclimate.com/github/mileszs/indyhackers.org/badges/gpa.svg)](https://codeclimate.com/github/mileszs/indyhackers.org)
 
+## Contributing
+
+```
+git clone [your fork]
+cd indyhackers.org
+bundle install
+bundle exec rake db:setup
+bundle exec rails s
+```
+
+And, if you're on macOS or another OS with this command available to you, you can stay in the terminal but open your browser using `open http://localhost:3000`.
+
 ## To Do
+
+These are ideas, anyway.
 
 ### General
 - Use Google calendar API instead of widgets for calendar on the front page?
