@@ -7,7 +7,7 @@ gem 'pg'
 
 gem 'coffee-script'
 gem 'uglifier'
-gem 'haml'
+gem 'haml', '5.0.4'
 gem 'sass'
 gem 'jquery-rails'
 gem 'simple_form'
