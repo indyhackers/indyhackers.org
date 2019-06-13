@@ -9,6 +9,8 @@
       = f.input :company
       = f.input :description
       = f.input :published_at, :as => :date
+      .if-no-contact
+        = "If they didn't leave a way to apply, append this to the bottom: \"To apply, please contact [#{resource.try(:user).try(:name)}](mailto:#{resource.try(:user).try(:email)})"
       .input
         %label &nbsp;
         = f.button :submit, 'Save'
