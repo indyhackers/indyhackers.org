@@ -21,6 +21,8 @@ Rails.application.routes.draw do
 
   get 'code-of-conduct' => 'site#coc'
 
+  get 'hackies' => 'site#hackies'
+
   get '/newsletter/subscribe' => redirect('http://eepurl.com/sMpJj')
   get '/newsletter' => 'newsletters#index'
   get '/newsletter/archive' => 'newsletters#index'
