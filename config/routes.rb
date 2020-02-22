@@ -19,6 +19,8 @@ Rails.application.routes.draw do
   get "why_indy", :to => "site#why_indy"
   get "holiday-social" => redirect('/holiday-social-2016/')
 
+  get 'about' => 'site#about'
+
   get 'code-of-conduct' => 'site#coc'
 
   get 'hackies' => 'site#hackies'
