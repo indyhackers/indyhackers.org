@@ -58,6 +58,7 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.5)
+    crass (1.0.6)
     css_parser (1.2.6)
       addressable
       rdoc
@@ -129,7 +130,8 @@ GEM
     kgio (2.11.0)
     launchy (2.4.3)
       addressable (~> 2.3)
-    loofah (2.0.3)
+    loofah (2.4.0)
+      crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     macaddr (1.7.1)
       systemu (~> 2.6.2)
@@ -177,8 +179,8 @@ GEM
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
-    rails-html-sanitizer (1.0.3)
-      loofah (~> 2.0)
+    rails-html-sanitizer (1.3.0)
+      loofah (~> 2.3)
     railties (5.1.1)
       actionpack (= 5.1.1)
       activesupport (= 5.1.1)
