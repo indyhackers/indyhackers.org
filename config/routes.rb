@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 
   resources :job_post_requests, :only => [:new, :create]
   resource :sitemap, :only => :show
+  get 'about' => 'site#about'
   get 'job_post_request' => 'job_post_requests#new'
   get "calendar", :to => "site#calendar"
   get "submit_event", to: "site#event"
