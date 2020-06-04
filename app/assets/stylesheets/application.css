@@ -8,6 +8,7 @@
  *= require jobs
  *= require footer
  *= require coc
+ *= require about
  */
 
 article ul li ul {

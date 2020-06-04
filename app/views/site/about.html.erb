@@ -1,0 +1,114 @@
+<%
+board_members = [
+  {
+    name: 'Aaron Milam',
+    picture: 'aaron.jpg',
+    email: 'aaron@indyhackers.org',
+    slack_url: 'https://indyhackers.slack.com/team/U7JGQBCBX',
+    slack_handle: '@aaronmilam',
+    twitter: 'https://twitter.com/IAmAMilam',
+    linkedin: 'https://linkedin.com/in/aaronmilam'
+  },
+  {
+    name: 'Aubrey Strasser',
+    picture: 'aubrey.jpeg',
+    email: 'aubrey@indyhackers.org',
+    slack_url: 'https://indyhackers.slack.com/team/aubrey',
+    slack_handle: '@aubrey',
+    twitter: 'https://twitter.com/aSs031916',
+    linkedin: 'https://linkedin.com/in/aubrey-strasser-03591b140/'
+  },
+ {
+   name: 'Conlin Durbin',
+   picture: 'conlin.jpeg',
+   email: 'conlin@indyhackers.org',
+   slack_url: 'https://indyhackers.slack.com/team/UG6J830KU',
+   slack_handle: '@Conlin Durbin',
+   twitter: 'https://twitter.com/CallMeWuz',
+   linkedin: 'https://linkedin.com/in/wuz/'
+ },
+ {
+   name: 'Jason Cordial',
+   picture: 'cordial.jpg',
+   email: 'cordial@indyhackers.org',
+   slack_url: 'https://indyhackers.slack.com/team/UD9FTGXSB',
+   slack_handle: '@Cordial',
+   twitter: 'https://twitter.com/btomw',
+   linkedin: 'https://linkedin.com/in/jason-cordial-2464454'
+ },
+ {
+   name: 'Mike Rogers',
+   picture: 'mike.jpg',
+   email: 'mike@indyhackers.org',
+   slack_url: 'https://indyhackers.slack.com/team/mike',
+   slack_handle: '@mike',
+   twitter: 'https://twitter.com/mikerogers_',
+   linkedin: 'https://linkedin.com/in/rmichaelrogers'
+ },
+ {
+   name: 'Miles Z. Sterrett',
+   picture: 'miles.jpeg',
+   email: 'miles@indyhackers.org',
+   slack_url: 'https://indyhackers.slack.com/team/mileszs',
+   slack_handle: '@mileszs',
+   twitter: 'https://twitter.com/mileszs',
+   linkedin: 'https://linkedin.com/in/mileszs'
+ },
+ {
+   name: 'Nikki Osbun',
+   picture: 'nikki.jpg',
+   email: 'nikki@indyhackers.org',
+   slack_url: 'https://indyhackers.slack.com/team/UKY9ZLEHK',
+   slack_handle: '@Nikki Osbun',
+   linkedin: 'https://linkedin.com/in/nicole-osbun-29408668'
+ },
+ {
+   name: 'Tyler Moore',
+   picture: 'tyler.jpeg',
+   email: 'tyler@indyhackers.org',
+   slack_url: 'https://indyhackers.slack.com/team/illbzo1',
+   slack_handle: '@tyler',
+   linkedin: 'https://linkedin.com/in/tylermoore'
+ },
+]
+%>
+<%  content_for :head do %>
+  <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" rel="stylesheet" />
+<% end %>
+
+<li>
+  <h2>About Indy Hackers</h2>
+
+  <div class="card-deck the-board" id="#the-board">
+    <% board_members.each.with_index do |member, index| %>
+      <div class="card">
+         <%= image_tag member[:picture], alt: member[:name], class: 'card-img-top' %>
+         <div class="card-block">
+           <h4 class="card-title"><%= member[:name] %></h4>
+           <hr />
+           <div class="contact">
+             <a class="email" href="mailto:<%= member[:email] %>" target="BLANK">
+               <i class="fa fa-envelope"></i>
+               <%= member[:email] %>
+             </a>
+             <hr />
+             <a class="slack" href="<%= member[:slack_url] %>" target="BLANK">
+               <i class="fa fa-slack"></i>
+               <%= member[:slack_handle] %>
+             </a>
+             <a class="twitter" href="<%= member[:twitter] %>" target="BLANK">
+               <i class="fa fa-twitter"></i>
+             </a>
+             <a class="linked" href="<%= member[:linkedin] %>" target="BLANK">
+               <i class="fa fa-linkedin"></i>
+             </a>
+           </div>
+         </div>
+      </div>
+      <% if [2, 5, 8].include?(index) %>
+        </div>
+        <div class="card-deck the-board">
+      <% end %>
+    <% end %>
+  </div>
+</li>

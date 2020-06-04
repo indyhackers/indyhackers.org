@@ -1,6 +1,3 @@
--content_for :head do
-  %link{:crossorigin => "anonymous", :href => "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css", :integrity => "sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ", :rel => "stylesheet"}/
-
 %li
   :markdown
     # Indy Hackers' Code of Conduct
@@ -9,14 +6,13 @@
     code of conduct. Board members will enforce this code throughout. We are expecting cooperation from
     all participants to help ensuring a safe/happy environment for everybody.
 
+  %br/
+  :markdown
     ## Need Help?
 
-    Contact [help@indyhackers.org](mailto:help@indyhackers.org). If you'd prefer to chat with an individual, you can also contact any of the
-  %a{href: '#the-board'} current board members directly.
+    Contact [help@indyhackers.org](mailto:help@indyhackers.org). If you'd prefer to chat with an individual, you can also contact any of the [current board members directly](/about#the-board).
 
   %br/
-  %br/
-
   :markdown
     ## The Quick Version
 
@@ -26,6 +22,8 @@
     language and imagery is not appropriate at the event. Event participants violating these rules may be sanctioned or
     expelled from the event without a refund at the discretion of the event organisers.
 
+  %br/
+  :markdown
     ## The Less Quick Version
 
     Harassment includes offensive verbal comments related to gender, gender identity and expression, age, sexual
@@ -43,169 +41,3 @@
 
     We will be happy to help participants contact local law enforcement, provide escorts, or otherwise assist
     those experiencing harassment to feel safe for the duration of the event/life of the slack organization. We value your participation!
-
-  .card-deck.the-board#the-board
-
-    .card
-      = image_tag "aaron.jpg", alt: "Aaron Milam", class: 'card-img-top'
-      .card-block
-        %h4.card-title Aaron Milam
-        %hr/
-        .contact
-          %a.email{ href: 'mailto:aaron@indyhackers.org', target: 'BLANK'}
-            %i.fa.fa-envelope
-            aaron@indyhackers.org
-          %hr/
-          %a.slack{ href: 'https://indyhackers.slack.com/team/U7JGQBCBX', target: 'BLANK'}
-            %i.fa.fa-slack
-            @aaronmilam
-          %a.twitter{ href: 'https://twitter.com/IAmAMilam', target: 'BLANK'}
-            %i.fa.fa-twitter
-          %a.linkedin{ href: 'https://linkedin.com/in/aaronmilam', target: 'BLANK'}
-            %i.fa.fa-linkedin
-
-    .card
-      = image_tag "aubrey.jpeg", alt: "Aubrey Strasser", class: 'card-img-top'
-      .card-block
-        %h4.card-title Aubrey Strasser
-        %hr/
-        .contact
-          %a.email{ href: 'mailto:aubrey@indyhackers.org', target: 'BLANK'}
-            %i.fa.fa-envelope
-            aubrey@indyhackers.org
-          %hr/
-          %a.slack{ href: 'https://indyhackers.slack.com/team/aubrey', target: 'BLANK'}
-            %i.fa.fa-slack
-            @aubrey
-          %a.twitter{ href: 'https://twitter.com/aSs031916', target: 'BLANK'}
-            %i.fa.fa-twitter
-          %a.linkedin{ href: 'https://linkedin.com/in/aubrey-strasser-03591b140/', target: 'BLANK'}
-            %i.fa.fa-linkedin
-
-    .card
-      = image_tag "calvin.jpeg", alt: "Calvin Hendryx-Parker", class: 'card-img-top'
-      .card-block
-        %h4.card-title Calvin Hendryx-Parker
-        %hr/
-        .contact
-          %a.email{ href: 'mailto:calvin@indyhackers.org', target: 'BLANK'}
-            %i.fa.fa-envelope
-            calvin@indyhackers.org
-          %hr/
-          %a.slack{ href: 'https://indyhackers.slack.com/team/calvinhp', target: 'BLANK'}
-            %i.fa.fa-slack
-            @calvinhp
-          %a.twitter{ href: 'https://twitter.com/calvinhp', target: 'BLANK'}
-            %i.fa.fa-twitter
-          %a.linkedin{ href: 'https://linkedin.com/in/calvinhp', target: 'BLANK'}
-            %i.fa.fa-linkedin
-
-
-  .card-deck.the-board
-
-    .card
-      = image_tag "conlin.jpeg", alt: "Conlin Durbin", class: 'card-img-top'
-      .card-block
-        %h4.card-title Conlin Durbin
-        %hr/
-        .contact
-          %a.email{ href: 'mailto:conlin@indyhackers.org', target: 'BLANK'}
-            %i.fa.fa-envelope
-            conlin@indyhackers.org
-          %hr/
-          %a.slack{ href: 'https://indyhackers.slack.com/team/UG6J830KU', target: 'BLANK'}
-            %i.fa.fa-slack
-            @Conlin Durbin
-          %a.twitter{ href: 'https://twitter.com/CallMeWuz', target: 'BLANK'}
-            %i.fa.fa-twitter
-          %a.linkedin{ href: 'https://linkedin.com/in/wuz', target: 'BLANK'}
-            %i.fa.fa-linkedin
-
-    .card
-      = image_tag "cordial.jpg", alt: "Jason Cordial", class: 'card-img-top'
-      .card-block
-        %h4.card-title Jason Cordial
-        %hr/
-        .contact
-          %a.email{ href: 'mailto:cordial@indyhackers.org', target: 'BLANK'}
-            %i.fa.fa-envelope
-            cordial@indyhackers.org
-          %hr/
-          %a.slack{ href: 'https://indyhackers.slack.com/team/UD9FTGXSB', target: 'BLANK'}
-            %i.fa.fa-slack
-            @Cordial
-          %a.linkedin{ href: 'https://linkedin.com/in/jason-cordial-2464454', target: 'BLANK'}
-            %i.fa.fa-linkedin
-
-    .card
-      = image_tag "mike.jpg", alt: "Mike Rogers", class: 'card-img-top'
-      .card-block
-        %h4.card-title Mike Rogers
-        %hr/
-        .contact
-          %a.email{ href: 'mailto:mike@indyhackers.org', target: 'BLANK'}
-            %i.fa.fa-envelope
-            mike@indyhackers.org
-          %hr/
-          %a.slack{ href: 'https://indyhackers.slack.com/team/mike', target: 'BLANK'}
-            %i.fa.fa-slack
-            @mike
-          %a.twitter{ href: 'https://twitter.com/mikerogers_', target: 'BLANK'}
-            %i.fa.fa-twitter
-          %a.linkedin{ href: 'https://linkedin.com/in/rmichaelrogers', target: 'BLANK'}
-            %i.fa.fa-linkedin
-
-
-  .card-deck.the-board
-
-    .card
-      = image_tag "miles.jpeg", alt: "Miles Sterrett", class: 'card-img-top'
-      .card-block
-        %h4.card-title Miles Sterrett
-        %hr/
-        .contact
-          %a.email{ href: 'mailto:miles@indyhackers.org', target: 'BLANK'}
-            %i.fa.fa-envelope
-            miles@indyhackers.org
-          %hr/
-          %a.slack{ href: 'https://indyhackers.slack.com/team/mileszs', target: 'BLANK'}
-            %i.fa.fa-slack
-            @mileszs
-          %a.twitter{ href: 'https://twitter.com/mileszs', target: 'BLANK'}
-            %i.fa.fa-twitter
-          %a.linkedin{ href: 'https://linkedin.com/in/mileszs', target: 'BLANK'}
-            %i.fa.fa-linkedin
-
-    .card
-      = image_tag "nikki.jpg", alt: "Nikki Osbun", class: 'card-img-top'
-      .card-block
-        %h4.card-title Nikki Osbun
-        %hr/
-        .contact
-          %a.email{ href: 'mailto:nikki@indyhackers.org', target: 'BLANK'}
-            %i.fa.fa-envelope
-            nikki@indyhackers.org
-          %hr/
-          %a.slack{ href: 'https://indyhackers.slack.com/team/UKY9ZLEHK', target: 'BLANK'}
-            %i.fa.fa-slack
-            @Nikki Osbun
-          %a.linkedin{ href: 'https://linkedin.com/in/nicole-osbun-29408668', target: 'BLANK'}
-            %i.fa.fa-linkedin
-
-    .card
-      = image_tag "tyler.jpeg", alt: "Tyler Moore", class: 'card-img-top'
-      .card-block
-        %h4.card-title Tyler Moore
-        %hr/
-        .contact
-          %a.email{ href: 'mailto:tyler@indyhackers.org', target: 'BLANK'}
-            %i.fa.fa-envelope
-            tyler@indyhackers.org
-          %hr/
-          %a.slack{ href: 'https://indyhackers.slack.com/team/tyler', target: 'BLANK'}
-            %i.fa.fa-slack
-            @tyler
-          %a.twitter{ href: 'https://twitter.com/illbzo1', target: 'BLANK'}
-            %i.fa.fa-twitter
-          %a.linkedin{ href: 'https://linkedin.com/in/tylerlmoore', target: 'BLANK'}
-            %i.fa.fa-linkedin
