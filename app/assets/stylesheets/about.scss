@@ -1,10 +1,11 @@
-.about .header-phone a, .about .header-phone a:hover{
+.about .header-phone a,
+.about .header-phone a:hover {
   color: white;
   text-decoration: none;
 }
 
-.about .header-phone a:hover{
-  color: #FFC000;
+.about .header-phone a:hover {
+  color: #ffc000;
 }
 
 .about .volunteer-organizers {
@@ -19,8 +20,13 @@
   width: 100%;
 }
 
+.about .the-board .card.blank {
+  background-color: #ffc000;
+  border: none;
+}
+
 .about .card-deck {
-  margin-bottom: 15px
+  margin-bottom: 15px;
 }
 
 .about h4.card-title {

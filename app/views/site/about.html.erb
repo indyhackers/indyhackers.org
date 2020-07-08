@@ -10,6 +10,15 @@ board_members = [
     linkedin: 'https://linkedin.com/in/aaronmilam'
   },
   {
+    name: 'Andrew Robinson III',
+    picture: 'andrew-robinson-iii.jpg',
+    email: 'andrew@indyhackers.org',
+    slack_url: 'https://indyhackers.slack.com/team/ar3',
+    slack_handle: '@ar3',
+    twitter: 'https://twitter.com/ar3_me',
+    linkedin: 'https://linkedin.com/in/arthree'
+  },
+  {
     name: 'Aubrey Strasser',
     picture: 'aubrey.jpeg',
     email: 'aubrey@indyhackers.org',
@@ -35,6 +44,14 @@ board_members = [
    slack_handle: '@Cordial',
    twitter: 'https://twitter.com/btomw',
    linkedin: 'https://linkedin.com/in/jason-cordial-2464454'
+ },
+ {
+   name: 'Josh Qualls',
+   picture: 'josh.jpg',
+   email: 'josh@indyhackers.org',
+   slack_url: 'https://indyhackers.slack.com/team/UME7JF7GT',
+   slack_handle: '@Josh Qualls',
+   linkedin: 'https://www.linkedin.com/in/josh-qualls/'
  },
  {
    name: 'Mike Rogers',
@@ -73,42 +90,47 @@ board_members = [
 ]
 %>
 <%  content_for :head do %>
-  <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" rel="stylesheet" />
+<link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" rel="stylesheet" />
 <% end %>
 
 <li>
   <h2>About Indy Hackers</h2>
 
+  <% board_members.in_groups_of(3) do |member_group| %>
   <div class="card-deck the-board" id="#the-board">
-    <% board_members.each.with_index do |member, index| %>
-      <div class="card">
-         <%= image_tag member[:picture], alt: member[:name], class: 'card-img-top' %>
-         <div class="card-block">
-           <h4 class="card-title"><%= member[:name] %></h4>
-           <hr />
-           <div class="contact">
-             <a class="email" href="mailto:<%= member[:email] %>" target="BLANK">
-               <i class="fa fa-envelope"></i>
-               <%= member[:email] %>
-             </a>
-             <hr />
-             <a class="slack" href="<%= member[:slack_url] %>" target="BLANK">
-               <i class="fa fa-slack"></i>
-               <%= member[:slack_handle] %>
-             </a>
-             <a class="twitter" href="<%= member[:twitter] %>" target="BLANK">
-               <i class="fa fa-twitter"></i>
-             </a>
-             <a class="linked" href="<%= member[:linkedin] %>" target="BLANK">
-               <i class="fa fa-linkedin"></i>
-             </a>
-           </div>
-         </div>
-      </div>
-      <% if [2, 5, 8].include?(index) %>
+    <% member_group.each do |member| %>
+    <% if member.nil? %>
+    <div class="card blank"></div>
+    <% else %>
+    <div class="card">
+      <%= image_tag member[:picture], alt: member[:name], class: 'card-img-top' %>
+      <div class="card-block">
+        <h4 class="card-title"><%= member[:name] %></h4>
+        <hr />
+        <div class="contact">
+          <a class="email" href="mailto:<%= member[:email] %>" target="BLANK">
+            <i class="fa fa-envelope"></i>
+            <%= member[:email] %>
+          </a>
+          <hr />
+          <a class="slack" href="<%= member[:slack_url] %>" target="BLANK">
+            <i class="fa fa-slack"></i>
+            <%= member[:slack_handle] %>
+          </a>
+          <% if member[:twitter] %>
+          <a class="twitter" href="<%= member[:twitter] %>" target="BLANK">
+            <i class="fa fa-twitter"></i>
+          </a>
+          <% end %>
+          <a class="linked" href="<%= member[:linkedin] %>" target="BLANK">
+            <i class="fa fa-linkedin"></i>
+          </a>
         </div>
-        <div class="card-deck the-board">
-      <% end %>
+      </div>
+    </div>
+    <% end %>
     <% end %>
   </div>
+  <% end %>
+
 </li>
