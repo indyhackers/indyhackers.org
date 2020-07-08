@@ -51,7 +51,6 @@ board_members = [
    email: 'josh@indyhackers.org',
    slack_url: 'https://indyhackers.slack.com/team/UME7JF7GT',
    slack_handle: '@Josh Qualls',
-   twitter: 'https://twitter.com/',
    linkedin: 'https://www.linkedin.com/in/josh-qualls/'
  },
  {
@@ -114,9 +113,11 @@ board_members = [
                <i class="fa fa-slack"></i>
                <%= member[:slack_handle] %>
              </a>
-             <a class="twitter" href="<%= member[:twitter] %>" target="BLANK">
-               <i class="fa fa-twitter"></i>
-             </a>
+             <% if member[:twitter] %>
+              <a class="twitter" href="<%= member[:twitter] %>" target="BLANK">
+                <i class="fa fa-twitter"></i>
+              </a>
+            <% end %>
              <a class="linked" href="<%= member[:linkedin] %>" target="BLANK">
                <i class="fa fa-linkedin"></i>
              </a>
