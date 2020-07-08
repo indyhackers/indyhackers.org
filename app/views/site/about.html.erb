@@ -46,6 +46,15 @@ board_members = [
    linkedin: 'https://linkedin.com/in/jason-cordial-2464454'
  },
  {
+   name: 'Josh Qualls',
+   picture: 'josh.jpg',
+   email: 'josh@indyhackers.org',
+   slack_url: 'https://indyhackers.slack.com/team/UME7JF7GT',
+   slack_handle: '@Josh Qualls',
+   twitter: 'https://twitter.com/',
+   linkedin: 'https://www.linkedin.com/in/josh-qualls/'
+ },
+ {
    name: 'Mike Rogers',
    picture: 'mike.jpg',
    email: 'mike@indyhackers.org',
@@ -118,6 +127,10 @@ board_members = [
         </div>
         <div class="card-deck the-board">
       <% end %>
+    <% end %>
+
+    <% ((3 - board_members.size % 3) % 3).times do %>
+      <div class="card blank"></div>
     <% end %>
   </div>
 </li>
