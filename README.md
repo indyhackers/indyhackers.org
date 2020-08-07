@@ -1,6 +1,6 @@
 # IndyHackers.org
 
-![TravisCI](https://travis-ci.org/mileszs/indyhackers.org.svg?branch=master)
+[![Build Status](https://travis-ci.org/indyhackers/indyhackers.org.svg?branch=master)](https://travis-ci.org/indyhackers/indyhackers.org)
 [![Code Climate](https://codeclimate.com/github/mileszs/indyhackers.org/badges/gpa.svg)](https://codeclimate.com/github/mileszs/indyhackers.org)
 
 ## Contributing
