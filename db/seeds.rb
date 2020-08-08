@@ -9,3 +9,8 @@ Job.create(
   description: 'Badass stuff',
   published_at: 2.days.ago
 )
+
+Admin.create(
+  email: "admin@example.com",
+  password: "indyhacker"
+)
