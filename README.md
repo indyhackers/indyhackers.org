@@ -8,12 +8,13 @@
 ```
 git clone [your fork]
 cd indyhackers.org
-bundle install
-bundle exec rake db:setup
+bin/setup
 bundle exec rails s
 ```
 
 And, if you're on macOS or another OS with this command available to you, you can stay in the terminal but open your browser using `open http://localhost:3000`.
+
+To access the admin pages, visit `http://localhost:3000/admins/sign_in` and use the seeded admin `admin@example.com` with password `indyhacker`
 
 ## To Do
 
