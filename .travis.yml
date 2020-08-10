@@ -1,13 +1,12 @@
 language: ruby
+cache: bundler
 rvm:
   - 2.6.2
-
+services:
+  - postgresql
 before_script:
   - psql -c 'create database indyhackers_test;' -U postgres
   - cp config/database.yml.travis config/database.yml
 
 script:
   - RAILS_ENV=test bundle exec rake --trace db:migrate test
-
-env:
-  - DB=postgresql
