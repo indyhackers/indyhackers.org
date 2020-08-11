@@ -13,7 +13,7 @@ gem 'jquery-rails'
 gem 'simple_form'
 gem 'inherited_resources'
 
-gem 'devise', "4.4.0"
+gem 'devise', "4.7.1"
 gem 'maruku'
 gem 'redcarpet'
 gem 'will_paginate'
