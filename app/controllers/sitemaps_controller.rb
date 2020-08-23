@@ -3,7 +3,7 @@ class SitemapsController < ApplicationController
   caches_action :show
 
   def show
-    @jobs = Job.published
+    @jobs = Job.active
     @posts = Post.published
     @other_routes = ["/","/jobs","/job_post_request","/calendar", "/why_indy"]
     respond_to do |format|
