@@ -10,13 +10,24 @@ class Job < ActiveRecord::Base
 
   after_update :notify_if_published
 
-  scope :published, lambda {
-    where("jobs.published_at IS NOT NULL AND jobs.published_at <= ?", Time.zone.now)
-  }
+  class << self
+    # Jobs that should appear in public listings
+    #
+    # @returns [ActiveRecord::Relation<Job>] active jobs
 
-  scope :stale, lambda {
-    where("created_at < ?", 60.days.ago)
-  }
+    def active
+      published.where("jobs.published_at >= ?", 60.days.ago)
+    end
+
+    private
+
+    def published
+      where(
+        "jobs.published_at IS NOT NULL AND jobs.published_at <= ?",
+        Time.zone.now
+      )
+    end
+  end
 
   def name
     "#{title} at #{company}"

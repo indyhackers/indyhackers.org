@@ -4,7 +4,7 @@ class JobsController < ApplicationController
   skip_before_action :verify_authenticity_token, :only => :viewed
 
   def index
-    @jobs = Job.published.order("created_at DESC").all
+    @jobs = Job.active.order("created_at DESC")
     respond_to do |format|
       format.html
       format.atom { render :layout => false }
