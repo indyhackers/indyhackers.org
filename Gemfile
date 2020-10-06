@@ -1,14 +1,14 @@
 source 'https://rubygems.org'
 ruby "2.6.2"
 
-gem 'rails', '5.1.1'
+gem 'rails', '5.1.7'
 
 gem 'pg'
 
 gem 'coffee-script'
 gem 'uglifier'
 gem 'haml', '5.0.4'
-gem 'sass'
+gem 'sassc'
 gem 'jquery-rails'
 gem 'simple_form'
 gem 'inherited_resources'
