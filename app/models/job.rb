@@ -36,7 +36,27 @@ class Job < ActiveRecord::Base
   # The 'slugged' gem expects this method to exist, as it's expecting the
   # method to be an AR attribute.
   def name_changed?
-    title_changed? || company_changed?
+    will_save_change_to_title? || will_save_change_to_company?
+  end
+
+  # Compatibility method for slugged gem due to current Rails changes to the "ActiveModel::Dirty" methods
+  def slug_was
+    slug_before_last_save
+  end
+
+  # Compatibility method for slugged gem due to current Rails changes to the "ActiveModel::Dirty" methods
+  def cached_slug_was
+    cached_slug_before_last_save
+  end
+
+  # Compatibility method for slugged gem due to current Rails changes to the "ActiveModel::Dirty" methods
+  def slug_changed?
+    saved_change_to_slug?
+  end
+
+  # Compatibility method for slugged gem due to current Rails changes to the "ActiveModel::Dirty" methods
+  def cached_slug_changed?
+    saved_change_to_cached_slug?
   end
 
   def notify_if_published
