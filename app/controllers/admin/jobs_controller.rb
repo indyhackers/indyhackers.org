@@ -28,6 +28,6 @@ class Admin::JobsController < InheritedResources::Base
   private
 
   def job_params
-    params[:job].permit(:title, :description, :published_at)
+    params.require(:job).permit(:title, :description, :company, :published_at)
   end
 end

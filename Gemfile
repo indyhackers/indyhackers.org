@@ -1,19 +1,19 @@
 source 'https://rubygems.org'
 ruby "2.6.2"
 
-gem 'rails', '5.2.4.4'
+gem 'rails', '6.0.3.3'
 
 gem 'pg'
 
 gem 'coffee-script'
 gem 'uglifier'
-gem 'haml', '5.0.4'
+gem 'haml', '~> 5.1.2'
 gem 'sassc'
 gem 'jquery-rails'
 gem 'simple_form'
 gem 'inherited_resources'
 
-gem 'devise', "4.4.3"
+gem 'devise', "4.7.3"
 gem 'maruku'
 gem 'redcarpet'
 gem 'will_paginate'
