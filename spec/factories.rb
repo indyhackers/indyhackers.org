@@ -1,10 +1,10 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :job do
-    title Faker::Lorem.words.join(' ')
-    description Faker::Lorem.paragraphs.join
+    title { Faker::Lorem.words.join(' ') }
+    description { Faker::Lorem.paragraphs.join }
 
     trait :unpublished do
-      published_at nil
+      published_at { nil }
     end
 
     trait :published do
@@ -27,13 +27,13 @@ FactoryGirl.define do
   end
 
   factory :viewer do
-    client_hash "asdfqwrogrwhoashogasdfgioha455"
+    client_hash { "asdfqwrogrwhoashogasdfgioha455" }
   end
 
   factory :user do
     sequence :email do |n|
       "#{Faker::Internet.user_name}#{n}@example.org"
     end
-    name "#{Faker::Name.name}"
+    name { "#{Faker::Name.name}" }
   end
 end

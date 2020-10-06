@@ -1,12 +1,12 @@
 Given /^there is a job with title "([^\"]*)"$/ do |title|
-  job = FactoryGirl.build(:job, :title => title)
+  job = FactoryBot.build(:job, :title => title)
   job.published_at = 1.day.ago
   job.save
 end
 
 Given /^I have a job published$/ do
-  @user = FactoryGirl.create(:user)
-  @job = FactoryGirl.build(:job)
+  @user = FactoryBot.create(:user)
+  @job = FactoryBot.build(:job)
   @job.published_at = 1.day.ago
   @job.user = @user
   @job.save

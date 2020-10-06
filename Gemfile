@@ -54,7 +54,7 @@ group :test do
   gem 'database_cleaner'
   gem 'rspec-rails'
   gem 'gherkin'
-  gem 'factory_girl_rails'
+  gem 'factory_bot_rails'
   gem 'faker'
   gem 'fakeweb'
   gem 'capybara'

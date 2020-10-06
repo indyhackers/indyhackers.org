@@ -1,9 +1,9 @@
 Given /^I am signed up as "([^\"]*)"$/ do |email|
-  FactoryGirl.create(:admin, :email => email, :password => "rockstar")
+  FactoryBot.create(:admin, :email => email, :password => "rockstar")
 end
 
 Given /^I am signed up as "([^\"]*)" with password "([^\"]*)"$/ do |email, password|
-  FactoryGirl.create(:admin, :email => email, :password => password)
+  FactoryBot.create(:admin, :email => email, :password => password)
 end
 
 Given 'I am logged in as an admin' do
@@ -12,7 +12,7 @@ Given 'I am logged in as an admin' do
 end
 
 Given /^I login as "(.*)" with password "(.*)"$/ do |email, password|
-  @current_user = FactoryGirl.create(:admin, :email => email, :password => password)
+  @current_user = FactoryBot.create(:admin, :email => email, :password => password)
   visit new_admin_session_path
   fill_in('Email', :with => @current_user.email)
   fill_in('Password', :with => password)
@@ -20,7 +20,7 @@ Given /^I login as "(.*)" with password "(.*)"$/ do |email, password|
 end
 
 Given 'I am an admin' do
-  @current_user = FactoryGirl.create(:admin, email: 'admin@example.com', password: 'password')
+  @current_user = FactoryBot.create(:admin, email: 'admin@example.com', password: 'password')
 end
 
 When 'I attempt to login' do
