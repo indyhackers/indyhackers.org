@@ -3,6 +3,7 @@
 //= require linkify
 //= require jquery.easing
 //= require jquery.blockUI
+//= require jquery.elastic
 //= require jquery.superlabels.min
 //= require showdown
 //= require script
