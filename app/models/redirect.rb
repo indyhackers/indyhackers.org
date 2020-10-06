@@ -12,6 +12,6 @@ class Redirect < ActiveRecord::Base
   end
 
   def visit!
-    update_attributes!(last_visited_at: Time.now, :visits => visits + 1)
+    update!(last_visited_at: Time.now, :visits => visits + 1)
   end
 end

@@ -24,7 +24,7 @@ class JobsController < ApplicationController
 
   def update
     find_job
-    if @job.update_attributes(job_params)
+    if @job.update(job_params)
       redirect_to edit_job_path(@job, :token => params[:token]), :notice => 'Your job post was updated'
      else
       render :edit

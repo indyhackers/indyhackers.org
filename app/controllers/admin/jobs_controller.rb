@@ -10,7 +10,7 @@ class Admin::JobsController < InheritedResources::Base
 
   def update
     @job = resource
-    if @job.update_attributes(job_params)
+    if @job.update(job_params)
       redirect_to @job, :notice => 'Job was updated successfully'
     else
       render :edit
