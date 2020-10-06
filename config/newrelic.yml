@@ -1,4 +1,4 @@
- production:
+production:
    error_collector:
      capture_source: true
      enabled: true
@@ -16,3 +16,7 @@
      transaction_threshold: apdex_f
    capture_params: false
    log_level: info
+development:
+  monitor_mode: false
+test:
+  monitor_mode: false

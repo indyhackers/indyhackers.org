@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 ruby "2.6.2"
 
-gem 'rails', '5.1.7'
+gem 'rails', '5.2.4.4'
 
 gem 'pg'
 
@@ -13,7 +13,7 @@ gem 'jquery-rails'
 gem 'simple_form'
 gem 'inherited_resources'
 
-gem 'devise', "4.4.0"
+gem 'devise', "4.4.3"
 gem 'maruku'
 gem 'redcarpet'
 gem 'will_paginate'

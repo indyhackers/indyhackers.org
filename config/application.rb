@@ -27,6 +27,6 @@ module IndyhackersRails
       'responsive/width-0-479.css',
     ]
     config.assets.debug = true
-    config.cache_store = :dalli_store
+    config.cache_store = :mem_cache_store
   end
 end
