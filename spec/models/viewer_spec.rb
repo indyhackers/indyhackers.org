@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe Viewer do
+RSpec.describe Viewer do
   it "should return true if the viewer has viewed the given job" do
     @job = FactoryBot.create(:job)
     @viewer = FactoryBot.create(:viewer)

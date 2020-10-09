@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe Job do
+RSpec.describe Job do
   context "#active" do
     it "only includes jobs that are published and active" do
       @unpublished_job = create(:job, :unpublished)

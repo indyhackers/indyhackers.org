@@ -1,5 +1,5 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe SiteController do
+RSpec.describe SiteController do
 
 end

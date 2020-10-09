@@ -1,5 +1,5 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe JobsController do
+RSpec.describe JobsController do
 
 end
