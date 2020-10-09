@@ -48,16 +48,17 @@ group :development, :test do
 
   gem 'pry-rails'
   gem 'rb-readline'
+
+  gem 'rspec-rails', '~> 4.0.1'
 end
 
 group :test do
-  gem 'database_cleaner'
-  gem 'rspec-rails'
-  gem 'gherkin'
+  # Adds support for Capybara system testing and selenium driver
+  gem 'capybara', '>= 2.15'
+  gem 'selenium-webdriver'
+  # Easy installation and use of web drivers to run system tests with browsers
+  gem 'webdrivers'
+
   gem 'factory_bot_rails'
   gem 'faker'
-  gem 'fakeweb'
-  gem 'capybara'
-  gem 'cucumber-rails', :require => false
-  gem 'cucumber'
 end

@@ -2,6 +2,8 @@ language: ruby
 cache: bundler
 rvm:
   - 2.6.2
+addons:
+  chrome: stable
 services:
   - postgresql
 before_script:
@@ -9,5 +11,5 @@ before_script:
   - cp config/database.yml.travis config/database.yml
 
 script:
-  - RAILS_ENV=test bundle exec rake --trace db:migrate spec
-  - RAILS_ENV=test bundle exec rake --trace features
+  - bundle exec rake --trace db:setup
+  - bundle exec rake --trace spec

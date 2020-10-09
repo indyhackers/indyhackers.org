@@ -1,6 +1,7 @@
 FactoryBot.define do
   factory :job do
     title { Faker::Lorem.words.join(' ') }
+    company { Faker::Company.name }
     description { Faker::Lorem.paragraphs.join }
 
     trait :unpublished do
@@ -24,6 +25,9 @@ FactoryBot.define do
     sequence :email do |n|
       "#{Faker::Internet.user_name}#{n}@example.org"
     end
+
+    password { "password" }
+    password_confirmation { "password" }
   end
 
   factory :viewer do
