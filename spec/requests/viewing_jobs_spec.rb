@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe "ViewingJobs", type: :request do
+RSpec.describe "ViewingJobs" do
   describe "GET /jobs" do
     it "Displays active jobs" do
       published_job = create(:job, :published, title: "A published job")
