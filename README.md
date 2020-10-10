@@ -16,6 +16,12 @@ And, if you're on macOS or another OS with this command available to you, you ca
 
 To access the admin pages, visit `http://localhost:3000/admins/sign_in` and use the seeded admin `admin@example.com` with password `indyhacker`
 
+## Tests
+
+Tests can be ran with `$ bundle exec rake spec` or `$bundle exec rspec`
+
+For the system (end-to-end) specs, Google Chrome is required to be installed on the system running the tests.
+
 ## To Do
 
 These are ideas, anyway.
