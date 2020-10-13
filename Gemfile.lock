@@ -62,13 +62,15 @@ GEM
       public_suffix (>= 2.0.2, < 5.0)
     bcrypt (3.1.16)
     builder (3.2.4)
-    capybara (2.14.0)
+    capybara (3.33.0)
       addressable
-      mime-types (>= 1.16)
-      nokogiri (>= 1.3.3)
-      rack (>= 1.0.0)
-      rack-test (>= 0.5.4)
-      xpath (~> 2.0)
+      mini_mime (>= 0.1.3)
+      nokogiri (~> 1.8)
+      rack (>= 1.6.0)
+      rack-test (>= 0.6.3)
+      regexp_parser (~> 1.5)
+      xpath (~> 3.2)
+    childprocess (3.0.0)
     coderay (1.1.3)
     coffee-script (2.4.1)
       coffee-script-source
@@ -79,25 +81,7 @@ GEM
     css_parser (1.2.6)
       addressable
       rdoc
-    cucumber (2.2.0)
-      builder (>= 2.1.2)
-      cucumber-core (~> 1.3.0)
-      cucumber-wire (~> 0.0.1)
-      diff-lcs (>= 1.1.3)
-      event-bus (~> 0.1.0)
-      gherkin3 (~> 3.1.0)
-      multi_json (>= 1.7.5, < 2.0)
-      multi_test (>= 0.1.2)
-    cucumber-core (1.3.1)
-      gherkin3 (~> 3.1.0)
-    cucumber-rails (1.4.0)
-      capybara (>= 1.1.2)
-      cucumber (>= 1.2.0)
-      nokogiri (>= 1.5.0)
-      rails (>= 3.0.0)
-    cucumber-wire (0.0.1)
     dalli (2.7.11)
-    database_cleaner (1.8.5)
     deadweight (0.2.2)
       css_parser (~> 1.2.6)
       nokogiri
@@ -111,7 +95,6 @@ GEM
       warden (~> 1.2.3)
     diff-lcs (1.4.4)
     erubi (1.9.0)
-    event-bus (0.1.0)
     execjs (2.7.0)
     factory_bot (6.1.0)
       activesupport (>= 5.0.0)
@@ -120,11 +103,8 @@ GEM
       railties (>= 5.0.0)
     faker (2.14.0)
       i18n (>= 1.6, < 2)
-    fakeweb (1.3.0)
     ffi (1.13.1)
     foreman (0.87.2)
-    gherkin (4.1.3)
-    gherkin3 (3.1.2)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     haml (5.1.2)
@@ -169,8 +149,6 @@ GEM
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
     minitest (5.14.2)
-    multi_json (1.15.0)
-    multi_test (0.1.2)
     newrelic_rpm (6.13.1)
     nio4r (2.5.4)
     nokogiri (1.10.10)
@@ -220,6 +198,7 @@ GEM
     rb-readline (0.5.5)
     rdoc (6.2.1)
     redcarpet (3.5.0)
+    regexp_parser (1.8.1)
     responders (3.0.1)
       actionpack (>= 5.0)
       railties (>= 5.0)
@@ -242,8 +221,12 @@ GEM
       rspec-mocks (~> 3.9)
       rspec-support (~> 3.9)
     rspec-support (3.9.3)
+    rubyzip (2.3.0)
     sassc (2.4.0)
       ffi (~> 1.9)
+    selenium-webdriver (3.142.7)
+      childprocess (>= 0.5, < 4.0)
+      rubyzip (>= 1.2.2)
     sequel (3.20.0)
     simple_form (5.0.3)
       actionpack (>= 5.0)
@@ -286,12 +269,16 @@ GEM
       macaddr (~> 1.0)
     warden (1.2.9)
       rack (>= 2.0.9)
+    webdrivers (4.4.1)
+      nokogiri (~> 1.6)
+      rubyzip (>= 1.3.0)
+      selenium-webdriver (>= 3.0, < 4.0)
     websocket-driver (0.7.3)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
     will_paginate (3.3.0)
-    xpath (2.1.0)
-      nokogiri (~> 1.3)
+    xpath (3.2.0)
+      nokogiri (~> 1.8)
     zeitwerk (2.4.0)
 
 PLATFORMS
@@ -299,20 +286,15 @@ PLATFORMS
 
 DEPENDENCIES
   actionpack-action_caching
-  capybara
+  capybara (>= 2.15)
   coffee-script
-  cucumber
-  cucumber-rails
   dalli
-  database_cleaner
   deadweight
   delayed_job
   devise (= 4.7.3)
   factory_bot_rails
   faker
-  fakeweb
   foreman
-  gherkin
   haml (~> 5.1.2)
   hpricot
   inherited_resources
@@ -329,8 +311,9 @@ DEPENDENCIES
   rails (= 6.0.3.4)
   rb-readline
   redcarpet
-  rspec-rails
+  rspec-rails (~> 4.0.1)
   sassc
+  selenium-webdriver
   simple_form
   slugged
   spork
@@ -339,6 +322,7 @@ DEPENDENCIES
   test-unit
   uglifier
   unicorn
+  webdrivers
   will_paginate
 
 RUBY VERSION
