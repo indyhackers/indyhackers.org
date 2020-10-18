@@ -2,7 +2,7 @@
   = javascript_include_tag 'showdown'
 
 %li.readable
-  = simple_form_for resource, :url => admin_job_path(resource), :html => {:multipart => true} do |f|
+  = simple_form_for @job, :url => admin_job_path(@job), :html => {:multipart => true} do |f|
     %fieldset
       %legend Edit Job
       = f.input :title
@@ -10,7 +10,7 @@
       = f.input :description
       = f.input :published_at, :as => :date
       .if-no-contact
-        = "If they didn't leave a way to apply, append this to the bottom: \"To apply, please contact [#{resource.try(:user).try(:name)}](mailto:#{resource.try(:user).try(:email)})"
+        = "If they didn't leave a way to apply, append this to the bottom: \"To apply, please contact [#{@job.try(:user).try(:name)}](mailto:#{@job.try(:user).try(:email)})"
       .input
         %label &nbsp;
         = f.button :submit, 'Save'

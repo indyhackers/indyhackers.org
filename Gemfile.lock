@@ -110,17 +110,9 @@ GEM
     haml (5.1.2)
       temple (>= 0.8.0)
       tilt
-    has_scope (0.7.2)
-      actionpack (>= 4.1)
-      activesupport (>= 4.1)
     hpricot (0.8.6)
     i18n (1.8.5)
       concurrent-ruby (~> 1.0)
-    inherited_resources (1.11.0)
-      actionpack (>= 5.0, < 6.1)
-      has_scope (~> 0.6)
-      railties (>= 5.0, < 6.1)
-      responders (>= 2, < 4)
     instrumental_agent (2.1.0)
       metrician
     jquery-rails (4.4.0)
@@ -297,7 +289,6 @@ DEPENDENCIES
   foreman
   haml (~> 5.1.2)
   hpricot
-  inherited_resources
   instrumental_agent
   jquery-rails
   json_pure
