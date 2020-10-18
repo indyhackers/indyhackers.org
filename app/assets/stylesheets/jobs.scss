@@ -61,3 +61,16 @@ li#jobs-header h1 {
   color: white;
   background-color: black;
 }
+
+
+body.admin.jobs {
+  nav {
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  #job-view-filter {
+    float: right;
+    clear: left;
+  }
+}

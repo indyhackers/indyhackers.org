@@ -5,6 +5,16 @@ class Admin::JobsController < ApplicationController
 
   def index
     @jobs = Job.order(created_at: :desc)
+
+    params[:job_view]  ||= 'all'
+    case params[:job_view]
+    when 'active'
+      @jobs = @jobs.active
+    when 'expired'
+      @jobs = @jobs.expired
+    end
+
+    @jobs = @jobs.page(params[:page])
   end
 
   def show
