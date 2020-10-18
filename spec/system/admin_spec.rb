@@ -52,4 +52,38 @@ RSpec.describe "Admin feature" do
     expect(page).to have_text(/success/)
     expect(page).to have_text(new_title.upcase)
   end
+
+  it "allows an admin to view only active jobs" do
+    admin = create(:admin)
+    active_job = create(:job, :published, user: create(:user))
+    expired_job = create(:job, :no_longer_active, user: create(:user))
+
+    visit new_admin_session_path
+    fill_in "Email", with: admin.email
+    fill_in "Password", with: "password"
+    click_on "Sign in"
+
+    visit admin_jobs_path
+    click_on "Active Jobs"
+
+    expect(page).to have_text(active_job.title)
+    expect(page).not_to have_text(expired_job.title)
+  end
+
+  it "allows an admin to view only expired jobs" do
+    admin = create(:admin)
+    active_job = create(:job, :published, user: create(:user))
+    expired_job = create(:job, :no_longer_active, user: create(:user))
+
+    visit new_admin_session_path
+    fill_in "Email", with: admin.email
+    fill_in "Password", with: "password"
+    click_on "Sign in"
+
+    visit admin_jobs_path
+    click_on "Expired Jobs"
+
+    expect(page).not_to have_text(active_job.title)
+    expect(page).to have_text(expired_job.title)
+  end
 end

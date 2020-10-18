@@ -1,6 +1,7 @@
 %li
   %h2 Jobs
 
+  #job-view-filter= job_view_links
   %p= link_to 'Create a New Job', new_admin_job_path, :class => 'button-black'
   %table#jobs
     %tr
@@ -17,3 +18,4 @@
           = link_to 'edit', edit_admin_job_path(job), :title => 'edit'
           |
           = link_to 'delete', admin_job_path(job), :method => :delete, :title => 'delete', :confirm => 'Are you sure you wanna destroy this job?'
+  = paginate(@jobs)

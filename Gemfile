@@ -15,7 +15,7 @@ gem 'simple_form'
 gem 'devise', "4.7.3"
 gem 'maruku'
 gem 'redcarpet'
-gem 'will_paginate'
+gem 'kaminari'
 
 gem 'stringex'
 gem 'slugged'
