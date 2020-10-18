@@ -11,7 +11,6 @@ gem 'haml', '~> 5.1.2'
 gem 'sassc'
 gem 'jquery-rails'
 gem 'simple_form'
-gem 'inherited_resources'
 
 gem 'devise', "4.7.3"
 gem 'maruku'

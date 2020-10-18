@@ -8,7 +8,7 @@
       %th Requested
       %th Published
       %th Actions
-    - collection.each do |job|
+    - @jobs.each do |job|
       %tr
         %td= job.name
         %td= l(job.created_at, :format => :murican)
