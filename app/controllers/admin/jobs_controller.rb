@@ -12,6 +12,8 @@ class Admin::JobsController < ApplicationController
       @jobs = @jobs.active
     when 'expired'
       @jobs = @jobs.expired
+    when 'unpublished'
+      @jobs = @jobs.unpublished
     end
 
     @jobs = @jobs.page(params[:page])

@@ -1,6 +1,6 @@
 module JobsHelper
   def job_view_links
-    ['all', 'active', 'expired'].map do |filter_type|
+    ['all', 'unpublished', 'active', 'expired'].map do |filter_type|
       label = "#{filter_type.titleize} Jobs"
       if params[:job_view] == filter_type
         tag.span label
