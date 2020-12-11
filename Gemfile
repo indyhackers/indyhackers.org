@@ -38,6 +38,10 @@ gem 'test-unit'
 
 gem 'rack-cache'
 
+group :development do
+  gem 'listen', '~> 3.3'
+end
+
 group :development, :test do
   gem 'foreman'
   gem 'spork'

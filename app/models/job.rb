@@ -4,7 +4,7 @@ class Job < ActiveRecord::Base
 
   has_many :job_views, :dependent => :destroy
   has_many :viewers, :through => :job_views
-  belongs_to :user
+  belongs_to :user, :optional => true
 
   attr_accessor :publish_now
 
