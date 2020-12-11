@@ -63,7 +63,7 @@ class Job < ActiveRecord::Base
 
   def notify_if_published
     if saved_change_to_published_at? && published_at.present? && published_at <= Time.now
-      SystemMailer.job_post_published(self.user, self).deliver
+      SystemMailer.job_post_published(self.user, self).deliver_now
     else
       Rails.logger.info "OMG WTF BBQ"
     end

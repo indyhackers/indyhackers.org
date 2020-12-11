@@ -14,7 +14,7 @@ class JobPostRequestsController < ApplicationController
       )
       @job.user = @user
       @job.save
-      SystemMailer.job_post_request(@job_post_request, @job).deliver
+      SystemMailer.job_post_request(@job_post_request, @job).deliver_now
       redirect_to new_job_post_request_path, :notice => 'Your job post request was sent successfully!'
     else
       flash[:notice] = 'There was a problem with sending your job post request'
