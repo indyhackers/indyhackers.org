@@ -17,7 +17,7 @@ FactoryBot.define do
     end
 
     trait :no_longer_active do
-      published_at { 61.days.from_now }
+      published_at { 61.days.ago }
     end
   end
 

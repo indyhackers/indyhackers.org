@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby "2.6.2"
+ruby "2.7.2"
 
 gem 'rails', '6.0.3.4'
 
@@ -11,12 +11,11 @@ gem 'haml', '~> 5.1.2'
 gem 'sassc'
 gem 'jquery-rails'
 gem 'simple_form'
-gem 'inherited_resources'
 
 gem 'devise', "4.7.3"
 gem 'maruku'
 gem 'redcarpet'
-gem 'will_paginate'
+gem 'kaminari'
 
 gem 'stringex'
 gem 'slugged'

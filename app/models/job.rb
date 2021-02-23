@@ -11,21 +11,23 @@ class Job < ActiveRecord::Base
   after_update :notify_if_published
 
   class << self
-    # Jobs that should appear in public listings
-    #
-    # @returns [ActiveRecord::Relation<Job>] active jobs
-
     def active
-      published.where("jobs.published_at >= ?", 60.days.ago)
+      published.where("jobs.published_at >= :date", date: 60.days.ago)
+    end
+
+    def expired
+      published.where("jobs.published_at < :date", date: 60.days.ago)
+    end
+
+    def unpublished
+      where(published_at: nil)
     end
 
     private
 
     def published
-      where(
-        "jobs.published_at IS NOT NULL AND jobs.published_at <= ?",
-        Time.zone.now
-      )
+      where.not(published_at: nil)
+        .where("published_at <= :date", date: Time.zone.now)
     end
   end
 
