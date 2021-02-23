@@ -206,7 +206,6 @@ GEM
       method_source
       rake (>= 0.8.7)
       thor (~> 1.0)
-    raindrops (0.19.1)
     rake (13.0.1)
     rb-fsevent (0.10.4)
     rb-inotify (0.10.1)
