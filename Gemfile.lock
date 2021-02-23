@@ -136,7 +136,6 @@ GEM
       activerecord
       kaminari-core (= 1.2.1)
     kaminari-core (1.2.1)
-    kgio (2.11.3)
     launchy (2.5.0)
       addressable (~> 2.7)
     listen (3.3.3)
@@ -174,6 +173,8 @@ GEM
     pry-rails (0.3.9)
       pry (>= 0.10.4)
     public_suffix (4.0.6)
+    puma (4.3.6)
+      nio4r (~> 2.0)
     rack (2.2.3)
     rack-cache (1.12.1)
       rack (>= 0.4)
@@ -284,9 +285,6 @@ GEM
       concurrent-ruby (~> 1.0)
     uglifier (4.2.0)
       execjs (>= 0.3.0, < 3)
-    unicorn (5.7.0)
-      kgio (~> 2.6)
-      raindrops (~> 0.7)
     uuid (2.3.9)
       macaddr (~> 1.0)
     warden (1.2.9)
@@ -329,6 +327,7 @@ DEPENDENCIES
   newrelic_rpm
   pg (~> 1.1)
   pry-rails
+  puma (~> 4.1)
   rack-cache
   rails (~> 6.1.0)
   rb-readline
@@ -343,7 +342,6 @@ DEPENDENCIES
   taps
   test-unit
   uglifier
-  unicorn
   webdrivers
 
 RUBY VERSION
