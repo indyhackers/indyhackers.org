@@ -1,14 +1,18 @@
 source 'https://rubygems.org'
 ruby "2.7.2"
 
-gem 'rails', '6.0.3.4'
+gem 'rails', '~> 6.1.0'
 
-gem 'pg'
+gem 'pg', '~> 1.1'
 
 gem 'coffee-script'
 gem 'uglifier'
-gem 'haml', '~> 5.1.2'
-gem 'sassc'
+gem 'haml', '~> 5.2.1'
+gem 'sass-rails', '>= 6'
+
+# Reduces boot times through caching; required in config/boot.rb
+gem 'bootsnap', '>= 1.4.4', require: false
+
 gem 'jquery-rails'
 gem 'simple_form'
 
@@ -33,7 +37,10 @@ gem 'dalli'
 gem 'test-unit'
 
 gem 'rack-cache'
-gem 'actionpack-action_caching'
+
+group :development do
+  gem 'listen', '~> 3.3'
+end
 
 group :development, :test do
   gem 'foreman'
@@ -53,7 +60,7 @@ end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '>= 2.15'
+  gem 'capybara', '>= 3.26'
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'

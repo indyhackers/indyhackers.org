@@ -4,7 +4,7 @@ class Job < ActiveRecord::Base
 
   has_many :job_views, :dependent => :destroy
   has_many :viewers, :through => :job_views
-  belongs_to :user
+  belongs_to :user, :optional => true
 
   attr_accessor :publish_now
 
@@ -63,7 +63,7 @@ class Job < ActiveRecord::Base
 
   def notify_if_published
     if saved_change_to_published_at? && published_at.present? && published_at <= Time.now
-      SystemMailer.job_post_published(self.user, self).deliver
+      SystemMailer.job_post_published(self.user, self).deliver_now
     else
       Rails.logger.info "OMG WTF BBQ"
     end
