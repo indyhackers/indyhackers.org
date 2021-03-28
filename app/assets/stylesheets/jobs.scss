@@ -5,6 +5,26 @@
 #single-job h1 {
   font-size: 36px;
 }
+
+#single-job h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: black;
+  text-transform: none;
+
+  &:not(:first-child) {
+    margin-top: 0.5em;
+  }
+}
+
+#single-job a {
+  color: black;
+  text-decoration: underline;
+}
+
 #single-job article.job-description h1 {
   font-size: 24px;
 }
