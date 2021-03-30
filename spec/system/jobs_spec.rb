@@ -5,7 +5,7 @@ RSpec.describe "Jobs feature" do
     job = create(:job, :published, user: create(:user))
 
     visit jobs_path
-    expect(page).to have_text(job.name.upcase)
+    expect(page).to have_text(job.name)
 
     click_on job.name
     expect(page).to have_text(job.description)
