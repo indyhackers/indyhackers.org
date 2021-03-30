@@ -31,7 +31,7 @@ RSpec.describe "Admin feature" do
     end.to change(Job, :count).by(1)
 
     expect(page).to have_text(/success/)
-    expect(page).to have_text(title.upcase)
+    expect(page).to have_text(title)
     expect(page).to have_text(description)
   end
 
@@ -50,7 +50,7 @@ RSpec.describe "Admin feature" do
     click_on "Save"
 
     expect(page).to have_text(/success/)
-    expect(page).to have_text(new_title.upcase)
+    expect(page).to have_text(new_title)
   end
 
   it "allows an admin to view only active jobs" do
