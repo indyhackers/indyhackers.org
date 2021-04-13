@@ -1,0 +1,35 @@
+@import '_variables';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 28px;
+}
+
+.logo {
+  max-width: 100px;
+
+  &-text {
+    font-family: $header-font;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  margin-left: 28px;
+}
+
+.menu {
+  list-style-type: none;
+  display: flex;
+  font-size: 18px;
+  
+  li {
+    margin-right: 28px;
+  }
+}

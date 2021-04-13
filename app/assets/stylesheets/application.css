@@ -3,7 +3,7 @@
  *= require jquery.qtip
  *= require jquery-ui/jquery-ui
  *= require base
- *= require admin_header
+ *= require header
  *= require simple_form
  *= require jobs
  *= require footer

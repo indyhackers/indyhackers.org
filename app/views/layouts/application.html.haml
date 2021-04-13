@@ -21,18 +21,15 @@
   %body{class: "#{request[:controller].split('/').join(' ')} #{request[:action]}"}
     = admin_header
     .main.main-body
-      .header.clear-fix
-        .layout-50p-left.clear-fix
+      .header
+        %div.logo-container
           = link_to image_tag('indyhackers-logo.svg', :class => 'logo'), '/'
-          = link_to 'Indy Hackers', '/', :class => 'header-logo'
+          = link_to 'Indy Hackers', '/', :class => 'logo-text'
 
-
-        .layout-50p-right
-          .header-phone
-            %ul.no-list.menu
-              %li= link_to 'Newsletter', '/newsletter'
-              %li= link_to 'Jobs', '/jobs'
-              %li= link_to 'Calendar', '/calendar'
+        %ul.menu
+          %li= link_to 'Newsletter', '/newsletter'
+          %li= link_to 'Jobs', '/jobs'
+          %li= link_to 'Calendar', '/calendar'
 
       .content.clear-fix
         %ul.no-list.clear-fix.section-list
@@ -68,8 +65,6 @@
           %p
             :markdown
               This web app sorta thing has been crafted lovingly but with wild abandon by [The Indy Hackers Board](/about#the-board). It's warty and it oozes unspeakably in some places. Find out [on GitHub](https://github.com/indyhackers/indyhackers.org).
-
-              Background photo by Garrett Hart.
 
 
     = javascript_include_tag 'application'
