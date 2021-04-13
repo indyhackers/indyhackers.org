@@ -10,18 +10,10 @@
       %meta{:content => "Bringing together hackers in Indiana", :name => "Description"}/
     - else
       = yield(:description)
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Voces"/>
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Dosis:400,300,200,500,600,700,800" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Work+Sans&display=swap" rel="stylesheet"> 
 
     = stylesheet_link_tag 'application'
-
-    <link rel="stylesheet" type="text/css" media="screen and (max-width:969px)" href="/assets/responsive/width-0-969.css"/>
-    <link rel="stylesheet" type="text/css" media="screen and (max-width:767px)" href="/assets/responsive/width-0-767.css"/>
-    <link rel="stylesheet" type="text/css" media="screen and (min-width:480px) and (max-width:969px)" href="/assets/responsive/width-480-969.css"/>
-    <link rel="stylesheet" type="text/css" media="screen and (min-width:768px) and (max-width:969px)" href="/assets/responsive/width-768-969.css"/>
-    <link rel="stylesheet" type="text/css" media="screen and (min-width:480px) and (max-width:767px)" href="/assets/responsive/width-480-767.css"/>
-    <link rel="stylesheet" type="text/css" media="screen and (max-width:479px)" href="/assets/responsive/width-0-479.css"/>
-
     = stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     = favicon_link_tag "/favicon.png"
     = yield(:head)
