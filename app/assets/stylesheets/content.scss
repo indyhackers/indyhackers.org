@@ -1,0 +1,25 @@
+@import '_variables';
+
+.content {
+  margin-bottom: 60px;
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      padding: 0 20%;
+    }
+  }
+  
+  .calendar-links {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .wwihd {
+    background-color: $background-blue;
+  }
+}

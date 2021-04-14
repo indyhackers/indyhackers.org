@@ -17,5 +17,6 @@ Rails.application.config.assets.precompile += [
   'showdown.js',
   'application.css',
   'application.js',
-  'indyhackers-logo.svg'
+  'indyhackers-logo.svg',
+  'grayindyhackers-logo.svg'
 ]

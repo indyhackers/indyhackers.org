@@ -32,8 +32,27 @@ h6 {
 a {
   text-decoration-color: #FFC000;
   color: black;
+  font-weight: bold;
 }
 
 a:visited {
   color: black;
+}
+
+.three-columns {
+  display: flex;
+}
+
+.three-columns>div {
+  width: 33%;
+}
+
+@media screen and (max-width: 680px) {
+  .three-columns {
+    flex-direction: column;
+  }
+
+  .three-columns>div {
+    width: 100%;
+  }
 }

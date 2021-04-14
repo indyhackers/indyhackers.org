@@ -1,21 +1,21 @@
-.footer #made-by ul {
-  margin-left: 60px;
-}
+@import '_variables';
 
-.footer #made-by ul li {
-  float: left;
-  margin-left: 35px;
-}
-.footer #made-by ul li p {
-  margin: 0;
-  padding: 0;
-}
+.footer {
+  padding: 30px 0;
+  background-color: $background-blue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-.footer #made-by ul li img {
-  width: 72px;
-  height: 72px;
-}
+  &-links {
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    width: 400px;
+  }
 
-.footer.layout-50 .layout-50-left, .footer.layout-50 .layout-50-right {
-  height: 160px;
+  .made-by {
+    margin: 0 auto;
+    text-align: center;
+  }
 }

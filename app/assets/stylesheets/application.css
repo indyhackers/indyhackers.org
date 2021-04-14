@@ -3,10 +3,12 @@
  *= require jquery.qtip
  *= require jquery-ui/jquery-ui
  *= require base
+ *= require atoms
  *= require header
  *= require simple_form
  *= require jobs
  *= require footer
  *= require coc
  *= require about
+ *= require content
  */
