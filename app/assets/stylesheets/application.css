@@ -5,7 +5,6 @@
  *= require base
  *= require atoms
  *= require header
- *= require simple_form
  *= require jobs
  *= require footer
  *= require coc

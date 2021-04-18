@@ -72,15 +72,12 @@ board_members = [
  },
 ]
 %>
-<%  content_for :head do %>
-<link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" rel="stylesheet" />
-<% end %>
 
 <li>
-  <h2>About Indy Hackers</h2>
+  <h2>Board Members</h2>
 
   <% board_members.in_groups_of(3) do |member_group| %>
-  <div class="card-deck the-board" id="#the-board">
+  <div class="three-columns about">
     <% member_group.each do |member| %>
     <% if member.nil? %>
     <div class="card blank"></div>
@@ -88,17 +85,13 @@ board_members = [
     <div class="card">
       <%= image_tag "board/#{member[:picture]}", skip_pipeline: true, alt: member[:name], class: 'card-img-top' %>
       <div class="card-block">
-        <h4 class="card-title"><%= member[:name] %></h4>
-        <hr />
+        <h3 class="card-title"><%= member[:name] %></h3>
         <div class="contact">
           <a class="email" href="mailto:<%= member[:email] %>" target="BLANK">
             <i class="fa fa-envelope"></i>
-            <%= member[:email] %>
           </a>
-          <hr />
-          <a class="slack" href="<%= member[:slack_url] %>" target="BLANK">
+          <a class="slack" href="<%= member[:slack_handle] %>" target="BLANK">
             <i class="fa fa-slack"></i>
-            <%= member[:slack_handle] %>
           </a>
           <% if member[:twitter] %>
           <a class="twitter" href="<%= member[:twitter] %>" target="BLANK">

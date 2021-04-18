@@ -1,56 +1,32 @@
-.about .header-phone a,
-.about .header-phone a:hover {
-  color: white;
-  text-decoration: none;
-}
+@import '_variables';
 
-.about .volunteer-organizers {
-  text-align: center;
-}
-
-.about .the-board img.card-img-top {
+.about {
+  img {
   width: 100%;
+  }
 }
 
-.about .the-board .card.blank {
-  border: none;
-}
+.card {
+  margin: 30px 10px;
 
-.about .card-deck {
-  margin-bottom: 15px;
-}
+  h3 {
+    text-align: center;
+  }
 
-.about h4.card-title {
-  font-size: 22px;
-}
+  hr {
+    color: $background-blue;
+  }
 
-.about .email {
-  display: block;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-}
+  a {
+    text-decoration: none;
 
-.about .slack {
-  display: inline-block;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-  width: 50%;
-}
-.about .twitter {
-  display: inline-block;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-  width: 20%;
-}
-.about .linkedin {
-  display: inline-block;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-  width: 20%;
-  margin-top: -20px;
+    &:hover {
+      color: $primary-yellow;
+    }
+  }
+
+  .contact {
+    display: flex;
+    justify-content: space-evenly;
+  }
 }
