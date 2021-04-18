@@ -1,0 +1,59 @@
+input[type=text], input[type=password], input[type=email], textarea {
+  margin-bottom: 5px;
+  font-size: 16px;
+  padding: 9px;
+  border: solid 2px black;
+  outline: 0;
+  background: white;
+}
+
+textarea {
+  height: 400px;
+  width: 100%;
+  line-height: 150%;
+}
+
+form.simple_form fieldset div label {
+  display: block;
+  width: 100px;
+  padding-right: 10px;
+}
+
+form.simple_form fieldset {
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin: 30px 0;
+  border: 0;
+}
+
+form.simple_form legend {
+  font-size: 100%;
+  font-weight: bold;
+}
+
+form.simple_form .hint {
+  font-size: 13px;
+  display: block;
+  font-style: italic;
+}
+
+form.simple_form span.error {
+  display: block;
+  text-align: center;
+}
+
+form.simple_form div.input { position: relative; }
+
+form.simple_form label abbr {
+  display: none;
+}
+
+form.simple_form .tab-menu {
+  display: flex;
+  margin-bottom: 20px;
+
+  li {
+    padding: 0;
+    margin-right: 10px;
+  }
+}
