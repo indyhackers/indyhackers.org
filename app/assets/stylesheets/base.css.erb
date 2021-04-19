@@ -49,12 +49,18 @@ a:visited {
   color: black;
 }
 
-.three-columns {
+.three-columns,
+.two-columns {
   display: flex;
+  align-items: center;
 }
 
-.three-columns>div {
+.three-columns>* {
   width: 33%;
+}
+
+.two-columns>* {
+  width: 50%;
 }
 
 @media screen and (max-width: 680px) {

@@ -18,5 +18,7 @@ Rails.application.config.assets.precompile += [
   'application.css',
   'application.js',
   'indyhackers-logo.svg',
-  'grayindyhackers-logo.svg'
+  'grayindyhackers-logo.svg',
+  'meeting.png',
+  'out-the-box.png'
 ]
