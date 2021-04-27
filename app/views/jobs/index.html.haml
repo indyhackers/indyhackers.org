@@ -17,4 +17,9 @@
       %a{:href =>'http://indyhackers.org/jobs.xml'}subsribe to the feed.
 
   - @jobs.each do |job|
-    %li= link_to job.name, job_path(job), name: "#{job.name.downcase.gsub(/[^a-zA-Z0-9]/, '-')}"
+    %li
+      %a{href: job_path(job), name: "#{job.name.downcase.gsub(/[^a-zA-Z0-9]/, '-')}"}> |
+        %div{style: "display: flex"}
+          %span= job.name
+          %span{style: "flex-grow: 1"}
+          %span= job.salary

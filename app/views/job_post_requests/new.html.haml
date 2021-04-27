@@ -13,19 +13,25 @@
 
     Make sure you provide information as to how a candidate should get their résumé to you.
 
-  = simple_form_for @job_post_request, :html => {:multipart => true} do |f|
+  = simple_form_for @job_post_request, html: {multipart: true} do |f|
     %fieldset
       %legend Your contact info
       = f.input :name
-      = f.input :email, as: :string, :hint => "Address to receive info about your post's status from IndyHackers"
+      = f.input :email, as: :string, hint: "Address to receive info about your post's status from IndyHackers"
     %fieldset
       %legend The job's info
-      = f.input :title, :input_html => { :class => "job_title" }
-      = f.input :company, :input_html => { :class => "job_company" }
+      = f.input :title, input_html: { class: "job_title" }
+      = f.input :company, input_html: { class: "job_company" }
+
+      %p
+        While a salary or salary range is not required, we do encourage you to provide one if you can. Read the&nbsp;
+        %a{href: '/coc', target: "coc"}> Code of Conduct
+        &nbsp;to understand why we believe providing a salary range up front is important.
+      = f.input :salary, label: "Salary range", input_html: { class: "job_salary" }
       %p
         %strong Note:
         Job posts use Markdown syntax. See&nbsp;
-        %a{:href => 'http://daringfireball.net/projects/markdown/syntax'}>  this Markdown reference
+        %a{href: 'http://daringfireball.net/projects/markdown/syntax'}>  this Markdown reference
         \. For instance, a '+' before a line turns it into a list item!
 
       %ul.tab-menu
@@ -34,7 +40,7 @@
         %li
           %a{ href: '#' } Preview
       .tab-container.active
-        = f.input :description, :as => :text
+        = f.input :description, as: :text
         .input
           %label &nbsp;
           = f.button :submit, 'Send'
