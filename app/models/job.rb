@@ -2,9 +2,9 @@ require File.join(Rails.root, 'lib', 'slug')
 class Job < ActiveRecord::Base
   is_sluggable :name
 
-  has_many :job_views, :dependent => :destroy
-  has_many :viewers, :through => :job_views
-  belongs_to :user, :optional => true
+  has_many :job_views, dependent: :destroy
+  has_many :viewers, through: :job_views
+  belongs_to :user, optional: true
 
   attr_accessor :publish_now
 
@@ -12,11 +12,11 @@ class Job < ActiveRecord::Base
 
   class << self
     def active
-      published.where("jobs.published_at >= :date", date: 60.days.ago)
+      published.where('jobs.published_at >= :date', date: 60.days.ago)
     end
 
     def expired
-      published.where("jobs.published_at < :date", date: 60.days.ago)
+      published.where('jobs.published_at < :date', date: 60.days.ago)
     end
 
     def unpublished
@@ -27,7 +27,7 @@ class Job < ActiveRecord::Base
 
     def published
       where.not(published_at: nil)
-        .where("published_at <= :date", date: Time.zone.now)
+           .where('published_at <= :date', date: Time.zone.now)
     end
   end
 
@@ -63,9 +63,9 @@ class Job < ActiveRecord::Base
 
   def notify_if_published
     if saved_change_to_published_at? && published_at.present? && published_at <= Time.now
-      SystemMailer.job_post_published(self.user, self).deliver_now
+      SystemMailer.job_post_published(user, self).deliver_now
     else
-      Rails.logger.info "OMG WTF BBQ"
+      Rails.logger.info 'OMG WTF BBQ'
     end
   end
 end
