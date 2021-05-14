@@ -4,9 +4,8 @@ atom_feed language: 'en-US' do |feed|
 
   @jobs.each do |job|
     feed.entry(job) do |entry|
-      title = job.title
-      title += ' (' + job.salary + ')' unless job.salary.blank?
-      entry.title(title)
+      salary = job.salary.present? ? " (#{job.salary})" : ''
+      entry.title("#{job.title}#{salary}")
       entry.content(MARKDOWN.render(job.description).html_safe, type: 'html')
       entry.author do |author|
         author.name('IndyHackers')
