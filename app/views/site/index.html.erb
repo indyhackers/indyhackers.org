@@ -1,10 +1,4 @@
-<!-- 2 column layout -->
-<!-- <div class="layout&#45;50&#45;right"> -->
-<!-- </div> -->
-<!-- <div class="layout&#45;50&#45;left"> -->
-<!-- </div> -->
-
-<li class="clear-fix blm" data-section="announcement">
+<li class="blm" data-section="announcement">
   <div>
     <h2>Black Lives Matter</h2>
     <p>IndyHackers board stands with the Black community. Just saying we are allies isn’t enough. We owe it to the Black community of Indiana to do better. We commit to initiating anti-racist work within our community.</p>
@@ -14,30 +8,39 @@
     <p>In the meantime, Andrew Robinson III (long-time board member who shifted his focus last year) has agreed to return to the board to guide and advise us in our efforts to fill this new position and to represent the Black community until the position is filled.</p>
   </div>
 </li>
-
-<li class="clear-fix" data-section="announcement">
+<li class="two-columns mb-30">
   <div>
-    <h2>Congrats 2020 Hackies Winners!</h2>
-    <p>Thank you to everyone who joined us in congratulating the Hackies winners for 2020! Despite it being what can only be described as <i>quite a year</i>, the Indy tech community is continuing to shine. In December at the virtual Holiday Social, we announced the winners for last year. Give them a hand!
-    <ul>
-      <li><b>Community Member of the Year:</b> <a href="https://www.linkedin.com/in/kristencooper23/" target="_blank">Kristen Cooper, The Startup Ladies</a></li>
-      <li><b>Level Up of the Year:</b> <a href="https://www.linkedin.com/in/brittany-hutter/" target="_blank">Brittany Hutter, Lessonly</a></li>
-      <li><b>Rising Star of the Year:</b> Alexa Kovacs, KSM Consulting</li>
-      <li><b>Mentor of the Year:</b> <a href="https://www.linkedin.com/in/robjac/" target="_blank">Robbie Jacobs, PactSafe</a></li>
-      <li><b>Trainer of the Year:</b> <a href="https://www.linkedin.com/in/arianna-basha-00b2b1146/" target="_blank">Arianna G Basha, Kenzie Academy</a></li>
-    </ul>
+    <h2>Indy Hackers</h2>
+    <p>
+      A network for all tech folks in Indiana. Fostering community connections and
+      celebrating individual successes.
     </p>
   </div>
+  <%= image_tag "out-the-box.png", alt: "One person jumping out of a box, while another jumps in the background." %>
 </li>
+<li class="wwihd">
+  <h2>What we do</h2>
+  <div class="three-columns">
+    <div>
+      <h3>Mentorship</h3>
+      <%= image_tag "meeting.png", alt: "Two people meeting each other" %>
+    </div>
+    <div>
+      <h3>Events</h3>
+      <%= image_tag "meeting.png", alt: "Two people meeting each other" %>
 
-<li id="indy_hackers_calendar">
-  <h2>Indy Hackers' Calendar</h2>
-  <div class="text-center">
-    <p>
-      <%= link_to 'Month View', '/calendar' %>
-      &nbsp;|&nbsp;
-      <%= link_to 'Subscribe to the Events Feed', 'webcal://calendar.google.com/calendar/ical/ig7e0j6v8ub9q6kga256n77048%40group.calendar.google.com/public/basic.ics' %>
-    </p>
-    <iframe src="//www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=400&amp;wkst=1&amp;bgcolor=%23DDDDDD&amp;src=ig7e0j6v8ub9q6kga256n77048%40group.calendar.google.com&amp;color=%23AB8B00&amp;ctz=America%2FNew_York" style="border-width:0 " width="800" height="400" frameborder="0" scrolling="no"></iframe>
+    </div>
+    <div>
+      <h3>Meetups</h3>
+      <%= image_tag "meeting.png", alt: "Two people meeting each other" %>
+    </div>
+  </div>
+</li>
+<li>
+  <h2>Our calendar</h2>
+  <iframe src="//www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=400&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=ig7e0j6v8ub9q6kga256n77048%40group.calendar.google.com&amp;color=%23AB8B00&amp;ctz=America%2FNew_York" style="border-width:0 " width="710" height="400" frameborder="0" scrolling="no"></iframe>
+  <div class="calendar-links">
+    <%= link_to 'Recommend event', 'https://docs.google.com/forms/d/e/1FAIpQLSdlfIqF42uU8iyoYyqKDFPEYRsNCOCFYpFJwMTvdVOkK3otSg/viewform?usp=sf_link' %>
+    <%= link_to 'Subscribe to calendar', 'webcal://calendar.google.com/calendar/ical/ig7e0j6v8ub9q6kga256n77048%40group.calendar.google.com/public/basic.ics' %>
   </div>
 </li>
