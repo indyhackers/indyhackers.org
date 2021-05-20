@@ -27,7 +27,7 @@ gem 'slugged'
 gem 'delayed_job'
 
 gem 'json_pure'
-gem 'puma', '~> 4.1'
+gem 'puma', '~> 4.3'
 gem 'newrelic_rpm'
 gem 'instrumental_agent'
 
