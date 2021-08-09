@@ -14,19 +14,15 @@
   }
 
   .blm {
-    background-color: black;
-    color: white;
-    margin: 30px 10%;
+    background-color: $text-color-black;
+    color: $primary-yellow;
     padding: 30px 10%;
-
-    h2, a { 
-      color: white;
-    }
   }
 
   .wwihd {
     background-color: $background-blue;
     margin-bottom: 30px;
+    padding: 30px 10%;
 
     h3 {
       font-family: $text-font;

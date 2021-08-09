@@ -73,7 +73,7 @@ board_members = [
 ]
 %>
 
-<li>
+<section class="container">
   <h2>Board Members</h2>
 
   <% board_members.in_groups_of(3) do |member_group| %>
@@ -89,9 +89,6 @@ board_members = [
         <div class="contact">
           <a class="email" href="mailto:<%= member[:email] %>" target="BLANK">
             <i class="fa fa-envelope"></i>
-          </a>
-          <a class="slack" href="<%= member[:slack_handle] %>" target="BLANK">
-            <i class="fa fa-slack"></i>
           </a>
           <% if member[:twitter] %>
           <a class="twitter" href="<%= member[:twitter] %>" target="BLANK">
@@ -109,4 +106,4 @@ board_members = [
   </div>
   <% end %>
 
-</li>
+</section>

@@ -7,7 +7,19 @@
 }
 
 .card {
+  background: $background-blue;
   margin: 30px 10px;
+  padding: 2% 5%;
+  box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.16);
+  border-radius: 2px;
+
+  .card-img-top {
+    border-radius: 999px;
+  }
+
+  &.blank {
+    visibility: hidden;
+  }
 
   h3 {
     text-align: center;
