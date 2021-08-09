@@ -3,6 +3,7 @@
  *= require jquery.qtip
  *= require jquery-ui/jquery-ui
  *= require base
+ *= require main
  *= require atoms
  *= require header
  *= require jobs

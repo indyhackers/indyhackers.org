@@ -8,7 +8,21 @@
 }
 
 .logo {
+  max-width: 50px;
+  fill: $text-color-black;
+  margin-right: 16px;
+
+  &-text {
+    font-family: $header-font;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+}
+
+.logo-gray {
   max-width: 100px;
+  fill: $dark-gray;
 
   &-text {
     font-family: $header-font;

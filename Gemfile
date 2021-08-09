@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby "2.7.2"
+ruby "2.7.3"
 
 gem 'rails', '~> 6.1.0'
 
@@ -8,7 +8,7 @@ gem 'pg', '~> 1.1'
 gem 'coffee-script'
 gem 'uglifier'
 gem 'haml', '~> 5.2.1'
-gem 'sass-rails', '>= 6'
+gem 'sass-rails'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
@@ -33,6 +33,7 @@ gem 'instrumental_agent'
 
 gem 'memcachier'
 gem 'dalli'
+gem 'inline_svg'
 
 gem 'test-unit'
 

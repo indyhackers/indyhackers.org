@@ -6,3 +6,5 @@ coverage/*
 tmp/**/*
 config/database.yml
 .sass-cache
+default.nix
+.envrc

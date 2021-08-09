@@ -1,0 +1,110 @@
+@import '_variables';
+
+html,
+body {
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+
+/******************************************************************************/
+/*  Base styles                             	                                */
+/******************************************************************************/
+html {
+  background-color: #fff;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Work Sans', sans-serif;
+  color: $text-color-black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Space Mono', monospace;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+button,
+input[type="submit"] {
+  background-color: #FFC000;
+  padding: 12px 16px;
+  border: 0px;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Work Sans', sans-serif;
+}
+
+a {
+  text-decoration-color: #FFC000;
+  color: inherit;
+  font-weight: bold;
+}
+
+a:visited {
+  color: $text-color-black;
+}
+
+iframe {
+  width: 100%;
+}
+
+.three-columns,
+.two-columns {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.three-columns>* {
+  flex: 1 1 33%;
+}
+
+.two-columns>* {
+  flex: 1 1 50%;
+}
+
+@media screen and (max-width: 680px) {
+  .three-columns {
+    flex-direction: column;
+  }
+
+  .three-columns>div {
+    width: 100%;
+  }
+}
+
+.main-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+.img-resp {
+  display: block;
+  width: 75%;
+  margin: 0 auto;
+}

@@ -23,7 +23,7 @@
     .main.main-body
       .header
         %div.logo-container
-          = link_to image_tag('indyhackers-logo.svg', :class => 'logo'), '/'
+          = link_to inline_svg_tag('ih-logo.svg', :class => 'logo'), '/'
           = link_to 'Indy Hackers', '/', :class => 'logo-text'
 
         %ul.menu
@@ -32,15 +32,13 @@
           %li= link_to 'About', '/about'
 
       .content.clear-fix
-        %ul.no-list.clear-fix.section-list
-
-          - if notice
-            %li.text-center.clear-fix
-              .notice= notice
-          - if alert
-            %li.text-center.clear-fix
-              .alert= alert
-          = yield
+        - if notice
+          %section.text-center.clear-fix
+            .notice= notice
+        - if alert
+          %section.text-center.clear-fix
+            .alert= alert
+        = yield
 
       .footer
         %div.footer-links
@@ -50,8 +48,8 @@
               =link_to 'Meet our Board', '/about'
             %p
               =link_to 'Code of Conduct', '/coc'
-            %p
-              =link_to 'Mentorship Program', '/'
+            // %p
+            //  =link_to 'Mentorship Program', '/'
 
           %div
             %span Contact
@@ -62,7 +60,7 @@
             %p
               = link_to 'GitHub', "https://github.com/indyhackers/indyhackers.org"
         %div.made-by
-          =image_tag('grayindyhackers-logo.svg', :class => 'logo')
+          = link_to inline_svg_tag('ih-logo.svg', :class => 'logo-gray'), '/'
           %p.ff-sm
             Made with ❤️ by the Indy Hackers board
 
