@@ -20,6 +20,6 @@
     %li
       %a{href: job_path(job), name: "#{job.name.downcase.gsub(/[^a-zA-Z0-9]/, '-')}"}> |
         %div{style: "display: flex"}
-          %span= job.name
-          %span{style: "flex-grow: 1"}
-          %span= job.salary
+          %span{style: "flex: 1 1 55%"}= job.name
+          %span{style: "flex: 1 1 20%"}
+          %span{style: "flex: 1 1 25%"}= job.salary
