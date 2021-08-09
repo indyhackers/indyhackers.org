@@ -54,14 +54,19 @@ li#jobs-header h1 {
   padding: 0;
 }
 
+.job-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 .job-list li {
-  padding: 10px 20% !important;
+   margin: 0;
+   padding: 20px 0;
 }
 
 .job-list li a {
   font-size: 20px;
-  display: block;
-  padding: 20px;
   text-decoration: none;
 }
 
