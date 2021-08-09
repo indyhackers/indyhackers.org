@@ -46,35 +46,19 @@ table#jobs tr td {
   overflow: hidden;
 }
 
-li#jobs-header {
-  padding: 10px;
-}
-
 li#jobs-header h1 {
   margin: 0;
   padding: 0;
 }
 
-.job-list {
-  margin-top: 40px;
-  background-color: #FFC000;
-}
-
 .job-list li {
-  border-bottom: 1px solid black;
-}
-
-.job-list li:last-child {
-  border-bottom: none;
+  padding: 10px 20% !important;
 }
 
 .job-list li a {
-  color: black;
   font-size: 20px;
-  font-weight: 500;
-  font-family: 'Dosis';
   display: block;
-  padding: 15px;
+  padding: 20px;
 }
 
 .job-list li a:hover {
@@ -91,5 +75,19 @@ body.admin.jobs {
   #job-view-filter {
     float: right;
     clear: left;
+  }
+}
+
+#live-preview, #single-job {
+  ul {
+    list-style-type: disc;
+  }
+  
+  ul, ol {
+    padding-left: 20px;
+
+    li {
+      padding: 0;
+    }
   }
 }

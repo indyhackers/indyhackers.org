@@ -1,0 +1,42 @@
+@import '_variables';
+
+.content {
+  margin-bottom: 60px;
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      padding: 30px 20%;
+    }
+  }
+
+  .blm {
+    background-color: black;
+    color: white;
+    margin: 30px 10%;
+    padding: 30px 10%;
+
+    h2, a { 
+      color: white;
+    }
+  }
+
+  .wwihd {
+    background-color: $background-blue;
+    margin-bottom: 30px;
+
+    h3 {
+      font-family: $text-font;
+      text-align: center;
+    }
+  }
+  
+  .calendar-links {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+  }
+}

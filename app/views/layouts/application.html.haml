@@ -10,18 +10,10 @@
       %meta{:content => "Bringing together hackers in Indiana", :name => "Description"}/
     - else
       = yield(:description)
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Voces"/>
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Dosis:400,300,200,500,600,700,800" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Work+Sans&display=swap" rel="stylesheet"> 
 
     = stylesheet_link_tag 'application'
-
-    <link rel="stylesheet" type="text/css" media="screen and (max-width:969px)" href="/assets/responsive/width-0-969.css"/>
-    <link rel="stylesheet" type="text/css" media="screen and (max-width:767px)" href="/assets/responsive/width-0-767.css"/>
-    <link rel="stylesheet" type="text/css" media="screen and (min-width:480px) and (max-width:969px)" href="/assets/responsive/width-480-969.css"/>
-    <link rel="stylesheet" type="text/css" media="screen and (min-width:768px) and (max-width:969px)" href="/assets/responsive/width-768-969.css"/>
-    <link rel="stylesheet" type="text/css" media="screen and (min-width:480px) and (max-width:767px)" href="/assets/responsive/width-480-767.css"/>
-    <link rel="stylesheet" type="text/css" media="screen and (max-width:479px)" href="/assets/responsive/width-0-479.css"/>
-
     = stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     = favicon_link_tag "/favicon.png"
     = yield(:head)
@@ -29,18 +21,15 @@
   %body{class: "#{request[:controller].split('/').join(' ')} #{request[:action]}"}
     = admin_header
     .main.main-body
-      .header.clear-fix
-        .layout-50p-left.clear-fix
-          = link_to image_tag('indyhackers-logo.png', :class => 'logo'), '/'
-          = link_to 'Indy Hackers', '/', :class => 'header-logo'
+      .header
+        %div.logo-container
+          = link_to image_tag('indyhackers-logo.svg', :class => 'logo'), '/'
+          = link_to 'Indy Hackers', '/', :class => 'logo-text'
 
-
-        .layout-50p-right
-          .header-phone
-            %ul.no-list.menu
-              %li= link_to 'Newsletter', '/newsletter'
-              %li= link_to 'Jobs', '/jobs'
-              %li= link_to 'Calendar', '/calendar'
+        %ul.menu
+          %li= link_to 'Newsletter', '/newsletter'
+          %li= link_to 'Jobs', '/jobs'
+          %li= link_to 'About', '/about'
 
       .content.clear-fix
         %ul.no-list.clear-fix.section-list
@@ -53,32 +42,29 @@
               .alert= alert
           = yield
 
-      .footer.layout-50.clear-fix
-        .layout-50-left
-          %h2 missin' somethin'?
-          %p
-            Want to recommend an event for the calendar? Fill out&nbsp;
-            %a{ :href => 'https://docs.google.com/forms/d/e/1FAIpQLSdlfIqF42uU8iyoYyqKDFPEYRsNCOCFYpFJwMTvdVOkK3otSg/viewform?usp=sf_link' }> this form
-            \.
-          %p
-            Coming to one of our events, or joining us on Slack? Cool!
-            %br
-            Check out our
-            =link_to 'Code of Conduct', '/coc'
-            \, and
-            =link_to 'meet our Board', '/about'
-          %p
-            Just wanna chat? Hit us up at
-            = link_to '@indyhackersorg', "https://twitter.com/indyhackersorg"
+      .footer
+        %div.footer-links
+          %div
+            %span About Us
+            %p
+              =link_to 'Meet our Board', '/about'
+            %p
+              =link_to 'Code of Conduct', '/coc'
+            %p
+              =link_to 'Mentorship Program', '/'
 
-        #made-by.layout-50-right
-          %h3 This thing you're looking at
-          %p
-            :markdown
-              This web app sorta thing has been crafted lovingly but with wild abandon by [The Indy Hackers Board](/about#the-board). It's warty and it oozes unspeakably in some places. Find out [on GitHub](https://github.com/indyhackers/indyhackers.org).
-
-              Background photo by Garrett Hart.
-
+          %div
+            %span Contact
+            %p
+              = link_to '@indyhackersorg', "https://twitter.com/indyhackersorg"
+            %p
+              = link_to 'Slack Community', "https://slack.indyhackers.org"
+            %p
+              = link_to 'GitHub', "https://github.com/indyhackers/indyhackers.org"
+        %div.made-by
+          =image_tag('grayindyhackers-logo.svg', :class => 'logo')
+          %p.ff-sm
+            Made with ❤️ by the Indy Hackers board
 
     = javascript_include_tag 'application'
     <!-- Google Analytics -->

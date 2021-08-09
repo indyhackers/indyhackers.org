@@ -3,75 +3,12 @@
  *= require jquery.qtip
  *= require jquery-ui/jquery-ui
  *= require base
- *= require admin_header
- *= require simple_form
+ *= require atoms
+ *= require header
  *= require jobs
  *= require footer
  *= require coc
  *= require about
+ *= require content
+ *= require simple_form
  */
-
-article ul li ul {
-  margin-left: 20px;
-}
-
-a.sponsor-blurb {
-  font-size: 18px;
-}
-
-p.sponsor-indicator {
-  font-size: 12px;
-}
-
-ul ul {
-  margin-left: 20px;
-}
-
-ul.tab-menu:before {
-  z-index: 1;
-}
-
-ul.tab-menu {
-  position: relative;
-  list-style: none;
-  margin: 0 0 10px 0;
-  padding: 0;
-  line-height: 24px;
-}
-
-ul.tab-menu:after {
-  position: absolute;
-  content: "";
-  width: 100%;
-  bottom: 0;
-  left: 0;
-  border-bottom: 1px solid #666;
-  z-index: 1;
-}
-
-ul.tab-menu li {
-  position: relative;
-  z-index: 0;
-  display: inline-block;
-  margin: 0;
-  padding: 0 30px;
-  border-left: 1px solid #666;
-  border-top: 1px solid #666;
-  border-right: 1px solid #666;
-  background-color: #000;
-}
-
-ul.tab-menu li.active {
-  color: #000;
-  background-color: #ffc000;
-  z-index: 2;
-  border-bottom-color: #ffc000;
-}
-
-ul.tab-menu li.active a:hover {
-  color: #fff;
-}
-
-ul.tab-menu li a:hover {
-  color: #ffc000;
-}

@@ -1,21 +1,15 @@
-// form
-form.simple_form {
-  width: 760px;
-  margin: 0 auto;
-}
-
 input[type=text], input[type=password], input[type=email], textarea {
   margin-bottom: 5px;
   font-size: 16px;
   padding: 9px;
-  border: solid 1px #e5e5e5;
+  border: solid 2px black;
   outline: 0;
   background: white;
 }
 
 textarea {
-  width: 740px;
   height: 400px;
+  width: 100%;
   line-height: 150%;
 }
 
@@ -28,8 +22,8 @@ form.simple_form fieldset div label {
 form.simple_form fieldset {
   padding-bottom: 10px;
   padding-top: 10px;
-  border-top: 1px solid #000;
-  margin: 30px 0
+  margin: 30px 0;
+  border: 0;
 }
 
 form.simple_form legend {
@@ -50,20 +44,16 @@ form.simple_form span.error {
 
 form.simple_form div.input { position: relative; }
 
-// #job_post_request form.simple_form fieldset div.input.string label,
-// #job_post_request form.simple_form fieldset div.input.text label,
-// #job_post_request form.simple_form fieldset div.input.email label,
-// #job_post_request form.simple_form fieldset div.input.password label {
-//   position: absolute;
-//   top: 10px;
-//   left: 10px;
-//   font-size: 18px;
-// }
-
 form.simple_form label abbr {
   display: none;
 }
 
-form.simple_form .input input.button {
-  float: left;
+form.simple_form .tab-menu {
+  display: flex;
+  margin-bottom: 20px;
+
+  li {
+    padding: 0;
+    margin-right: 10px;
+  }
 }

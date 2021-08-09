@@ -17,11 +17,8 @@ Rails.application.config.assets.precompile += [
   'showdown.js',
   'application.css',
   'application.js',
-  'indyhackers-logo.png',
-  'responsive/width-0-969.css',
-  'responsive/width-0-767.css',
-  'responsive/width-480-969.css',
-  'responsive/width-768-969.css',
-  'responsive/width-480-767.css',
-  'responsive/width-0-479.css'
+  'indyhackers-logo.svg',
+  'grayindyhackers-logo.svg',
+  'meeting.png',
+  'out-the-box.png'
 ]
