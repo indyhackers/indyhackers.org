@@ -75,6 +75,10 @@ li#jobs-header h1 {
   text-decoration-color: $primary-yellow;
 }
 
+.job-list>li:nth-child(even) {
+    background-color: lightgrey;
+}
+
 body.admin.jobs {
   nav {
     margin-top: 10px;
