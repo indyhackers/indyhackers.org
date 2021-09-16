@@ -222,6 +222,7 @@ GEM
       railties (>= 5.0)
     rest-client (1.6.14)
       mime-types (~> 1.16)
+    rexml (3.2.5)
     rspec-core (3.10.1)
       rspec-support (~> 3.10.0)
     rspec-expectations (3.10.1)
@@ -335,6 +336,7 @@ DEPENDENCIES
   rails (~> 6.1.0)
   rb-readline
   redcarpet
+  rexml
   rspec-rails (~> 4.0.1)
   sass-rails
   selenium-webdriver
@@ -348,7 +350,7 @@ DEPENDENCIES
   webdrivers
 
 RUBY VERSION
-   ruby 2.7.3p183
+   ruby 3.0.2p107
 
 BUNDLED WITH
-   2.1.4
+   2.2.22
