@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby "2.7.3"
+ruby "3.0.2"
 
 gem 'rails', '~> 6.1.0'
 
@@ -38,6 +38,8 @@ gem 'inline_svg'
 gem 'test-unit'
 
 gem 'rack-cache'
+
+gem 'rexml'
 
 group :development do
   gem 'listen', '~> 3.3'
