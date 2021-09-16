@@ -1,14 +1,14 @@
 source 'https://rubygems.org'
-ruby "3.0.2"
+ruby '3.0.2'
 
-gem 'rails', '~> 6.1.0'
+gem 'rails', '~> 6.1.4'
 
 gem 'pg', '~> 1.1'
 
 gem 'coffee-script'
-gem 'uglifier'
 gem 'haml', '~> 5.2.1'
 gem 'sass-rails'
+gem 'uglifier'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
@@ -16,24 +16,24 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem 'jquery-rails'
 gem 'simple_form'
 
-gem 'devise', "4.7.3"
+gem 'devise', '4.7.3'
+gem 'kaminari'
 gem 'maruku'
 gem 'redcarpet'
-gem 'kaminari'
 
-gem 'stringex'
 gem 'slugged'
+gem 'stringex'
 
 gem 'delayed_job'
 
-gem 'json_pure'
-gem 'puma', '~> 4.1'
-gem 'newrelic_rpm'
 gem 'instrumental_agent'
+gem 'json_pure'
+gem 'newrelic_rpm'
+gem 'puma', '~> 4.1'
 
-gem 'memcachier'
 gem 'dalli'
 gem 'inline_svg'
+gem 'memcachier'
 
 gem 'test-unit'
 
@@ -46,10 +46,10 @@ group :development do
 end
 
 group :development, :test do
-  gem 'foreman'
-  gem 'spork'
-  gem 'launchy'
   gem 'deadweight'
+  gem 'foreman'
+  gem 'launchy'
+  gem 'spork'
 
   gem 'hpricot'
 
