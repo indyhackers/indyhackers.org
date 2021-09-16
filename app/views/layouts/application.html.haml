@@ -11,7 +11,7 @@
     - else
       = yield(:description)
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Work+Sans&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Work+Sans&display=swap" rel="stylesheet">
 
     = stylesheet_link_tag 'application'
     = stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -21,7 +21,7 @@
   %body{class: "#{request[:controller].split('/').join(' ')} #{request[:action]}"}
     = admin_header
     .main.main-body
-      .header
+      .header.container
         %div.logo-container
           = link_to inline_svg_tag('ih-logo.svg', :class => 'logo'), '/'
           = link_to 'Indy Hackers', '/', :class => 'logo-text'

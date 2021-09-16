@@ -19,6 +19,16 @@
     padding: 30px 10%;
   }
 
+  .hackies {
+    background-color: $primary-yellow;
+    color: $text-color-black;
+    padding: 30px 10%;
+
+    a.learn-more {
+      text-decoration-color: $text-color-black;
+    }
+  }
+
   .wwihd {
     background-color: $background-blue;
     margin-bottom: 30px;
@@ -29,7 +39,7 @@
       text-align: center;
     }
   }
-  
+
   .calendar-links {
     margin-top: 30px;
     display: flex;

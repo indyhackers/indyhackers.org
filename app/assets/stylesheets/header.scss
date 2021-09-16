@@ -4,7 +4,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 28px;
 }
 
 .logo {
@@ -35,15 +34,28 @@
 .logo-container {
   display: flex;
   align-items: center;
-  margin-left: 28px;
 }
 
 .menu {
   list-style-type: none;
   display: flex;
   font-size: 18px;
-  
+
   li {
     margin-right: 28px;
+  }
+}
+
+#admin-header {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+
+  div.left {
+    padding: 20px;
+  }
+
+  div.right {
+    padding: 20px;
   }
 }
