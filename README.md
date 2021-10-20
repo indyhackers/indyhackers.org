@@ -34,9 +34,9 @@ These are ideas, anyway.
 
 ### Job Board
 - Read-only API
-- Allow hackers to apply on the site, rather than finding info in the post
+- Allow hackers to apply on the site, rather than finding info in the post 
   - GitHub link
   - LinkedIn link
   - Upload resume
-- Make it work well on mobile devices
+- Make it work well on mobile android as well as os devices
 - Consider using a completely different design from the main site for the job board
