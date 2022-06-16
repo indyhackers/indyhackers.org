@@ -29,7 +29,7 @@ gem 'delayed_job'
 gem 'instrumental_agent'
 gem 'json_pure'
 gem 'newrelic_rpm'
-gem 'puma', '~> 4.1'
+gem 'puma', '~> 4.3'
 
 gem 'dalli'
 gem 'inline_svg'
