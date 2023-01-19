@@ -80,7 +80,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
-    concurrent-ruby (1.1.9)
+    concurrent-ruby (1.1.10)
     crass (1.0.6)
     css_parser (1.2.6)
       addressable
@@ -109,13 +109,13 @@ GEM
       i18n (>= 1.6, < 2)
     ffi (1.15.3)
     foreman (0.87.2)
-    globalid (0.5.2)
+    globalid (1.0.1)
       activesupport (>= 5.0)
     haml (5.2.2)
       temple (>= 0.8.0)
       tilt
     hpricot (0.8.6)
-    i18n (1.8.10)
+    i18n (1.12.0)
       concurrent-ruby (~> 1.0)
     inline_svg (1.7.2)
       activesupport (>= 3.0)
@@ -159,7 +159,7 @@ GEM
     mime-types (1.25.1)
     mini_mime (1.1.1)
     mini_portile2 (2.8.0)
-    minitest (5.14.4)
+    minitest (5.17.0)
     msgpack (1.4.2)
     newrelic_rpm (7.2.0)
     nio4r (2.5.8)
@@ -284,7 +284,7 @@ GEM
       power_assert
     thor (1.1.0)
     tilt (2.0.10)
-    tzinfo (2.0.4)
+    tzinfo (2.0.5)
       concurrent-ruby (~> 1.0)
     uglifier (4.2.0)
       execjs (>= 0.3.0, < 3)
@@ -301,7 +301,7 @@ GEM
     websocket-extensions (0.1.5)
     xpath (3.2.0)
       nokogiri (~> 1.8)
-    zeitwerk (2.4.2)
+    zeitwerk (2.6.6)
 
 PLATFORMS
   ruby
