@@ -26,7 +26,6 @@ gem 'stringex'
 
 gem 'delayed_job'
 
-gem 'instrumental_agent'
 gem 'json_pure'
 gem 'newrelic_rpm'
 gem 'puma', '~> 4.3'
@@ -40,6 +39,10 @@ gem 'test-unit'
 gem 'rack-cache'
 
 gem 'rexml'
+
+gem 'net-smtp', require: false
+gem 'net-imap', require: false
+gem 'net-pop', require: false
 
 group :development do
   gem 'listen', '~> 3.3'
