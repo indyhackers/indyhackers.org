@@ -62,6 +62,10 @@ group :development, :test do
   gem 'rb-readline'
 
   gem 'rspec-rails', '~> 4.0.1'
+
+  gem 'bundler-audit'
+  gem 'rubocop'
+  gem 'brakeman'
 end
 
 group :test do
@@ -74,5 +78,4 @@ group :test do
   gem 'factory_bot_rails'
   gem 'faker'
   gem 'matrix'
-  gem 'bundler-audit'
 end
