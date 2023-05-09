@@ -74,4 +74,5 @@ group :test do
   gem 'factory_bot_rails'
   gem 'faker'
   gem 'matrix'
+  gem 'bundler-audit'
 end
