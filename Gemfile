@@ -61,7 +61,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'rb-readline'
 
-  gem 'rspec-rails', '~> 4.0.1'
+  gem 'rspec-rails', '~> 6.0.2'
 
   gem 'bundler-audit'
   gem 'rubocop'
