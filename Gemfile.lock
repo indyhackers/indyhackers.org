@@ -85,7 +85,8 @@ GEM
     css_parser (1.2.6)
       addressable
       rdoc
-    dalli (2.7.11)
+    dalli (3.2.3)
+    date (3.3.1)
     deadweight (0.2.2)
       css_parser (~> 1.2.6)
       nokogiri
@@ -120,8 +121,6 @@ GEM
     inline_svg (1.7.2)
       activesupport (>= 3.0)
       nokogiri (>= 1.6)
-    instrumental_agent (3.0.0)
-      metrician
     jquery-rails (4.4.0)
       rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
@@ -153,14 +152,23 @@ GEM
       mini_mime (>= 0.1.1)
     marcel (1.0.1)
     maruku (0.7.3)
+    matrix (0.4.2)
     memcachier (0.0.2)
     method_source (1.0.0)
-    metrician (0.1.0)
     mime-types (1.25.1)
     mini_mime (1.1.1)
     mini_portile2 (2.8.0)
     minitest (5.14.4)
     msgpack (1.4.2)
+    net-imap (0.3.2)
+      date
+      net-protocol
+    net-pop (0.1.2)
+      net-protocol
+    net-protocol (0.2.1)
+      timeout
+    net-smtp (0.3.3)
+      net-protocol
     newrelic_rpm (7.2.0)
     nio4r (2.5.8)
     nokogiri (1.13.10)
@@ -282,8 +290,9 @@ GEM
     temple (0.8.2)
     test-unit (3.4.4)
       power_assert
-    thor (1.1.0)
+    thor (1.2.1)
     tilt (2.0.10)
+    timeout (0.3.1)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
     uglifier (4.2.0)
@@ -320,14 +329,17 @@ DEPENDENCIES
   haml (~> 5.2.1)
   hpricot
   inline_svg
-  instrumental_agent
   jquery-rails
   json_pure
   kaminari
   launchy
   listen (~> 3.3)
   maruku
+  matrix
   memcachier
+  net-imap
+  net-pop
+  net-smtp
   newrelic_rpm
   pg (~> 1.1)
   pry-rails
@@ -350,7 +362,7 @@ DEPENDENCIES
   webdrivers
 
 RUBY VERSION
-   ruby 3.0.2p107
+   ruby 3.1.2p20
 
 BUNDLED WITH
    2.2.22
