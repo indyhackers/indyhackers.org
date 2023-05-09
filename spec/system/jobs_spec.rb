@@ -37,7 +37,7 @@ RSpec.describe "Jobs feature" do
     visit edit_job_path(job, token: user.token)
 
     new_title = "A job posting funtime good job"
-    fill_in "Title", with: new_title
+    fill_in "Title", with: new_title, fill_options: { clear: :backspace }
     click_on "Update"
 
     job.reload
