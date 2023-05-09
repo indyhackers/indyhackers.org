@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 ruby '3.1.2'
 
-gem 'rails', '~> 6.1.4'
+gem 'rails', '~> 6.1.7.3'
 
 gem 'pg', '~> 1.1'
 
@@ -62,6 +62,10 @@ group :development, :test do
   gem 'rb-readline'
 
   gem 'rspec-rails', '~> 4.0.1'
+
+  gem 'bundler-audit'
+  gem 'rubocop'
+  gem 'brakeman'
 end
 
 group :test do
