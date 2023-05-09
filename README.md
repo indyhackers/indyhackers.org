@@ -1,6 +1,5 @@
 # IndyHackers.org
 
-[![Build Status](https://travis-ci.org/indyhackers/indyhackers.org.svg?branch=master)](https://travis-ci.org/indyhackers/indyhackers.org)
 [![Code Climate](https://codeclimate.com/github/indyhackers/indyhackers.org/badges/gpa.svg)](https://codeclimate.com/github/mileszs/indyhackers.org)
 
 ## Contributing
@@ -28,7 +27,6 @@ These are ideas, anyway.
 
 ### General
 - Use Google calendar API instead of widgets for calendar on the front page?
-- Is it time for a new design?
 - Should the main, content-y stuff be static leaving the job board as the only thing requiring "a backend" (which we could locate at jobs.indyhackers.org)?
 - Offer meeting organizers a list of open weekday evenings, pulled dynamically from current calendar data.
 
