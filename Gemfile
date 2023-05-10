@@ -56,8 +56,6 @@ group :development, :test do
 
   gem 'hpricot'
 
-  gem 'taps'
-
   gem 'pry-rails'
   gem 'rb-readline'
 

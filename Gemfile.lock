@@ -170,7 +170,6 @@ GEM
     matrix (0.4.2)
     memcachier (0.0.2)
     method_source (1.0.0)
-    mime-types (1.25.1)
     mini_mime (1.1.2)
     mini_portile2 (2.8.2)
     minitest (5.18.0)
@@ -250,8 +249,6 @@ GEM
     responders (3.1.0)
       actionpack (>= 5.2)
       railties (>= 5.2)
-    rest-client (1.6.14)
-      mime-types (~> 1.16)
     rexml (3.2.5)
     rspec-core (3.12.2)
       rspec-support (~> 3.12.0)
@@ -298,12 +295,9 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
-    sequel (3.20.0)
     simple_form (5.2.0)
       actionpack (>= 5.2)
       activemodel (>= 5.2)
-    sinatra (1.0)
-      rack (>= 1.0)
     slugged (2.0.0)
       activerecord (>= 3.0)
       activesupport (>= 3.0)
@@ -319,11 +313,6 @@ GEM
     stringex (2.8.6)
     stringio (3.0.6)
     systemu (2.6.5)
-    taps (0.3.24)
-      rack (>= 1.0.1)
-      rest-client (>= 1.4.0, < 1.7.0)
-      sequel (~> 3.20.0)
-      sinatra (~> 1.0.0)
     temple (0.10.0)
     test-unit (3.5.7)
       power_assert
@@ -398,7 +387,6 @@ DEPENDENCIES
   slugged
   spork
   stringex
-  taps
   test-unit
   uglifier
   webdrivers
