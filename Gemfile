@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 ruby '3.1.2'
 
-gem 'rails', '~> 6.1.7.3'
+gem 'rails', '~> 7.0'
 
 gem 'pg', '~> 1.1'
 
@@ -16,7 +16,7 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem 'jquery-rails'
 gem 'simple_form'
 
-gem 'devise', '4.7.3'
+gem 'devise', '4.8.1'
 gem 'kaminari'
 gem 'maruku'
 gem 'redcarpet'
