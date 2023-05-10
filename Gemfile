@@ -16,7 +16,7 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem 'jquery-rails'
 gem 'simple_form'
 
-gem 'devise', '4.8.1'
+gem 'devise', '4.9.2'
 gem 'kaminari'
 gem 'maruku'
 gem 'redcarpet'

@@ -103,7 +103,7 @@ GEM
       nokogiri
     delayed_job (4.1.11)
       activesupport (>= 3.0, < 8.0)
-    devise (4.8.1)
+    devise (4.9.2)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
       railties (>= 4.1.0)
@@ -155,7 +155,7 @@ GEM
     listen (3.8.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
-    loofah (2.20.0)
+    loofah (2.21.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     macaddr (1.7.2)
@@ -363,7 +363,7 @@ DEPENDENCIES
   dalli
   deadweight
   delayed_job
-  devise (= 4.8.1)
+  devise (= 4.9.2)
   factory_bot_rails
   faker
   foreman
