@@ -17,9 +17,6 @@ Rails.application.routes.draw do
   get "calendar", :to => "site#calendar"
   get "submit_event", to: "site#event"
 
-  get "why_indy", :to => "site#why_indy"
-  get "holiday-social" => redirect('/holiday-social-2016/')
-
   get 'code-of-conduct' => 'site#coc'
 
   get 'hackies' => 'site#hackies'
