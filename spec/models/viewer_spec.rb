@@ -1,4 +1,4 @@
-require 'rails_helper'
+require "rails_helper"
 
 RSpec.describe Viewer do
   it "should return true if the viewer has viewed the given job" do

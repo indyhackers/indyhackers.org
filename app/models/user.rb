@@ -4,6 +4,6 @@ class User < ActiveRecord::Base
   before_create :create_token
 
   def create_token
-    self.token = Digest::MD5.hexdigest(self.name + self.email + Time.zone.now.to_s)
+    self.token = Digest::MD5.hexdigest(name + email + Time.zone.now.to_s)
   end
 end
