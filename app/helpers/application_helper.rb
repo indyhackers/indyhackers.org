@@ -1,5 +1,4 @@
 module ApplicationHelper
-
   # Help individual pages to set their HTML titles
   def title(text)
     content_for(:title) { text }
@@ -11,9 +10,8 @@ module ApplicationHelper
   end
 
   def admin_header
-    if admin_signed_in?
-      render :partial => 'shared/admin_header'
-    end
-  end
+    return unless admin_signed_in?
 
+    render partial: "shared/admin_header"
+  end
 end

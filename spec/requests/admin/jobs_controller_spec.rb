@@ -1,11 +1,11 @@
-require 'rails_helper'
+require "rails_helper"
 
 RSpec.describe Admin::JobsController do
   let(:admin) { create(:admin) }
 
   describe "#index" do
     before do
-      2.times { create(:job) }
+      create_list(:job, 2)
     end
 
     describe "when authenticated" do
@@ -78,7 +78,7 @@ RSpec.describe Admin::JobsController do
   describe "#create" do
     let(:job_params) do
       {
-        title: Faker::Lorem.words.join(' '),
+        title: Faker::Lorem.words.join(" "),
         company: Faker::Company.name,
         description: Faker::Lorem.paragraphs.join
       }

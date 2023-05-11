@@ -6,13 +6,13 @@ class Admin::JobsController < ApplicationController
   def index
     @jobs = Job.order(created_at: :desc)
 
-    params[:job_view] ||= 'all'
+    params[:job_view] ||= "all"
     case params[:job_view]
-    when 'active'
+    when "active"
       @jobs = @jobs.active
-    when 'expired'
+    when "expired"
       @jobs = @jobs.expired
-    when 'unpublished'
+    when "unpublished"
       @jobs = @jobs.unpublished
     end
 
@@ -31,7 +31,7 @@ class Admin::JobsController < ApplicationController
     @job = Job.new(job_params)
 
     if @job.save
-      redirect_to admin_job_path(@job), notice: 'Job was successfully created.'
+      redirect_to admin_job_path(@job), notice: "Job was successfully created."
     else
       render :new
     end
@@ -39,7 +39,7 @@ class Admin::JobsController < ApplicationController
 
   def update
     if @job.update(job_params)
-      redirect_to job_path(@job), notice: 'Job was updated successfully'
+      redirect_to job_path(@job), notice: "Job was updated successfully"
     else
       render :edit
     end
@@ -47,7 +47,7 @@ class Admin::JobsController < ApplicationController
 
   def destroy
     @job.destroy
-    redirect_to admin_jobs_path, notice: 'Job was successfully destroyed.'
+    redirect_to admin_jobs_path, notice: "Job was successfully destroyed."
   end
 
   private
