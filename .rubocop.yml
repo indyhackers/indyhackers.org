@@ -13,6 +13,7 @@ AllCops:
     - 'config/**/*'
     - 'script/**/*'
     - 'bin/{rails,rake}'
+    - 'vendor/**/*'
 
 Style/StringLiterals:  
   EnforcedStyle: double_quotes
