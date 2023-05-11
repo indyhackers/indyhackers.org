@@ -15,10 +15,6 @@ Rails.application.routes.draw do
   get 'about' => 'site#about'
   get 'job_post_request' => 'job_post_requests#new'
   get "calendar", :to => "site#calendar"
-  get "submit_event", to: "site#event"
-
-  get "why_indy", :to => "site#why_indy"
-  get "holiday-social" => redirect('/holiday-social-2016/')
 
   get 'code-of-conduct' => 'site#coc'
 
