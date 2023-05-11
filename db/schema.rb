@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_21_003247) do
-
+ActiveRecord::Schema[7.0].define(version: 2023_05_10_112955) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -20,28 +19,28 @@ ActiveRecord::Schema.define(version: 2021_04_21_003247) do
     t.string "encrypted_password", default: "", null: false
     t.integer "failed_attempts", default: 0, null: false
     t.string "unlock_token"
-    t.datetime "locked_at"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "locked_at", precision: nil
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.index ["email"], name: "index_admins_on_email", unique: true
   end
 
   create_table "job_views", force: :cascade do |t|
     t.integer "job_id"
     t.integer "viewer_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
   end
 
   create_table "jobs", force: :cascade do |t|
     t.string "title"
     t.text "description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.integer "views"
     t.integer "user_id"
-    t.datetime "published_at"
-    t.datetime "published_notice_sent_at"
+    t.datetime "published_at", precision: nil
+    t.datetime "published_notice_sent_at", precision: nil
     t.string "cached_slug"
     t.string "company"
     t.string "salary"
@@ -52,25 +51,25 @@ ActiveRecord::Schema.define(version: 2021_04_21_003247) do
     t.text "body"
     t.text "body_html"
     t.string "title"
-    t.datetime "published_at"
+    t.datetime "published_at", precision: nil
     t.string "slug"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
   end
 
   create_table "redirects", id: { type: :string, limit: 32 }, force: :cascade do |t|
     t.string "url", limit: 2083
-    t.datetime "last_visited_at"
+    t.datetime "last_visited_at", precision: nil
     t.integer "visits", default: 0, null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
   end
 
   create_table "slugs", force: :cascade do |t|
     t.string "scope"
     t.string "slug"
     t.integer "record_id"
-    t.datetime "created_at"
+    t.datetime "created_at", precision: nil
     t.index ["scope", "record_id", "created_at"], name: "index_slugs_on_scope_and_record_id_and_created_at"
     t.index ["scope", "record_id"], name: "index_slugs_on_scope_and_record_id"
     t.index ["scope", "slug", "created_at"], name: "index_slugs_on_scope_and_slug_and_created_at"
@@ -81,14 +80,14 @@ ActiveRecord::Schema.define(version: 2021_04_21_003247) do
     t.string "email"
     t.string "token"
     t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
   end
 
   create_table "viewers", force: :cascade do |t|
     t.string "client_hash"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
   end
 
 end

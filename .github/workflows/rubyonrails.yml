@@ -40,20 +40,20 @@ jobs:
       - name: Run tests
         run: bin/rake
 
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Install Ruby and gems
+        uses: ruby/setup-ruby@55283cc23133118229fd3f97f9336ee23a179fcf # v1.146.0
+        with:
+          bundler-cache: true
+      # Add or replace any other lints here
+      - name: Security audit dependencies
+        run: bundle exec bundler-audit --update
   # TODO: enable these when we've either fixed the issues or 
   # properly ignored those we won't fix.
-  # lint:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Checkout code
-  #       uses: actions/checkout@v3
-  #     - name: Install Ruby and gems
-  #       uses: ruby/setup-ruby@55283cc23133118229fd3f97f9336ee23a179fcf # v1.146.0
-  #       with:
-  #         bundler-cache: true
-  #     # Add or replace any other lints here
-  #     - name: Security audit dependencies
-  #       run: bundle exec bundler-audit --update
   #     - name: Security audit application code
   #       run: bundle exec brakeman -q -w2
   #     - name: Lint Ruby files
