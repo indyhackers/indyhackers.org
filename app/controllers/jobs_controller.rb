@@ -13,7 +13,7 @@ class JobsController < ApplicationController
   end
 
   def show
-    return unless find_job.blank?
+    return if find_job.present?
 
     redirect_to(jobs_path, notice: "Couldn't find that job. It may have been filled. Sorry!") and return
   end

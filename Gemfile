@@ -64,6 +64,8 @@ group :development, :test do
   gem "brakeman"
   gem "bundler-audit"
   gem "rubocop"
+  gem "rubocop-rails"
+  gem "rubocop-rspec"
 end
 
 group :test do

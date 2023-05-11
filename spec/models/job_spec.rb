@@ -1,7 +1,7 @@
 require "rails_helper"
 
 RSpec.describe Job do
-  context "#active" do
+  describe "#active" do
     it "only includes jobs that are published and active" do
       unpublished_job = create(:job, :unpublished)
       future_published_job = create(:job, :published_in_future)

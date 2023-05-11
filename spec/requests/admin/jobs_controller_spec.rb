@@ -5,7 +5,7 @@ RSpec.describe Admin::JobsController do
 
   describe "#index" do
     before do
-      2.times { create(:job) }
+      create_list(:job, 2)
     end
 
     describe "when authenticated" do
