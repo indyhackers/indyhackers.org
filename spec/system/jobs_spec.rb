@@ -32,7 +32,7 @@ RSpec.describe "Jobs feature" do
 
   it "allows a user to edit their published job post" do
     user = create(:user)
-    job = create(:job, :published, user: user)
+    job = create(:job, :published, user:)
 
     visit edit_job_path(job, token: user.token)
 
@@ -49,7 +49,7 @@ RSpec.describe "Jobs feature" do
 
   it "allows a user to delete their published job post" do
     user = create(:user)
-    job = create(:job, :published, user: user)
+    job = create(:job, :published, user:)
 
     visit edit_job_path(job, token: user.token)
 

@@ -9,7 +9,7 @@ module IndyHackers
     end
 
     def escaped_title
-      title.downcase.gsub(/[^a-zA-Z0-9]/, '-').gsub(/-{2,}/, '-').gsub(/-$/, '')
+      title.downcase.gsub(/[^a-zA-Z0-9]/, "-").gsub(/-{2,}/, "-").gsub(/-$/, "")
     end
   end
 end

@@ -8,7 +8,7 @@ RSpec.describe "ViewingJobs" do
 
       get jobs_path
 
-      expect(response).to have_http_status(200)
+      expect(response).to have_http_status(:ok)
       expect(response.body).to include(published_job.title)
       expect(response.body).not_to include(not_active_job.title)
     end

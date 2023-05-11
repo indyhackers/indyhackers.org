@@ -4,7 +4,7 @@ class JobPostRequest
 
   attr_accessor :id, :name, :email, :title, :company, :salary, :description
 
-  validates_presence_of :name, :email, :title, :company, :description
+  validates :name, :email, :title, :company, :description, presence: true
 
   def initialize(attributes = {})
     attributes.each do |key, value|

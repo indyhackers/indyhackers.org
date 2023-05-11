@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :job do
-    title { Faker::Lorem.words.join(' ') }
+    title { Faker::Lorem.words.join(" ") }
     company { Faker::Company.name }
     description { Faker::Lorem.paragraphs.join }
 

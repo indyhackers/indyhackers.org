@@ -1,4 +1,4 @@
-require 'uri'
+require "uri"
 
 class Redirect < ActiveRecord::Base
   validates :id,  format: /[a-z0-9_]+/i, presence: true, length: { maximum: 32 }
@@ -6,12 +6,12 @@ class Redirect < ActiveRecord::Base
   validate :url_is_valid
 
   def url_is_valid
-    unless url =~ URI::regexp
-      errors.add(:url, "not a valid url")
-    end
+    return if url =~ URI::DEFAULT_PARSER.make_regexp
+
+    errors.add(:url, "not a valid url")
   end
 
   def visit!
-    update!(last_visited_at: Time.now, :visits => visits + 1)
+    update!(last_visited_at: Time.now, visits: visits + 1)
   end
 end

@@ -8,7 +8,7 @@ RSpec.describe SitemapsController do
 
       get sitemap_path(format: :xml)
 
-      expect(response).to have_http_status(200)
+      expect(response).to have_http_status(:ok)
       expect(response.body).to include(job_url(published_job))
       expect(response.body).not_to include(job_url(not_active_job))
     end
