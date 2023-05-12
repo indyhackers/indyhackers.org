@@ -20,13 +20,13 @@
 
   %body{class: "#{request[:controller].split('/').join(' ')} #{request[:action]}"}
     = admin_header
-    .main.main-body
-      .header.container
-        %div.logo-container
+    .main.main-body.container
+      .header.navbar
+        %div.logo-container.navleft
           = link_to inline_svg_tag('ih-logo.svg', :class => 'logo'), '/'
           = link_to 'Indy Hackers', '/', :class => 'logo-text'
 
-        %ul.menu
+        %ul.menu.navright
           %li= link_to 'Newsletter', '/newsletter'
           %li= link_to 'Jobs', '/jobs'
           %li= link_to 'Events', '/#event-calendar'
