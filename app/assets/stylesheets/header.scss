@@ -52,8 +52,8 @@
 
 #admin-header {
   display: flex;
-  justify-content: flex-end;
   width: 100%;
+  border-bottom: 1px solid #ccc;
 
   div.left {
     padding: 20px;
@@ -61,5 +61,32 @@
 
   div.right {
     padding: 20px;
+    margin-left: auto;
+  }
+
+  a {
+    padding: 12px 24px;
+    text-decoration: none;
+    background-color: white;
+    color: $text-color-black;
+
+    &:hover {
+      text-decoration: underline;
+      text-decoration-color: #FFC000;
+    }
+  }
+
+  h1 {
+    font-size: 36px;
+    margin: 0;
+    padding: 0;
+  }
+
+  &.development {
+    color: $development;
+  }
+
+  &.production {
+    color: $production;
   }
 }

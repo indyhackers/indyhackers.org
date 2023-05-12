@@ -12,8 +12,8 @@
     - @jobs.each do |job|
       %tr
         %td= job.name
-        %td= l(job.created_at, :format => :murican)
-        %td= l(job.published_at, :format => :murican) unless job.published_at.nil?
+        %td.requested= l(job.created_at, :format => :murican)
+        %td.published= l(job.published_at, :format => :murican) unless job.published_at.nil?
         %td.actions
           = link_to 'edit', edit_admin_job_path(job), :title => 'edit'
           |

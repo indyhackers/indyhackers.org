@@ -2,7 +2,6 @@
  *= require_self
  *= require jquery.qtip
  *= require jquery-ui/jquery-ui
- *= require base
  *= require main
  *= require atoms
  *= require header
@@ -12,4 +11,5 @@
  *= require about
  *= require content
  *= require simple_form
+ *= require admin
  */
