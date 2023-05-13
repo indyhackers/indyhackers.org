@@ -41,12 +41,32 @@ table#jobs {
   width: 100%;
 }
 
-table#jobs tr td {
-  margin: 0;
-  padding: 6px 16px 6px 0;
-  border-top: 1px solid #000;
-  border-collapse: collapse;
-  overflow: hidden;
+table#jobs {
+  border-spacing: 0;
+
+  tr {
+    margin: 0;
+    padding: 0;
+    
+    td {
+      padding: 6px;
+      margin: 0;
+      border-top: 1px solid #000;
+      border-collapse: collapse;
+      overflow: hidden;
+    }
+  }
+
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  td.actions,
+  td.requested,
+  td.published {
+    text-align: center;
+
+  }
 }
 
 li#jobs-header h1 {

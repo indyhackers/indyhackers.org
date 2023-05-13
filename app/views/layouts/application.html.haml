@@ -34,11 +34,11 @@
 
       .content.clear-fix
         - if notice
-          %section.text-center.clear-fix
+          %section
             .notice= notice
         - if alert
-          %section.text-center.clear-fix
-            .alert= alert
+          %section
+            .alert.danger= alert
         = yield
 
       .footer
