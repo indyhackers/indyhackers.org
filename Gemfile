@@ -1,11 +1,10 @@
 source "https://rubygems.org"
-ruby "3.1.2"
+ruby "3.1.4"
 
 gem "rails", "~> 7.0"
 
 gem "pg", "~> 1.1"
 
-gem "coffee-script"
 gem "haml", "~> 5.2.1"
 gem "sass-rails"
 gem "uglifier"
@@ -18,17 +17,13 @@ gem "simple_form"
 
 gem "devise", "4.9.2"
 gem "kaminari"
-gem "maruku"
 gem "redcarpet"
 
 gem "slugged"
 gem "stringex"
 
-gem "delayed_job"
-
 gem "json_pure"
-gem "newrelic_rpm"
-gem "puma", "~> 4.3"
+gem "puma", "~> 5.0"
 
 gem "dalli"
 gem "inline_svg"
@@ -37,16 +32,6 @@ gem "memcachier"
 gem "test-unit"
 
 gem "rack-cache"
-
-gem "rexml"
-
-gem "net-imap", require: false
-gem "net-pop", require: false
-gem "net-smtp", require: false
-
-group :development do
-  gem "listen", "~> 3.3"
-end
 
 group :development, :test do
   gem "deadweight"

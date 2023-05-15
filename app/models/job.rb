@@ -1,4 +1,3 @@
-require File.join(Rails.root, "lib", "slug")
 class Job < ActiveRecord::Base
   is_sluggable :name
 
