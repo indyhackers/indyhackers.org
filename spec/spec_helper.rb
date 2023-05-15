@@ -11,7 +11,15 @@
 # a separate helper file that requires the additional dependencies and performs
 # the additional setup, and require it from the spec files that actually need
 # it.
-#
+
+require "simplecov"
+if ENV.fetch("COVERAGE", false)
+  SimpleCov.start do
+    minimum_coverage 90
+    maximum_coverage_drop 2
+  end
+end
+
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
