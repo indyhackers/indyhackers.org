@@ -1,6 +1,6 @@
 # IndyHackers.org
 
-[![Code Climate](https://codeclimate.com/github/indyhackers/indyhackers.org/badges/gpa.svg)](https://codeclimate.com/github/mileszs/indyhackers.org)
+[![Code Climate](https://codeclimate.com/github/indyhackers/indyhackers.org/badges/gpa.svg)](https://codeclimate.com/github/indyhackers/indyhackers.org)
 ![GitHub Actions Status](https://github.com/indyhackers/indyhackers.org/actions/workflows/rubyonrails.yml/badge.svg)
 
 ## Contributing
