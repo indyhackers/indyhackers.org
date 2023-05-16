@@ -63,4 +63,5 @@ group :test do
   gem "factory_bot_rails"
   gem "faker"
   gem "matrix"
+  gem "simplecov", require: false
 end
