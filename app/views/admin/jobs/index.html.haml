@@ -8,12 +8,14 @@
       %th Name
       %th Requested
       %th Published
+      %th Views
       %th Actions
     - @jobs.each do |job|
       %tr
         %td= job.name
         %td.requested= l(job.created_at, :format => :murican)
         %td.published= l(job.published_at, :format => :murican) unless job.published_at.nil?
+        %td.views= job.views || 0
         %td.actions
           = link_to 'edit', edit_admin_job_path(job), :title => 'edit'
           |
