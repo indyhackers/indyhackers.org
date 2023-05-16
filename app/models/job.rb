@@ -27,7 +27,7 @@ class Job < ActiveRecord::Base
         title: job_post_request.title,
         description: job_post_request.description,
         company: job_post_request.company,
-        salary: job_post_request.salary,
+        salary: job_post_request.salary
       )
     end
 
