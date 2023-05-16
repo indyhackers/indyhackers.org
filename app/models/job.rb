@@ -67,4 +67,8 @@ class Job < ActiveRecord::Base
       Rails.logger.info "OMG WTF BBQ"
     end
   end
+
+  def increment_views
+    self.views = views.nil? ? 1 : views + 1
+  end
 end

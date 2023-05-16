@@ -1,7 +1,6 @@
 require "digest/md5"
 class JobsController < ApplicationController
   before_action :authenticate_by_token, only: %i[edit destroy]
-  skip_before_action :verify_authenticity_token, only: :viewed
 
   def index
     @jobs = Job.active.order("created_at DESC")
@@ -13,9 +12,11 @@ class JobsController < ApplicationController
   end
 
   def show
-    return if find_job.present?
+    if find_job.blank?
+      redirect_to(jobs_path, notice: "Couldn't find that job. It may have been filled. Sorry!") and return
+    end
 
-    redirect_to(jobs_path, notice: "Couldn't find that job. It may have been filled. Sorry!") and return
+    increment_job_views!
   end
 
   def edit
@@ -29,18 +30,6 @@ class JobsController < ApplicationController
     else
       render :edit
     end
-  end
-
-  def viewed
-    find_job
-    cookies["_ih_uid"] = Digest::MD5.hexdigest(Time.now.to_s + rand(13_000).to_s) if cookies["_ih_uid"].nil?
-    @viewer = Viewer.find_or_create_by!(client_hash: cookies["_ih_uid"])
-    unless @viewer.viewed?(@job)
-      @job.viewers << @viewer
-      @job.views = @job.views.nil? ? 1 : @job.views + 1
-      @job.save
-    end
-    render text: "Success!"
   end
 
   def destroy
@@ -65,5 +54,24 @@ class JobsController < ApplicationController
 
   def find_job
     @job = Job.find_using_slug(params[:id])
+  end
+
+  def increment_job_views!
+    set_cookie_ih_id!
+    viewer = viewer_from_cookie
+
+    return if viewer.viewed?(@job)
+
+    @job.viewers << viewer
+    @job.increment_views
+    @job.save
+  end
+
+  def set_cookie_ih_id!
+    cookies["_ih_uid"] = Digest::MD5.hexdigest(Time.now.to_s + rand(13_000).to_s) if cookies["_ih_uid"].nil?
+  end
+
+  def viewer_from_cookie
+    Viewer.find_or_create_by!(client_hash: cookies["_ih_uid"])
   end
 end
