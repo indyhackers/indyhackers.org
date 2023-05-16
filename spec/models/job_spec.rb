@@ -61,26 +61,28 @@ RSpec.describe Job do
     it "is true if the job title has changed" do
       job = create(:job)
       job.title = "New fancier title"
-      expect(job.name_changed?).to be_truthy
+      expect(job).to be_name_changed
     end
 
     it "is true if the job company has changed" do
       job = create(:job)
       job.company = "New fancier company name"
-      expect(job.name_changed?).to be_truthy
+      expect(job).to be_name_changed
     end
   end
 
   describe "#notify_if_published" do
     it "sends an email if the job was just published" do
       user = create(:user)
-      job = create(:job, :unpublished, user: user)
+      job = create(:job, :unpublished, user:)
       mail_double = double
       allow(mail_double).to receive(:deliver_now)
+      allow(SystemMailer).to receive(:job_post_published).with(user, job).and_return(mail_double)
 
-      expect(SystemMailer).to receive(:job_post_published).with(user, job).and_return(mail_double)
       job.published_at = 5.seconds.ago
       job.save!
+
+      expect(SystemMailer).to have_received(:job_post_published).with(user, job)
     end
   end
 
