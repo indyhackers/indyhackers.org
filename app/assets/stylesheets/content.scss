@@ -57,5 +57,13 @@
     margin-top: 30px;
     display: flex;
     justify-content: space-around;
+
+    & > div {
+      padding: 1em 0;
+      display: flex;
+      margin-left: auto;
+      margin: 1em 0 1em auto;
+      gap: 1em;
+    }
   }
 }
