@@ -11,11 +11,15 @@ class Job < ActiveRecord::Base
 
   class << self
     def active
-      published.where("jobs.published_at >= :date", date: 60.days.ago)
+      published
+        .where("jobs.published_at >= :date", date: 60.days.ago)
+        .where("expires_at IS NULL OR expires_at >= :date", date: Time.zone.now)
     end
 
     def expired
-      published.where("jobs.published_at < :date", date: 60.days.ago)
+      published
+        .where("jobs.published_at < :date", date: 60.days.ago)
+        .or(published.where("expires_at IS NOT NULL AND expires_at < :date", date: Time.zone.now))
     end
 
     def unpublished

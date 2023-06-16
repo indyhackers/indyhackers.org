@@ -1,7 +1,7 @@
 class Admin::JobsController < ApplicationController
   before_action :authenticate_admin!
-  before_action :fetch_job, only: %i[show edit update destroy]
-  skip_before_action :verify_authenticity_token, only: :destroy
+  before_action :fetch_job, only: %i[show edit update close destroy]
+  skip_before_action :verify_authenticity_token, only: %i[close destroy]
 
   def index
     @jobs = Job.order(created_at: :desc)
@@ -43,6 +43,11 @@ class Admin::JobsController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def close
+    @job.update(expires_at: Time.zone.now)
+    redirect_to admin_jobs_path, notice: "Job was successfully closed."
   end
 
   def destroy

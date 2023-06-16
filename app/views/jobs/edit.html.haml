@@ -1,9 +1,9 @@
 .grid_10.prefix_1
   .readable
     %h2 Edit Your Job
-    = button_to 'Delete', job_path(@job, :token => params[:token]), :method => :delete, :class => 'button', :id => "delete-button", :confirm => "Are you sure you want to delete your job post?"
+    = button_to 'Close job', job_path(@job, token: params[:token]), method: :delete, class: 'button', id: "delete-button", confirm: "Are you sure you want to close your job post?"
     = simple_form_for @job do |f|
-      = render :partial => 'form', :locals => {:f => f}
+      = render partial: 'form', locals: { :f => f }
       .input
         = hidden_field_tag :token, params[:token]
         = f.button :submit, 'Update'

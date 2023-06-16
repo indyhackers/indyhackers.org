@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_05_10_112955) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_16_164549) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -44,6 +44,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_10_112955) do
     t.string "cached_slug"
     t.string "company"
     t.string "salary"
+    t.datetime "expires_at"
     t.index ["cached_slug"], name: "index_jobs_on_cached_slug"
   end
 

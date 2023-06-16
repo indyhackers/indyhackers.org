@@ -20,22 +20,28 @@ class JobsController < ApplicationController
   end
 
   def edit
-    find_job
+    return if find_job.present?
+
+    redirect_to(jobs_path, notice: "Couldn't find that job.")
   end
 
   def update
-    find_job
-    if @job.update(job_params)
-      redirect_to edit_job_path(@job, token: params[:token]), notice: "Your job post was updated"
+    if find_job.blank?
+      redirect_to(jobs_path, notice: "Couldn't find that job.")
+    elsif @job.update(job_params)
+      redirect_to(edit_job_path(@job, token: params[:token]), notice: "Your job post was updated")
     else
       render :edit
     end
   end
 
   def destroy
-    find_job
-    @job.destroy
-    redirect_to jobs_path, notice: "Job post deleted. Thanks!"
+    if find_job.blank?
+      redirect_to(jobs_path, notice: "Couldn't find that job.")
+    else
+      @job.update(expires_at: Time.zone.now)
+      redirect_to jobs_path, notice: "Job post closed. Thanks!"
+    end
   end
 
   private
@@ -46,6 +52,8 @@ class JobsController < ApplicationController
 
   def authenticate_by_token
     find_job
+    return nil if @job.blank?
+
     @user = User.find_by_token(params[:token]) unless params[:token].nil?
     return if @user.present? && @job.user == @user
 
@@ -53,7 +61,7 @@ class JobsController < ApplicationController
   end
 
   def find_job
-    @job = Job.find_using_slug(params[:id])
+    @job = Job.active.find_using_slug(params[:id])
   end
 
   def increment_job_views!
