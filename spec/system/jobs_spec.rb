@@ -47,15 +47,15 @@ RSpec.describe "Jobs feature" do
     expect(page).to have_text("Your job post was updated")
   end
 
-  it "allows a user to delete their published job post" do
+  it "allows a user to close their published job post" do
     user = create(:user)
     job = create(:job, :published, user:)
 
     visit edit_job_path(job, token: user.token)
 
     expect do
-      click_on "Delete"
-    end.to change(Job, :count).by(-1)
+      click_on "Close job"
+    end.to change { Job.active.count }.by(-1)
 
     expect(page.current_url).to match(/#{jobs_path}/)
     expect(page).not_to have_text(job.title)
