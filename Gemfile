@@ -23,7 +23,7 @@ gem "slugged"
 gem "stringex"
 
 gem "json_pure"
-gem "puma", "~> 5.0"
+gem "puma", "~> 5.6"
 
 gem "dalli"
 gem "inline_svg"
