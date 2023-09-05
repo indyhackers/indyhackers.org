@@ -118,8 +118,9 @@ GEM
     foreman (0.87.2)
     globalid (1.1.0)
       activesupport (>= 5.0)
-    haml (5.2.2)
-      temple (>= 0.8.0)
+    haml (6.1.1)
+      temple (>= 0.8.2)
+      thor
       tilt
     hpricot (0.8.6)
     i18n (1.13.0)
@@ -318,7 +319,7 @@ GEM
     stringex (2.8.6)
     stringio (3.0.6)
     systemu (2.6.5)
-    temple (0.10.0)
+    temple (0.10.2)
     test-unit (3.5.7)
       power_assert
     thor (1.2.1)
@@ -359,7 +360,7 @@ DEPENDENCIES
   factory_bot_rails
   faker
   foreman
-  haml (~> 5.2.1)
+  haml (~> 6.1.1)
   hpricot
   inline_svg
   jquery-rails
