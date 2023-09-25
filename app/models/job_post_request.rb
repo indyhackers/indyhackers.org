@@ -12,6 +12,14 @@ class JobPostRequest
     end
   end
 
+  def send!
+    user = User.find_or_create_by!(name:, email:)
+    job = Job.from_job_post_request(self)
+    job.user = user
+    job.save!
+    SystemMailer.job_post_request(self, job).deliver_now
+  end
+
   def save
     true
   end
