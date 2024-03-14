@@ -62,7 +62,7 @@ board_members = [
   {
     name: 'Stanton Sievers',
     picture: 'stantonsievers.jpeg',
-    email: 'stanton@indyhackers.org',
+    #email: 'stanton@indyhackers.org',
     slack_url: 'https://indyhackers.slack.com/team/ULATJ17B8',
     slack_handle: '@Stanton',
     linkedin: 'https://www.linkedin.com/in/stantonsievers/'
@@ -71,7 +71,7 @@ board_members = [
   {
     name: 'Michael Welling',
     picture: 'michaelwelling.jpg',
-    email:'michael@indyhackers.org',
+    #email:'michael@indyhackers.org',
     slack_url: 'https://indyhackers.slack.com/team/U5BP6A84B',
     slack_handle: '@mewelling',
     linkedin: 'https://www.linkedin.com/in/mewelling/'
@@ -79,7 +79,7 @@ board_members = [
   {
     name: 'Josh Hurst',
     picture: 'joshhurst.jpg',
-    email:'josh@indyhackers.org',
+    #email:'josh@indyhackers.org',
     slack_url: 'https://indyhackers.slack.com/team/UDTS3H8E7',
     slack_handle: '@josh',
     linkedin: 'https://www.linkedin.com/in/josh-hurst42/'
@@ -87,7 +87,7 @@ board_members = [
   {
     name: 'Ben Cochrane',
     picture: 'ben.jpg',
-    email:'ben@indyhackers.org',
+    #email:'ben@indyhackers.org',
     slack_url:'https://indyhackers.slack.com/team/UER6V5CMN',
     slack_handle: '@Ben Cochrane',
     linkedin: 'https://www.linkedin.com/in/cochranb'
@@ -95,7 +95,7 @@ board_members = [
   {
     name: "Mike Hockerman",
     picture: 'mikehockerman.png',
-    email: 'mikehockerman@indyhackers.org',
+    #email: 'mikehockerman@indyhackers.org',
     slack_url: 'https://indyhackers.slack.com/team/UAH0Q04FN',
     slack_handle: '@Mike Hockerman',
     linkedin: 'https://www.linkedin.com/in/mhoc/'
@@ -103,15 +103,15 @@ board_members = [
   {
     name: 'Andrew Poland',
     picture: 'andrew.jpeg',
-    email: 'andrew@indyhackers.org',
+    #email: 'andrew@indyhackers.org',
     slack_url: 'https://indyhackers.slack.com/team/U55NF30GY',
     slack_handle: '@Andrew Poland',
     linkedin: 'https://www.linkedin.com/in/polandandrew/'
   },
   {
-    name: 'Chirs Vannoy',
+    name: 'Chris Vannoy',
     picture: 'chris.jpeg',
-    email: 'chris@indyhackers.org',
+    #email: 'chris@indyhackers.org',
     slack_url: 'https://indyhackers.slack.com/team/U57CW98TZ',
     slack_handle: '@chrisv',
     linkedin: 'https://www.linkedin.com/in/chrisvannoy/'
@@ -150,9 +150,11 @@ board_members = [
       <div class="card-block">
         <h3 class="card-title"><%= member[:name] %></h3>
         <div class="contact">
+          <% if member[:email] %>
           <a class="email" href="mailto:<%= member[:email] %>" target="BLANK">
             <i class="fa fa-envelope"></i>
           </a>
+          <% end %>
           <% if member[:twitter] %>
           <a class="twitter" href="<%= member[:twitter] %>" target="BLANK">
             <i class="fa fa-twitter"></i>
