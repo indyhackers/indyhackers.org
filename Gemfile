@@ -39,7 +39,7 @@ group :development, :test do
   gem "launchy"
   gem "spork"
 
-  gem "hpricot"
+  #gem "hpricot"
 
   gem "pry-rails"
   gem "rb-readline"
