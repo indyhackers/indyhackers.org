@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 ruby "3.1.4"
 
-gem "rails", "~> 7.0"
+gem "rails", "~> 7.1"
 
 gem "pg", "~> 1.1"
 
@@ -23,7 +23,7 @@ gem "slugged"
 gem "stringex"
 
 gem "json_pure"
-gem "puma", "~> 6.0"
+gem "puma", "~> 6.4"
 
 gem "dalli"
 gem "inline_svg"
@@ -39,8 +39,6 @@ group :development, :test do
   gem "launchy"
   gem "spork"
 
-  #gem "hpricot"
-
   gem "pry-rails"
   gem "rb-readline"
 
@@ -55,7 +53,7 @@ end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
-  gem "capybara", ">= 3.26"
+  gem "capybara"
   gem "selenium-webdriver"
   # Easy installation and use of web drivers to run system tests with browsers
   gem "webdrivers"
