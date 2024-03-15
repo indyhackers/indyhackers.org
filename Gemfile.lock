@@ -101,14 +101,8 @@ GEM
     concurrent-ruby (1.2.2)
     connection_pool (2.4.1)
     crass (1.0.6)
-    css_parser (1.2.6)
-      addressable
-      rdoc
     dalli (3.2.4)
     date (3.3.4)
-    deadweight (0.2.2)
-      css_parser (~> 1.2.6)
-      nokogiri
     devise (4.9.3)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -343,7 +337,7 @@ GEM
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
     stringex (2.8.6)
-    stringio (3.0.6)
+    stringio (3.1.0)
     systemu (2.6.5)
     temple (0.10.0)
     test-unit (3.5.7)
@@ -382,7 +376,6 @@ DEPENDENCIES
   bundler-audit
   capybara
   dalli
-  deadweight
   devise (= 4.9.3)
   factory_bot_rails
   faker
@@ -413,12 +406,13 @@ DEPENDENCIES
   slugged
   spork
   stringex
+  stringio (~> 3.1)
   test-unit
   uglifier
   webdrivers
 
 RUBY VERSION
-   ruby 3.1.4p223
+   ruby 3.3.0p0
 
 BUNDLED WITH
    2.4.13

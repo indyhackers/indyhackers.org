@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-ruby "3.1.4"
+ruby "3.3.0"
 
 gem "rails", "~> 7.1"
 
@@ -21,6 +21,7 @@ gem "redcarpet"
 
 gem "slugged"
 gem "stringex"
+gem "stringio", "~> 3.1"
 
 gem "json_pure"
 gem "puma", "~> 6.4"
@@ -34,7 +35,6 @@ gem "test-unit"
 gem "rack-cache"
 
 group :development, :test do
-  gem "deadweight"
   gem "foreman"
   gem "launchy"
   gem "spork"
