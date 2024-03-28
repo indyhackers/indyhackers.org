@@ -1,7 +1,7 @@
 source "https://rubygems.org"
-ruby "3.1.4"
+ruby "3.2.2"
 
-gem "rails", "~> 7.0"
+gem "rails", "~> 7.1"
 
 gem "pg", "~> 1.1"
 
@@ -15,15 +15,16 @@ gem "bootsnap", ">= 1.4.4", require: false
 gem "jquery-rails"
 gem "simple_form"
 
-gem "devise", "4.9.2"
+gem "devise", "4.9.3"
 gem "kaminari"
 gem "redcarpet"
 
 gem "slugged"
 gem "stringex"
+gem "stringio", "~> 3.1"
 
 gem "json_pure"
-gem "puma", "~> 6.0"
+gem "puma", "~> 6.4"
 
 gem "dalli"
 gem "inline_svg"
@@ -34,12 +35,9 @@ gem "test-unit"
 gem "rack-cache"
 
 group :development, :test do
-  gem "deadweight"
   gem "foreman"
   gem "launchy"
   gem "spork"
-
-  #gem "hpricot"
 
   gem "pry-rails"
   gem "rb-readline"
@@ -55,7 +53,7 @@ end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
-  gem "capybara", ">= 3.26"
+  gem "capybara"
   gem "selenium-webdriver"
   # Easy installation and use of web drivers to run system tests with browsers
   gem "webdrivers"
