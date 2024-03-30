@@ -7,6 +7,7 @@ class Job < ActiveRecord::Base
 
   attr_accessor :publish_now
 
+  after_create :notify_created
   after_update :notify_if_published
 
   class << self
@@ -62,6 +63,21 @@ class Job < ActiveRecord::Base
   # Compatibility method for slugged gem due to current Rails changes to the "ActiveModel::Dirty" methods
   def cached_slug_changed?
     saved_change_to_cached_slug?
+  end
+
+  def notify_created
+    return unless ENV['SLACK_WEBSITE_COMMITTEE_WEBHOOK'].present?
+
+    url = "https://www.indyhackers.org/admin/jobs"
+    message = "New job board submission: <#{url}|#{self.title} at #{self.company}>"
+
+    HTTParty.post(
+      ENV['SLACK_WEBSITE_COMMITTEE_WEBHOOK'],
+      body: {
+        text: message
+      }.to_json,
+      headers: { 'Content-Type' => 'application/json' }
+    )
   end
 
   def notify_if_published

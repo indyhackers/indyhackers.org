@@ -128,6 +128,9 @@ GEM
     haml (5.2.2)
       temple (>= 0.8.0)
       tilt
+    httparty (0.21.0)
+      mini_mime (>= 1.0.0)
+      multi_xml (>= 0.5.2)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     inline_svg (1.9.0)
@@ -175,6 +178,7 @@ GEM
     mini_portile2 (2.8.5)
     minitest (5.20.0)
     msgpack (1.7.0)
+    multi_xml (0.6.0)
     mutex_m (0.2.0)
     net-imap (0.4.10)
       date
@@ -381,6 +385,7 @@ DEPENDENCIES
   faker
   foreman
   haml (~> 5.2.1)
+  httparty
   inline_svg
   jquery-rails
   json_pure
