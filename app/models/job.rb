@@ -66,17 +66,17 @@ class Job < ActiveRecord::Base
   end
 
   def notify_created
-    return unless ENV['SLACK_WEBSITE_COMMITTEE_WEBHOOK'].present?
+    return if ENV["SLACK_WEBSITE_COMMITTEE_WEBHOOK"].blank?
 
     url = "https://www.indyhackers.org/admin/jobs"
-    message = "New job board submission: <#{url}|#{self.title} at #{self.company}>"
+    message = "New job board submission: <#{url}|#{title} at #{company}>"
 
     HTTParty.post(
-      ENV['SLACK_WEBSITE_COMMITTEE_WEBHOOK'],
+      ENV["SLACK_WEBSITE_COMMITTEE_WEBHOOK"],
       body: {
         text: message
       }.to_json,
-      headers: { 'Content-Type' => 'application/json' }
+      headers: { "Content-Type" => "application/json" }
     )
   end
 
