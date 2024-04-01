@@ -16,6 +16,19 @@
     = stylesheet_link_tag 'application'
     = stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     = favicon_link_tag "/favicon.png"
+    = javascript_include_tag 'application'
+    <!-- Google Analytics -->
+    :javascript
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-3615572-3']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    <!-- END Google Analytics -->
     = yield(:head)
 
   %body{class: "#{request[:controller].split('/').join(' ')} #{request[:action]}"}
@@ -65,17 +78,4 @@
           %p.ff-sm
             Made with ❤️ by the Indy Hackers board
 
-    = javascript_include_tag 'application'
-    <!-- Google Analytics -->
-    :javascript
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-3615572-3']);
-      _gaq.push(['_trackPageview']);
-
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    <!-- END Google Analytics -->
     = yield(:footer)
