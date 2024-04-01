@@ -27,6 +27,15 @@ class Job < ActiveRecord::Base
       where(published_at: nil)
     end
 
+    def from_job_post_request(job_post_request)
+      Job.new(
+        title: job_post_request.title,
+        description: job_post_request.description,
+        company: job_post_request.company,
+        salary: job_post_request.salary
+      )
+    end
+
     private
 
     def published
