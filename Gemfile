@@ -34,6 +34,8 @@ gem "test-unit"
 
 gem "rack-cache"
 
+gem "httparty"
+
 group :development, :test do
   gem "foreman"
   gem "launchy"
