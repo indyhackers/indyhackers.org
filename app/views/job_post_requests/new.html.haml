@@ -38,6 +38,7 @@
           %a{ href: '#' } Preview
       .tab-container.active
         = f.input :description, as: :text
+        = recaptcha_tags
         .input
           %label &nbsp;
           = f.button :submit, 'Send'

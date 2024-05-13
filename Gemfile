@@ -35,6 +35,7 @@ gem "test-unit"
 gem "rack-cache"
 
 gem "httparty"
+gem "recaptcha"
 
 group :development, :test do
   gem "foreman"

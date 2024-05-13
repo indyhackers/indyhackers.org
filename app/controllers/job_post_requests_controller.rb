@@ -5,7 +5,7 @@ class JobPostRequestsController < ApplicationController
 
   def create
     @job_post_request = JobPostRequest.new(job_post_request_params.merge!({ id: 13 }))
-    if @job_post_request.valid?
+    if verify_recaptcha(model: @job_post_request) && @job_post_request.valid?
       @user = User.find_or_create_by!(name: @job_post_request.name, email: @job_post_request.email)
       @job = Job.new(
         title: @job_post_request.title,
@@ -18,7 +18,7 @@ class JobPostRequestsController < ApplicationController
       SystemMailer.job_post_request(@job_post_request, @job).deliver_now
       redirect_to new_job_post_request_path, notice: "Your job post request was sent successfully!"
     else
-      flash[:notice] = "There was a problem with sending your job post request"
+      flash[:notice] = "There was a problem with sending your job post request.  Verify all fields are present and the reCAPTCHA is checked."
       render :new
     end
   end
