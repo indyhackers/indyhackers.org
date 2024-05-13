@@ -17,3 +17,6 @@ AllCops:
 
 Style/StringLiterals:  
   EnforcedStyle: double_quotes
+
+Metrics/MethodLength:
+  Max: 100

@@ -254,6 +254,7 @@ GEM
     rb-readline (0.5.5)
     rdoc (6.6.3.1)
       psych (>= 4.0.0)
+    recaptcha (5.16.0)
     redcarpet (3.6.0)
     regexp_parser (2.9.0)
     reline (0.4.3)
@@ -399,6 +400,7 @@ DEPENDENCIES
   rack-cache
   rails (~> 7.1)
   rb-readline
+  recaptcha
   redcarpet
   rspec-rails (~> 6.0.2)
   rubocop
