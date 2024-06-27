@@ -19,6 +19,15 @@
     padding: 30px 10%;
   }
 
+  .kickoff {
+    background-color: $text-color-black;
+    color: white;
+    padding: 30px 10%;
+    h2 {
+      color: $primary-yellow
+    }
+  }
+
   .announcements-alt {
     background-color: $background-blue-dark;
     color: $primary-yellow;
