@@ -66,16 +66,12 @@
             Made with ❤️ by the Indy Hackers board
 
     = javascript_include_tag 'application'
-    <!-- Google Analytics -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZF5Q1C13NM"></script>
     :javascript
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-3615572-3']);
-      _gaq.push(['_trackPageview']);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    <!-- END Google Analytics -->
+      gtag('config', 'G-ZF5Q1C13NM');
     = yield(:footer)
