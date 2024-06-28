@@ -23,8 +23,7 @@
     .main.main-body.container
       .header.navbar
         %div.logo-container.navleft
-          = link_to inline_svg_tag('ih-logo.svg', :class => 'logo'), '/'
-          = link_to 'Indy Hackers', '/', :class => 'logo-text'
+          = link_to image_tag('ih-logo-black.png', alt: 'Indy Hackers Logo', width: '300px'), "/"
 
         %ul.menu.navright
           %li= link_to 'Newsletter', '/newsletter'

@@ -1,0 +1,1 @@
+//= link ih-logo-black.png
