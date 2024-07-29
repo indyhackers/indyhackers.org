@@ -24,7 +24,7 @@ Rails.application.routes.draw do
 
   get '/newsletter/subscribe' => redirect('https://buttondown.email/indyhackers')
   get '/newsletter' => 'newsletters#index'
-  get '/newsletter/archive' => 'newsletters#index'
+  get '/newsletter/archive' => 'newsletters#archive'
 
   resources :redirects, only: [:show], constraints: { id: /[a-z0-9_]+/i }, path: "r"
 
