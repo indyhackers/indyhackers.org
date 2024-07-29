@@ -21,7 +21,7 @@ RSpec.describe NewslettersController do
     it "redirects the user" do
       get "/newsletter/subscribe"
 
-      expect(response).to redirect_to("http://eepurl.com/sMpJj")
+      expect(response).to redirect_to("https://buttondown.email/indyhackers")
     end
   end
 end
