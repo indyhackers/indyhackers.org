@@ -22,7 +22,7 @@ Rails.application.routes.draw do
 
   get 'hackies' => 'site#hackies'
 
-  get '/newsletter/subscribe' => redirect('http://eepurl.com/sMpJj')
+  get '/newsletter/subscribe' => redirect('https://buttondown.email/indyhackers')
   get '/newsletter' => 'newsletters#index'
   get '/newsletter/archive' => 'newsletters#index'
 

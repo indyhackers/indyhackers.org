@@ -5,7 +5,7 @@
 
     %title= yield(:title).blank? ? "IndyHackers - Events and Jobs for Tech Folks in Indianapolis" : "#{yield(:title)} - IndyHackers"
 
-    %meta{:content => 'Miles Z. Sterrett', :name => "author"}/
+    %meta{:content => 'IndyHackers', :name => "author"}/
     - if yield(:description).blank?
       %meta{:content => "Bringing together hackers in Indiana", :name => "Description"}/
     - else
@@ -18,7 +18,7 @@
     = favicon_link_tag "/favicon.png"
     = yield(:head)
 
-  %body{class: "#{request[:controller].split('/').join(' ')} #{request[:action]}"}
+  %body{class: "#{params[:controller].split('/').join(' ')} #{params[:action]}"}
     = admin_header
     .main.main-body.container
       .header.navbar
