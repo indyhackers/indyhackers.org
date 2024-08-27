@@ -9,3 +9,5 @@ config/database.yml
 default.nix
 .envrc
 .idea/
+
+/config/master.key
