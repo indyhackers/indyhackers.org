@@ -125,8 +125,9 @@ GEM
     foreman (0.88.1)
     globalid (1.2.1)
       activesupport (>= 6.1)
-    haml (5.2.2)
-      temple (>= 0.8.0)
+    haml (6.3.0)
+      temple (>= 0.8.2)
+      thor
       tilt
     httparty (0.22.0)
       csv
@@ -389,7 +390,7 @@ DEPENDENCIES
   factory_bot_rails
   faker
   foreman
-  haml (~> 5.2.1)
+  haml (~> 6.3.0)
   httparty
   inline_svg
   jquery-rails
