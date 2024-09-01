@@ -5,7 +5,7 @@ gem "rails", "~> 7.1"
 
 gem "pg", "~> 1.1"
 
-gem "haml", "~> 5.2.1"
+gem "haml", "~> 6.3.0"
 gem "sass-rails"
 gem "uglifier"
 
