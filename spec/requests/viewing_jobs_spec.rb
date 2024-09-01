@@ -31,7 +31,7 @@ RSpec.describe "ViewingJobs" do
       published_job = create(:job, :published, title: "A published job")
 
       expect { get job_path(published_job) }.to change(JobView, :count).by(1)
-      expect { get job_path(published_job) }.to change(JobView, :count).by(0)
+      expect { get job_path(published_job) }.not_to change(JobView, :count)
     end
   end
 end

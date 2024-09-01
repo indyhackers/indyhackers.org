@@ -8,3 +8,6 @@ config/database.yml
 .sass-cache
 default.nix
 .envrc
+.idea/
+
+/config/master.key

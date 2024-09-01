@@ -103,7 +103,7 @@ RSpec.describe Admin::JobsController do
       it "asks the user to log in" do
         expect do
           post admin_jobs_path, params: { job: job_params }
-        end.to change(Job, :count).by(0)
+        end.not_to change(Job, :count)
 
         expect(response).to redirect_to(new_admin_session_path)
       end
@@ -163,7 +163,7 @@ RSpec.describe Admin::JobsController do
       it "asks the user to log in" do
         expect do
           delete admin_job_path(job)
-        end.to change(Job, :count).by(0)
+        end.not_to change(Job, :count)
 
         expect(response).to redirect_to(new_admin_session_path)
       end
