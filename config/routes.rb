@@ -26,6 +26,8 @@ Rails.application.routes.draw do
   get '/newsletter' => 'newsletters#index'
   get '/newsletter/archive' => 'newsletters#archive'
 
+  get '/events' => 'events#index'
+
   resources :redirects, only: [:show], constraints: { id: /[a-z0-9_]+/i }, path: "r"
 
   get 'coc' => 'site#coc'

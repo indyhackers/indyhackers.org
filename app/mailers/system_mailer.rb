@@ -1,6 +1,6 @@
 class SystemMailer < ActionMailer::Base
   default from: "alfred@indyhackers.org"
-  default to: "miles@indyhackers.org"
+  default to: "board@indyhackers.org"
 
   def job_post_request(job_post_request, job)
     @job_post_request = job_post_request
@@ -15,11 +15,11 @@ class SystemMailer < ActionMailer::Base
   def job_post_published(user, job)
     @user = user
     @job = job
-    send_to = @user.present? ? [@user.email, "miles@indyhackers.org"] : "miles@indyhackers.org"
+    send_to = @user.present? ? [@user.email, "board@indyhackers.org"] : "board@indyhackers.org"
     mail(
       subject: "[IndyHackers Jobs] Published! #{@job.title}",
       from: %("IndyHackers" <alfred@indyhackers.org>),
-      reply_to: "miles@indyhackers.org",
+      reply_to: "board@indyhackers.org",
       to: send_to
     )
   end

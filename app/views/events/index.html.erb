@@ -1,0 +1,70 @@
+
+<section id="event-calendar">
+  <h2>Upcoming Events</h2>
+ <!-- <iframe src="//www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=400&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=ig7e0j6v8ub9q6kga256n77048%40group.calendar.google.com&amp;color=%23AB8B00&amp;ctz=America%2FNew_York" style="border-width:0 " width="710" height="400" frameborder="0" scrolling="no"></iframe>
+ -->
+
+  <a href="">List View</a> <a href="">Calendar View</a>
+  <br/><br/>
+  <table width="100%">
+    <tr>
+      <td>
+
+      <% for i in 1..6 do %>
+        <img style="float: left; margin-right: 10px" src="https://secure-content.meetupstatic.com/images/classic-events/520955854/200x113.jpg?w=200?w=640"/>
+        THU, SEPT 12 - 9:00AM EDT<br/>
+        Downtown Code and Coffee<br/>
+        Kaffeine Coffee<br/>
+        An informal get together to talk about technology and code on Thursday mornings.<br/>
+        <br/>
+        <hr/>
+      <% end %>
+
+      </td>
+      <td valign="top" align="right">
+        <iframe border="0" width="425" height="350" src="https://www.openstreetmap.org/export/embed.html?bbox=-86.40335083007814%2C39.59828141820854%2C-86.033935546875%2C39.961332959837826&amp;layer=mapnik" style="border: 0px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=11/39.7800/-86.2186">View Larger Map</a></small>
+      </td>
+    </tr>
+  </table>
+
+  <div class="calendar-links">
+    <%= link_to 'Recommend event', 'https://docs.google.com/forms/d/e/1FAIpQLSdlfIqF42uU8iyoYyqKDFPEYRsNCOCFYpFJwMTvdVOkK3otSg/viewform?usp=sf_link' %>
+    <%= link_to 'Subscribe to calendar', 'webcal://calendar.google.com/calendar/ical/ig7e0j6v8ub9q6kga256n77048%40group.calendar.google.com/public/basic.ics' %>
+  </div>
+
+  <div id="calendar"/>
+
+</section>
+
+
+
+
+<script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js'></script>
+<script>
+
+    document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+            eventClick: function(info) {
+                alert('Event: ' + info.event.title);
+                alert('Coordinates: ' + info.jsEvent.pageX + ',' + info.jsEvent.pageY);
+                alert('View: ' + info.view.type);
+
+                // change the border color just for fun
+                info.el.style.borderColor = 'red';
+            },
+            initialView: 'dayGridMonth',
+            timeZone: 'UTC',
+            events: [
+                { // this object will be "parsed" into an Event Object
+                    title: 'Downtown Code and Coffee', // a property!
+                    start: '2024-09-05T07:00:00', // a property!
+                    end: '2024-09-05T09:00:00', // a property! ** see important note below about 'end' **
+                    url: '#'
+                }
+            ]
+        });
+        calendar.render();
+    });
+
+</script>
