@@ -268,8 +268,7 @@ GEM
     responders (3.1.1)
       actionpack (>= 5.2)
       railties (>= 5.2)
-    rexml (3.3.6)
-      strscan
+    rexml (3.3.9)
     rspec-core (3.13.0)
       rspec-support (~> 3.13.0)
     rspec-expectations (3.13.2)
@@ -346,7 +345,6 @@ GEM
       sprockets (>= 3.0.0)
     stringex (2.8.6)
     stringio (3.1.1)
-    strscan (3.1.0)
     systemu (2.6.5)
     temple (0.10.3)
     test-unit (3.6.2)
