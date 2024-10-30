@@ -14,6 +14,7 @@ Rails.application.routes.draw do
 
   resources :job_post_requests, only: [:new, :create]
   resource :sitemap, only: :show
+
   get 'about' => 'site#about'
   get 'job_post_request' => 'job_post_requests#new'
   get "calendar", to: "site#calendar"
@@ -25,6 +26,8 @@ Rails.application.routes.draw do
   get '/newsletter/subscribe' => redirect('https://buttondown.email/indyhackers')
   get '/newsletter' => 'newsletters#index'
   get '/newsletter/archive' => 'newsletters#archive'
+
+  get '/sponsors' => 'sponsors#index'
 
   resources :redirects, only: [:show], constraints: { id: /[a-z0-9_]+/i }, path: "r"
 
