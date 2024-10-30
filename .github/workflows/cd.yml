@@ -1,0 +1,40 @@
+name: cd
+
+on:
+  workflow_call:
+    inputs:
+      image:
+        type: string
+        required: true
+      ssh_host:
+        type: string
+        required: true
+      ssh_user:
+        type: string
+        required: true
+    secrets:
+      ssh_key:
+        required: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.ssh_key }}
+
+      - name: Deploy image on host
+        run: |
+          ssh-keyscan ${{ inputs.SSH_HOST }} >> ~/.ssh/known_hosts
+          
+          CONTAINERS=$(ssh ${{ inputs.SSH_USER }}@${{ inputs.SSH_HOST }} docker ps -a -q)
+          
+          if [ ! -z "$CONTAINERS" ]; then
+            #stop running containers
+            ssh ${{ inputs.SSH_USER }}@${{ inputs.SSH_HOST }} docker stop $CONTAINERS
+            ssh ${{ inputs.SSH_USER }}@${{ inputs.SSH_HOST }} docker rm $CONTAINERS
+          fi
+          
+          #run new image
+          ssh ${{ inputs.SSH_USER }}@${{ inputs.SSH_HOST }} docker run --restart always -p 32768:80 -d ${{ inputs.image }}
