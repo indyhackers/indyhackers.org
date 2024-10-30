@@ -34,7 +34,7 @@ jobs:
   cd:
     if: github.ref == 'refs/heads/main'
     needs: [build]
-    uses: ./.github/workflows/cd.yaml
+    uses: ./.github/workflows/cd.yml
     with:
       image: ${{ needs.build.outputs.image }}
       ssh_user: indyhackers
