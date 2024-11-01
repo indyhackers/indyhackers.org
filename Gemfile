@@ -3,7 +3,7 @@ ruby "3.2.5"
 
 gem "rails", "~> 7.2"
 
-gem "pg", "~> 1.1"
+gem "pg", "~> 1.5"
 
 gem "haml", "~> 6.3.0"
 gem "sass-rails"
