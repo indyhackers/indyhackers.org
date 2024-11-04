@@ -45,7 +45,7 @@ group :development, :test do
   gem "pry-rails"
   gem "rb-readline"
 
-  gem "rspec-rails", "~> 6.0.2"
+  gem "rspec-rails", "~> 7.0.1"
 
   gem "brakeman"
   gem "bundler-audit"
