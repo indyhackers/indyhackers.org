@@ -24,7 +24,7 @@ gem "stringex"
 gem "stringio", "~> 3.1"
 
 gem "json_pure"
-gem "puma", "~> 6.4"
+gem "puma", "~> 6.5"
 
 gem "dalli"
 gem "inline_svg"
