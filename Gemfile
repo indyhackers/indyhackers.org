@@ -1,9 +1,9 @@
 source "https://rubygems.org"
-ruby "3.2.5"
+ruby "3.3.5"
 
-gem "rails", "~> 7.2"
+gem "rails", "~> 8.0"
 
-gem "pg", "~> 1.1"
+gem "pg", "~> 1.5"
 
 gem "haml", "~> 6.3.0"
 gem "sass-rails"
@@ -24,7 +24,7 @@ gem "stringex"
 gem "stringio", "~> 3.1"
 
 gem "json_pure"
-gem "puma", "~> 6.4"
+gem "puma", "~> 6.5"
 
 gem "dalli"
 gem "inline_svg"
@@ -45,7 +45,7 @@ group :development, :test do
   gem "pry-rails"
   gem "rb-readline"
 
-  gem "rspec-rails", "~> 6.0.2"
+  gem "rspec-rails", "~> 7.1.0"
 
   gem "brakeman"
   gem "bundler-audit"

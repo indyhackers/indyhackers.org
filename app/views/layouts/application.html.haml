@@ -27,9 +27,10 @@
 
         %ul.menu.navright
           %li= link_to 'Home', '/'
-          %li= link_to 'Events', '/events'
-          %li= link_to 'Jobs', '/jobs'
           %li= link_to 'Newsletter', '/newsletter'
+          %li= link_to 'Jobs', '/jobs'
+          %li= link_to 'Events', '/events'
+          %li= link_to 'Sponsors', '/sponsors'
           %li= link_to 'About', '/about'
 
       .content.clear-fix
@@ -51,6 +52,8 @@
               =link_to 'Code of Conduct', '/coc'
             // %p
             //  =link_to 'Mentorship Program', '/'
+            %p
+              =link_to 'Donate', 'https://donate.stripe.com/bIY17XcYL77c0HSdQQ', target: :_blank
 
           %div
             %span Contact
