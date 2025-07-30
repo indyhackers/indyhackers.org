@@ -1,3 +1,5 @@
+# Note: This code base is archived.  The current indyhackers.org site repo can be found at https://github.com/indyhackers/indyhackers-redux !
+
 # IndyHackers.org
 
 [![Code Climate](https://codeclimate.com/github/indyhackers/indyhackers.org/badges/gpa.svg)](https://codeclimate.com/github/indyhackers/indyhackers.org)
