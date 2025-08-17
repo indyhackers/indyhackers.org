@@ -215,7 +215,7 @@ GEM
     psych (5.2.0)
       stringio
     public_suffix (6.0.1)
-    puma (6.5.0)
+    puma (6.6.0)
       nio4r (~> 2.0)
     racc (1.8.1)
     rack (3.1.8)
@@ -400,7 +400,7 @@ DEPENDENCIES
   memcachier
   pg (~> 1.5)
   pry-rails
-  puma (~> 6.5)
+  puma (~> 6.6)
   rack-cache
   rails (~> 8.0)
   rb-readline
